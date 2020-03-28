@@ -1417,7 +1417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100148, guid: d494dac8b35e226448e0fd339fafc58b, type: 3}
       propertyPath: m_Name
-      value: YO_3D
+      value: Personaje1
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: d494dac8b35e226448e0fd339fafc58b, type: 3}
       propertyPath: m_LocalPosition.x
