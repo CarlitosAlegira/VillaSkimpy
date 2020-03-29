@@ -300,7 +300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 811c454ddc9a36b45a8d5e2dbfbee565, type: 3}
       propertyPath: m_Name
-      value: character
+      value: Principal
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 811c454ddc9a36b45a8d5e2dbfbee565, type: 3}
       propertyPath: m_TagString
@@ -1117,7 +1117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100148, guid: 297215edd55ad674397074819d8d0fd0, type: 3}
       propertyPath: m_Name
-      value: Raul
+      value: Personaje2
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: 297215edd55ad674397074819d8d0fd0, type: 3}
       propertyPath: m_LocalPosition.x
