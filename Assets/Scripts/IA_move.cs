@@ -59,21 +59,15 @@ public class IA_move : MonoBehaviour
         collision = true;
         if (other.tag=="Player")
         {
-            getpunch=other.GetComponent<Movimeinto>().ataking;
+            getpunch = other.GetComponent<Movimeinto>().keyframe1;
             if (getpunch)
             {
-                timer += 1 * Time.deltaTime;
-                if (timer>=0.4)
-                {
-                    timer = 0;
-                    anim.SetBool("punch", true);
-                    anim.SetBool("noAtack", false);
-                }
+                anim.SetBool("punch", true);
+                anim.SetBool("noAtack", false);
             }
             else
             {
                 anim.SetBool("punch", false);
-                timer = 0;
             }
         }
     }

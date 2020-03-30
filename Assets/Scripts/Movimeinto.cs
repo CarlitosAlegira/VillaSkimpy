@@ -10,8 +10,8 @@ public class Movimeinto : MonoBehaviour
     public Camera camaraP;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
-    bool idle,atack;
-    public bool ataking;
+    bool idle,atack, ataking;
+    public bool keyframe1;
     void Start()
     {
         grav = 9.8f;
@@ -122,5 +122,18 @@ public class Movimeinto : MonoBehaviour
         camFrente = camFrente.normalized;
         camDerecha = camDerecha.normalized;
     }
-
+    void Combate(int numero)
+    {
+        switch (numero)
+        {
+            case 1:
+                keyframe1 = true;
+                break;
+            case 2:
+                keyframe1 = false;
+                break;
+            default:
+                break;
+        }
+    }
 }
