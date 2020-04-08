@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1446136167672371336}
   - component: {fileID: 2561983519119045168}
   m_Layer: 0
-  m_Name: OptimizedTree
+  m_Name: ArbolSergio01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
