@@ -8,6 +8,8 @@ public class Movimeinto : MonoBehaviour
     private float pox, poy,pog,grav,timer,rand;
     public CharacterController jugador;
     public Camera camaraP;
+    string nombre_player;
+    int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
     bool idle,atack, ataking;

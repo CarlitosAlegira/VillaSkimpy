@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SelectCharacter.unity
+    guid: a2e1fb487eb4bdb41b61c150263fdb2f
+  - enabled: 1
+    path: Assets/Scenes/centro.unity
+    guid: 611ef36c2815d644f9e191ed72ac21be
+  - enabled: 1
+    path: Assets/Scenes/Bosque.unity
+    guid: 3d11d3ae0d94bbb4e91358c9484f00d0
   m_configObjects: {}

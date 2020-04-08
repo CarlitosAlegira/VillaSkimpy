@@ -8,7 +8,7 @@ public class IA_move : MonoBehaviour
     public bool collision;
     bool girando,getpunch,atack;
     Animator anim;
-    float y,timer;
+    float y,timer1;
     private void Start()
     {
         anim=gameObject.GetComponent<Animator>();
@@ -75,6 +75,6 @@ public class IA_move : MonoBehaviour
     {
         collision = false;
         anim.SetBool("noAtack",true);
-        timer = 0;
+        timer1 = 0;
     }
 }
