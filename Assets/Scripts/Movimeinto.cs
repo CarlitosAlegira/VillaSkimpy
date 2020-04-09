@@ -12,8 +12,8 @@ public class Movimeinto : MonoBehaviour
     int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
-    bool idle,atack, ataking;
-    public bool keyframe1;
+    bool idle ;
+    public bool keyframe1, atacking;
     void Start()
     {
         grav = 9.8f;
@@ -30,7 +30,7 @@ public class Movimeinto : MonoBehaviour
             anim.SetBool("quieto", true);
             anim.SetBool("caminar", false);
             timer += 1 * Time.deltaTime;
-            if (timer >= 5 && !atack)
+            if (timer >= 5  && !atacking)
             {
                 if (idle)
                 {
@@ -46,30 +46,6 @@ public class Movimeinto : MonoBehaviour
                     idle = true;
                 }
             }
-
-            if (Input.GetMouseButton(0))
-            {
-                atack = true;
-                ataking = true;
-                anim.SetBool("punch", true);
-                timer = 0;
-            }
-            if (atack)
-            {
-                anim.SetBool("Combat", true);
-
-                if (timer >= 10)
-                {
-                    anim.SetBool("Combat", false);
-                    anim.SetBool("punch", false);
-                    atack = false;
-                }
-                if (timer >= 0.59)
-                {
-                    anim.SetBool("punch", false);
-                    ataking = false;
-                }
-            }
         }
         else
         {
@@ -80,9 +56,8 @@ public class Movimeinto : MonoBehaviour
             anim.SetFloat("Poy", poy);
             anim.SetBool("caminar", true);
             anim.SetBool("Combat", false);
-            atack = false;
         }
-        if (!ataking)
+        if (!atacking)
         {
             pox = Input.GetAxis("Horizontal");
             poy = Input.GetAxis("Vertical");
@@ -124,18 +99,5 @@ public class Movimeinto : MonoBehaviour
         camFrente = camFrente.normalized;
         camDerecha = camDerecha.normalized;
     }
-    void Combate(int numero)
-    {
-        switch (numero)
-        {
-            case 1:
-                keyframe1 = true;
-                break;
-            case 2:
-                keyframe1 = false;
-                break;
-            default:
-                break;
-        }
-    }
+    
 }

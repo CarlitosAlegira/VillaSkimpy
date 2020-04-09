@@ -12,6 +12,8 @@ public class Datos : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        nombre = "daniel";
+        hero = 2;
     }
     void Start()
     {
