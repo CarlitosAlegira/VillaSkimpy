@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 public class Salida_zona1 : MonoBehaviour
 {
     public GameObject mostrar;
-    bool ans;
+    bool si,no;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag=="Player")
@@ -14,11 +14,23 @@ public class Salida_zona1 : MonoBehaviour
             mostrar.SetActive(true);
             other.GetComponent<Movimeinto>().menu=true;
             Cursor.lockState = CursorLockMode.None;
-            if (ans)
+            if (si)
             {
                 mostrar.SetActive(false);
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                other.GetComponent<Transform>().SetPositionAndRotation(new Vector3(350,55,30),other.transform.rotation);
+                EditorSceneManager.LoadScene(2);
+                si = false;
+                no = false;
+            }
+            else if(no)
+            {
+                mostrar.SetActive(false);
+                other.GetComponent<Movimeinto>().menu = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                si = false;
+                no = false;
             }
         }
     }
@@ -27,11 +39,11 @@ public class Salida_zona1 : MonoBehaviour
     {
         if (res)
         {
-            EditorSceneManager.LoadScene(2);
+            si = true;
         }
         else
         {
-            ans = res;
+            no = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -39,7 +51,8 @@ public class Salida_zona1 : MonoBehaviour
         if (other.tag == "Player")
         {
             mostrar.SetActive(false);
-            ans = false;
+            si = false;
+            no = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
     }

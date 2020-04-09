@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: fe575feb5ac85ce4396a493c29ef692d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: fe575feb5ac85ce4396a493c29ef692d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5487,7 +5487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero_name: {fileID: 0}
-  hero: 0
+  hero: 2
 --- !u!4 &799789040
 Transform:
   m_ObjectHideFlags: 0
@@ -7719,7 +7719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cd76f9b2ee8204bacee1d8b0c98bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 2
+  velocidad: 7
   jugador: {fileID: 1120959950}
   camaraP: {fileID: 549458550}
   keyframe1: 0
@@ -11042,7 +11042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 4204d4ecc394ed344958094936050495, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 4204d4ecc394ed344958094936050495, type: 3}
       propertyPath: m_LocalPosition.x
