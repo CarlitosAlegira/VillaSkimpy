@@ -8,6 +8,7 @@ public class jugador : MonoBehaviour
     GameObject datos,camara;
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         camara = GameObject.Find("Main Camera");
         datos = GameObject.Find("Datos_player");
         if (datos.GetComponent<Datos>().hero == 1)

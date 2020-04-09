@@ -13,7 +13,7 @@ public class Movimeinto : MonoBehaviour
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
     bool idle ;
-    public bool keyframe1, atacking;
+    public bool keyframe1, atacking, menu;
     void Start()
     {
         grav = 9.8f;
@@ -57,7 +57,7 @@ public class Movimeinto : MonoBehaviour
             anim.SetBool("caminar", true);
             anim.SetBool("Combat", false);
         }
-        if (!atacking)
+        if (!atacking && !menu)
         {
             pox = Input.GetAxis("Horizontal");
             poy = Input.GetAxis("Vertical");

@@ -10,6 +10,10 @@ public class Camara : MonoBehaviour
     public float vel, sensibilidad;
     
     Transform pos;
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         pos=objetivo.GetComponent<Transform>();
