@@ -7,6 +7,8 @@ using UnityEditor.SceneManagement;
 public class Selectcharacter : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioClip Select;
+    AudioSource LoQueSuena;
     Animator a1, a2, a3;
     public GameObject c1, c2, c3, panel, ambiente,panel_name,error;
     public Image img;
@@ -15,13 +17,14 @@ public class Selectcharacter : MonoBehaviour
     float timer;
     void Start()
     {
+        LoQueSuena = GetComponent<AudioSource>();
         a1 = c1.GetComponent<Animator>();
         a2 = c2.GetComponent<Animator>();
         a3 = c3.GetComponent<Animator>();
         img = img.GetComponent<Image>();
         img.color = new Color(0.2621485F, 0.4056604F, 0.4017817F, 1F);
         error.SetActive(false);
-
+        LoQueSuena.clip = Select;
     }
 
     // Update is called once per frame
@@ -49,16 +52,19 @@ public class Selectcharacter : MonoBehaviour
                 a1.SetBool("selected",true);
                 a2.SetInteger("no_s", aa);
                 a3.SetInteger("no_s", ab);
+                LoQueSuena.Play();
                 break;
             case 2:
                 a2.SetBool("selected", true);
                 a1.SetInteger("no_s", aa);
                 a3.SetInteger("no_s", ab);
+                LoQueSuena.Play();
                 break;
             case 3:
                 a3.SetBool("selected", true);
                 a2.SetInteger("no_s", aa);
                 a1.SetInteger("no_s", ab);
+                LoQueSuena.Play();
                 break;
             default:
                 break;
