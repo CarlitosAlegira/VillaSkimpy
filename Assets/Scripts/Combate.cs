@@ -23,7 +23,11 @@ public class Combate : MonoBehaviour
             combo += 1;
             if (combo>3)
             {
-                combo = 0;
+                combo = 3;
+                if (com3)
+                {
+                    combo = 0;
+                }
             }
             //Debug.Log(combo);
             atack = true;
@@ -47,7 +51,7 @@ public class Combate : MonoBehaviour
     {
         if (Weapon==0)
         {
-            Weapon = 3;
+            Weapon = 1;
         }
         gameObject.GetComponent<Movimeinto>().atacking = true;
         anim.SetBool("Combat", true);

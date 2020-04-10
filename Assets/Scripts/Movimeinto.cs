@@ -99,5 +99,4 @@ public class Movimeinto : MonoBehaviour
         camFrente = camFrente.normalized;
         camDerecha = camDerecha.normalized;
     }
-    
 }

@@ -6,23 +6,26 @@ using UnityEditor.SceneManagement;
 public class Salida_zona1 : MonoBehaviour
 {
     public GameObject mostrar;
-    bool si,no;
+    [SerializeField] Transform player;
+    bool si,no,is_menu;
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag=="Player")
+        if (other.tag=="Player" && !is_menu)
         {
             mostrar.SetActive(true);
             other.GetComponent<Movimeinto>().menu=true;
             Cursor.lockState = CursorLockMode.None;
+
             if (si)
             {
                 mostrar.SetActive(false);
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                other.GetComponent<Transform>().SetPositionAndRotation(new Vector3(350,55,30),other.transform.rotation);
-                EditorSceneManager.LoadScene(2);
+                player.transform.position = new Vector3(0,0,0);
+                //EditorSceneManager.LoadScene(2);
                 si = false;
                 no = false;
+                is_menu = true;
             }
             else if(no)
             {
@@ -31,6 +34,7 @@ public class Salida_zona1 : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 si = false;
                 no = false;
+                is_menu = true;
             }
         }
     }
@@ -54,6 +58,7 @@ public class Salida_zona1 : MonoBehaviour
             si = false;
             no = false;
             Cursor.lockState = CursorLockMode.Locked;
+            is_menu = false;
         }
     }
 }
