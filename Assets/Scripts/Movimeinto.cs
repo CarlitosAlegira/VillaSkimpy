@@ -12,12 +12,11 @@ public class Movimeinto : MonoBehaviour
     int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
-    bool idle ;
+    bool idle;
     public bool keyframe1, atacking, menu;
     
     void Start()
     {
-        
         grav = 9.8f;
         jugador = GetComponent<CharacterController>();
         anim = jugador.GetComponent<Animator>();
@@ -31,6 +30,7 @@ public class Movimeinto : MonoBehaviour
         {
             anim.SetBool("quieto", true);
             anim.SetBool("caminar", false);
+            anim.SetBool("Correr", false);
             timer += 1 * Time.deltaTime;
             if (timer >= 5  && !atacking)
             {
@@ -75,7 +75,7 @@ public class Movimeinto : MonoBehaviour
         camara();
         move = datos_in.x* camDerecha + datos_in.z*camFrente;
         jugador.transform.LookAt(jugador.transform.position+move);
-        if (Input.GetKey(KeyCode.LeftShift) && !atacking)
+        if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0))
         {
             move = move * velocidad*2;
             anim.SetBool("caminar", false);
