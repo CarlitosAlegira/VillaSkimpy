@@ -10,7 +10,7 @@ public class Selectcharacter : MonoBehaviour
     public AudioClip Select;
     AudioSource LoQueSuena;
     Animator a1, a2, a3;
-    public GameObject c1, c2, c3, panel, ambiente,panel_name,error;
+    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3;
     public Image img;
     int aa,ab;
     bool step1;
@@ -45,7 +45,11 @@ public class Selectcharacter : MonoBehaviour
     {
         aa = Random.Range(1, 10);
         ab = Random.Range(1, 10);
-        
+        b1.SetActive(false);
+        b2.SetActive(false);
+        b3.SetActive(false);
+
+
         switch (num)
         {
             case 1:

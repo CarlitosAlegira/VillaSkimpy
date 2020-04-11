@@ -51,7 +51,7 @@ public class Combate : MonoBehaviour
     {
         if (Weapon==0)
         {
-            Weapon = 1;
+            Weapon = 4;
         }
         gameObject.GetComponent<Movimeinto>().atacking = true;
         anim.SetBool("Combat", true);
@@ -96,10 +96,14 @@ public class Combate : MonoBehaviour
             case 3:
                 anim.SetBool("Hacha", true);
                 break;
+            case 4:
+                anim.SetBool("Maza", true);
+                break;
             default:
                 anim.SetBool("punch", false);
                 anim.SetBool("Hacha", false);
-                //anim.SetBool("Bate", false);
+                anim.SetBool("Bate", false);
+                anim.SetBool("Maza", false);
                 break;
         }
     }

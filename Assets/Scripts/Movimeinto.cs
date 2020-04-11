@@ -14,8 +14,10 @@ public class Movimeinto : MonoBehaviour
     Animator anim;
     bool idle ;
     public bool keyframe1, atacking, menu;
+    
     void Start()
     {
+        
         grav = 9.8f;
         jugador = GetComponent<CharacterController>();
         anim = jugador.GetComponent<Animator>();
@@ -76,9 +78,12 @@ public class Movimeinto : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             move = move * velocidad*2;
+            anim.SetBool("caminar", false);
+            anim.SetBool("Correr", true);
         }
         else
         {
+            anim.SetBool("Correr", false);
             move = move * velocidad;
         }
         gravedad();
