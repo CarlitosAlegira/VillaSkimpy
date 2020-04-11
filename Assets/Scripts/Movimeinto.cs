@@ -75,7 +75,7 @@ public class Movimeinto : MonoBehaviour
         camara();
         move = datos_in.x* camDerecha + datos_in.z*camFrente;
         jugador.transform.LookAt(jugador.transform.position+move);
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !atacking)
         {
             move = move * velocidad*2;
             anim.SetBool("caminar", false);

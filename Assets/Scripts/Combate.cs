@@ -9,7 +9,9 @@ public class Combate : MonoBehaviour
     public bool atack;
     float timer;
     Animator anim;
-    int Weapon,combo;
+    int combo;
+    public int Weapon;
+    public GameObject wep1, wep2, wep3;
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -18,6 +20,7 @@ public class Combate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        changeweapon(Weapon);
         if (Input.GetMouseButtonDown(0))
         {
             combo += 1;
@@ -51,7 +54,7 @@ public class Combate : MonoBehaviour
     {
         if (Weapon==0)
         {
-            Weapon = 4;
+            Weapon = 1;
         }
         gameObject.GetComponent<Movimeinto>().atacking = true;
         anim.SetBool("Combat", true);
@@ -139,6 +142,32 @@ public class Combate : MonoBehaviour
                 dam3 = true;
                 break;
             default:
+                break;
+        }
+    }
+    void changeweapon(int num)
+    {
+        switch (num)
+        {
+            case 2:
+                wep1.SetActive(true);
+                wep2.SetActive(false);
+                wep3.SetActive(false);
+                break;
+            case 3:
+                wep1.SetActive(false);
+                wep2.SetActive(true);
+                wep3.SetActive(false);
+                break;
+            case 4:
+                wep1.SetActive(false);
+                wep2.SetActive(false);
+                wep3.SetActive(true);
+                break;
+            default:
+                wep1.SetActive(false);
+                wep2.SetActive(false);
+                wep3.SetActive(false);
                 break;
         }
     }
