@@ -6,7 +6,6 @@ using UnityEditor.SceneManagement;
 public class Salida_zona1 : MonoBehaviour
 {
     public GameObject mostrar;
-    [SerializeField] Transform player;
     bool si,no,is_menu;
     private void OnTriggerStay(Collider other)
     {
@@ -15,14 +14,13 @@ public class Salida_zona1 : MonoBehaviour
             mostrar.SetActive(true);
             other.GetComponent<Movimeinto>().menu=true;
             Cursor.lockState = CursorLockMode.None;
-
+            
             if (si)
             {
                 mostrar.SetActive(false);
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                player.transform.position = new Vector3(0,0,0);
-                //EditorSceneManager.LoadScene(2);
+                EditorSceneManager.LoadScene(2);
                 si = false;
                 no = false;
                 is_menu = true;

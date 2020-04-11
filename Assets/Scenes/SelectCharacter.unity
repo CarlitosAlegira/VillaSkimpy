@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,6 +150,9 @@ MonoBehaviour:
   ambiente: {fileID: 1552974913}
   panel_name: {fileID: 1436452687}
   error: {fileID: 358862690}
+  b1: {fileID: 749411745}
+  b2: {fileID: 1314787621}
+  b3: {fileID: 801330358}
   img: {fileID: 1066177982}
 --- !u!4 &84490429
 Transform:
@@ -664,7 +667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1552974914}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340382497
 GameObject:
@@ -3034,7 +3037,7 @@ PrefabInstance:
     - target: {fileID: 5376091708979481645, guid: cb1bc57e43908bf498b9377a96b6e853,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5376091708979481645, guid: cb1bc57e43908bf498b9377a96b6e853,
         type: 3}
@@ -4198,8 +4201,8 @@ Transform:
   - {fileID: 89859362}
   - {fileID: 1352984329}
   - {fileID: 1091505445}
-  - {fileID: 328663125}
   - {fileID: 562635029}
+  - {fileID: 328663125}
   - {fileID: 102990241}
   - {fileID: 492593704}
   - {fileID: 631656330}

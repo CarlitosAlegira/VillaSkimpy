@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-    public GameObject objetivo;
-    public GameObject centro;
+    GameObject objetivo, centro, Datos_j;
     public Vector3 distancia;
     public float vel, sensibilidad;
-    
+    public Camera cam;
     Transform pos;
-    private void Awake()
+    private void Start()
     {
-        DontDestroyOnLoad(gameObject);
-    }
-    void Start()
-    {
-        pos=objetivo.GetComponent<Transform>();
-
+        Datos_j= GameObject.Find("Datos_player");
+        if (Datos_j.GetComponent<Datos>().hero==1)
+        {
+            objetivo = GameObject.Find("Heroe1");
+            objetivo.GetComponent<Movimeinto>().camaraP = cam;
+            centro = GameObject.Find("c1");
+        }
+        else if (Datos_j.GetComponent<Datos>().hero == 2)
+        {
+            objetivo = GameObject.Find("Heroe2");
+            objetivo.GetComponent<Movimeinto>().camaraP = cam;
+            centro = GameObject.Find("c2");
+        }
+        else if(Datos_j.GetComponent<Datos>().hero == 3)
+        {
+            objetivo = GameObject.Find("Heroe3");
+            objetivo.GetComponent<Movimeinto>().camaraP = cam;
+            centro = GameObject.Find("c3");
+        }
+        
+        pos = objetivo.GetComponent<Transform>();
     }
 
     void LateUpdate()
