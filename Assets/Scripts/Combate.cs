@@ -6,7 +6,7 @@ public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
     bool com1,com2,com3,dam1,dam2,dam3;
-    public bool atack,run_atack;
+    public bool atack,run_atack,Running;
     float timer;
     Animator anim;
     int combo;
@@ -24,7 +24,7 @@ public class Combate : MonoBehaviour
         pox = Input.GetAxis("Horizontal");
         poy = Input.GetAxis("Vertical");
         changeweapon(Weapon);
-        if ((pox!=0 || poy!=0) && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&Running)
         {
             run_atack = true;
             run_animation();
@@ -156,6 +156,7 @@ public class Combate : MonoBehaviour
                 break;
             case 9:
                 run_atack = false;
+                animaciones_combate(0);
                 break;
             default:
                 break;

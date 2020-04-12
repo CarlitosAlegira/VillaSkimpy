@@ -78,6 +78,7 @@ public class Movimeinto : MonoBehaviour
         {
             move = move * velocidad*2;
             anim.SetBool("Correr", true);
+            jugador.GetComponent<Combate>().Running = true;
             if (Input.GetKeyDown(KeyCode.C))
             {
                 onslide = true;
@@ -86,6 +87,7 @@ public class Movimeinto : MonoBehaviour
         }
         else
         {
+            jugador.GetComponent<Combate>().Running = false;
             if (onslide)
             {
                 anim.SetBool("Correr", false);
