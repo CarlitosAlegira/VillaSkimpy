@@ -55,18 +55,13 @@ public class IA_Animals : MonoBehaviour
     {
         y = Random.Range(-3, 3);
     }
-    private void OnTriggerStay(Collider other)
-    {
-        collision = true;
-        girar();
-    }
     private void OnTriggerExit(Collider other)
     {
         collision = false;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        this.collision = true;
+        collision = true;
         girar();
     }
 }

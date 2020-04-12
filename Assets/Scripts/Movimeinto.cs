@@ -13,7 +13,7 @@ public class Movimeinto : MonoBehaviour
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
     bool idle,agachado,pararse,agac_vel,onslide;
-    public bool keyframe1, atacking, menu;
+    public bool keyframe1, atacking,atack_run, menu;
     
     void Start()
     {
@@ -30,8 +30,6 @@ public class Movimeinto : MonoBehaviour
         if (pox == 0 && poy == 0)
         {
             anim.SetBool("quieto", true);
-            anim.SetBool("caminar", false);
-            anim.SetBool("Correr", false);
             timer += 1 * Time.deltaTime;
             if (timer >= 5  && !atacking)
             {
@@ -60,7 +58,7 @@ public class Movimeinto : MonoBehaviour
             anim.SetBool("caminar", true);
             anim.SetBool("Combat", false);
         }
-        if (!atacking && !menu)
+        if (!atacking && !menu || atack_run)
         {
             pox = Input.GetAxis("Horizontal");
             poy = Input.GetAxis("Vertical");

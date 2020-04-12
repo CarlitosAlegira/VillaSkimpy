@@ -6,12 +6,13 @@ public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
     bool com1,com2,com3,dam1,dam2,dam3;
-    public bool atack;
+    public bool atack,run_atack;
     float timer;
     Animator anim;
     int combo;
     public int Weapon;
     public GameObject wep1, wep2, wep3;
+    private float pox, poy;
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -20,8 +21,15 @@ public class Combate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pox = Input.GetAxis("Horizontal");
+        poy = Input.GetAxis("Vertical");
         changeweapon(Weapon);
-        if (Input.GetMouseButtonDown(0))
+        if ((pox!=0 || poy!=0) && Input.GetMouseButtonDown(0))
+        {
+            run_atack = true;
+            run_animation();
+        }
+        if (Input.GetMouseButtonDown(0) && !run_atack)
         {
             combo += 1;
             if (combo>3)
@@ -45,6 +53,16 @@ public class Combate : MonoBehaviour
             if (timer>=2)
             {
                 gameObject.GetComponent<Movimeinto>().atacking = false;
+                if (pox != 0 || poy != 0)
+                {
+                    anim.SetBool("caminar", true);
+                    anim.SetBool("quieto", false);
+                }
+                else
+                {
+                    anim.SetBool("quieto", true);
+                    anim.SetBool("caminar", false);
+                }
                 anim.SetBool("Combat", false);
                 timer = 0;
             }
@@ -86,6 +104,14 @@ public class Combate : MonoBehaviour
             }
         }
     }
+    void run_animation()
+    {
+        if (Weapon == 0)
+        {
+            Weapon = 1;
+        }
+        animaciones_combate(Weapon);
+    }
     void animaciones_combate(int num)
     {
         switch (num)
@@ -123,6 +149,13 @@ public class Combate : MonoBehaviour
                 break;
             case 3:
                 com3 = true;
+                break;
+            case 8:
+                gameObject.GetComponent<Movimeinto>().atacking = true;
+                animaciones_combate(0);
+                break;
+            case 9:
+                run_atack = false;
                 break;
             default:
                 break;
