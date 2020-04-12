@@ -12,11 +12,12 @@ public class Movimeinto : MonoBehaviour
     int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
-    bool idle;
+    bool idle,agachado,pararse,agac_vel,onslide;
     public bool keyframe1, atacking, menu;
     
     void Start()
     {
+        pararse = true;
         grav = 9.8f;
         jugador = GetComponent<CharacterController>();
         anim = jugador.GetComponent<Animator>();
@@ -75,16 +76,37 @@ public class Movimeinto : MonoBehaviour
         camara();
         move = datos_in.x* camDerecha + datos_in.z*camFrente;
         jugador.transform.LookAt(jugador.transform.position+move);
-        if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0))
+        if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0) && pararse)
         {
             move = move * velocidad*2;
-            anim.SetBool("caminar", false);
             anim.SetBool("Correr", true);
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                onslide = true;
+                anim.SetBool("Agacharse", true);
+            }
         }
         else
         {
-            anim.SetBool("Correr", false);
-            move = move * velocidad;
+            if (onslide)
+            {
+                anim.SetBool("Correr", false);
+                move = move * velocidad*1.5f;
+            }
+            else if (agachado)
+            {
+                anim.SetBool("Correr", false);
+                move = move * velocidad * 0.5f;
+            }
+            else
+            {
+                anim.SetBool("Correr", false);
+                move = move * velocidad;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            slide();
         }
         gravedad();
 
@@ -93,8 +115,51 @@ public class Movimeinto : MonoBehaviour
 
     void gravedad()
     {
-            move.y = -grav;
+        move.y = -grav;
     }
+    
+    void slide()
+    {
+        if (agachado)
+        {
+            if (pox != 0 || poy != 0)
+            {
+                anim.SetBool("Agacharse", false);
+                anim.SetBool("caminar", true);
+            }
+            else
+            {
+                anim.SetBool("Agacharse", false);
+                anim.SetBool("caminar", false);
+            }
+            agac_vel = false;
+            onslide = false;
+            pararse = true;
+            agachado = false;
+        }
+        else if (pararse)
+        {
+            jugador.GetComponent<CharacterController>().center=(new Vector3(0,0.61f,0));
+            jugador.GetComponent<CharacterController>().height=1;
+            if (pox != 0 || poy != 0)
+            {
+                anim.SetBool("Agacharse", true);
+                anim.SetBool("caminar", true);
+            }
+            else
+            {
+                anim.SetBool("Agacharse", true);
+                anim.SetBool("caminar", false);
+            }
+            agachado = true;
+            pararse = false;
+        }
+    }
+    void parar_slide()
+    {
+        onslide = false;
+    }
+
     void camara()
     {
         camFrente = camaraP.transform.forward;
