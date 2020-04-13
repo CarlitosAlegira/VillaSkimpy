@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bosque
   - Centro
+  - Puntos
+  - Aldeano
   layers:
   - Default
   - TransparentFX

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool com1,com2,com3,dam1,dam2,dam3;
-    public bool atack,run_atack,Running;
+    bool com1, com2, com3;
+    public bool atack,run_atack,Running, dam1, dam2, dam3;
     float timer;
     Animator anim;
     int combo;
@@ -170,10 +170,19 @@ public class Combate : MonoBehaviour
                 dam1 = true;
                 break;
             case 2:
-                dam2 = true;
+                dam1 = false;
                 break;
             case 3:
+                dam2 = true;
+                break;
+            case 4:
+                dam2 = false;
+                break;
+            case 5:
                 dam3 = true;
+                break;
+            case 6:
+                dam3 = false;
                 break;
             default:
                 break;
