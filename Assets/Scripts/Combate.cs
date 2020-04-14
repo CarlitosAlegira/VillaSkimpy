@@ -54,7 +54,7 @@ public class Combate : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if (timer>=2)
+            if (timer>=3)
             {
                 gameObject.GetComponent<Movimeinto>().atacking = false;
                 if (pox != 0 || poy != 0)
@@ -69,6 +69,10 @@ public class Combate : MonoBehaviour
                 }
                 anim.SetBool("Combat", false);
                 timer = 0;
+            }
+            else
+            {
+
             }
         }
     }
@@ -114,6 +118,7 @@ public class Combate : MonoBehaviour
         {
             Weapon = 1;
         }
+        gameObject.GetComponent<Movimeinto>().atack_run = true;
         animaciones_combate(Weapon);
     }
     void animaciones_combate(int num)
@@ -160,7 +165,8 @@ public class Combate : MonoBehaviour
                 break;
             case 9:
                 run_atack = false;
-                animaciones_combate(0);
+                gameObject.GetComponent<Movimeinto>().atack_run = false;
+                gameObject.GetComponent<Movimeinto>().atacking = false;
                 break;
             default:
                 break;

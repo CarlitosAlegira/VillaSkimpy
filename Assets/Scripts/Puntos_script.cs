@@ -24,7 +24,6 @@ public class Puntos_script : MonoBehaviour
         if (other.CompareTag("Aldeano"))
         {
             direccion = Random.Range(2, 30);
-            Debug.Log(direccion);
             if (direccion>=1 && direccion<=14)
             {
                 other.GetComponent<IA_move>().Punto_p = w1;

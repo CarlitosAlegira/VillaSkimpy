@@ -58,7 +58,7 @@ public class Movimeinto : MonoBehaviour
             anim.SetBool("caminar", true);
             anim.SetBool("Combat", false);
         }
-        if (!atacking && !menu || atack_run)
+        if (!atacking && !menu)
         {
             pox = Input.GetAxis("Horizontal");
             poy = Input.GetAxis("Vertical");
@@ -76,7 +76,14 @@ public class Movimeinto : MonoBehaviour
         jugador.transform.LookAt(jugador.transform.position+move);
         if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0) && pararse)
         {
-            move = move * velocidad*2;
+            if (atack_run)
+            {
+                move = move * velocidad;
+            }
+            else
+            {
+                move = move * velocidad * 2;
+            }
             anim.SetBool("Correr", true);
             jugador.GetComponent<Combate>().Running = true;
             if (Input.GetKeyDown(KeyCode.C))

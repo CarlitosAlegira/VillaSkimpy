@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IA_move : MonoBehaviour
 {
-    public float tiempo,velocidad;
+    public float tiempo,velocidad, timer;
     public bool collision;
     bool girando,getpunch1, getpunch2, getpunch3,pegar;
     public Transform Punto_p,perseguir;
@@ -18,7 +18,16 @@ public class IA_move : MonoBehaviour
     }
     void Update()
     {
-        
+        if (pegar)
+        {
+            timer += Time.deltaTime;
+            if (timer>=10)
+            {
+                anim.SetBool("noAtack",true);
+                pegar = false;
+                timer = 0;
+            }
+        }
         if (!collision)
         {
             if (pegar)
@@ -85,6 +94,7 @@ public class IA_move : MonoBehaviour
             other.transform.LookAt(gameObject.transform);
             if (getpunch1)
             {
+                timer = 0;
                 pegar = true;
                 anim.SetBool("punch", true);
                 anim.SetBool("noAtack", false);
