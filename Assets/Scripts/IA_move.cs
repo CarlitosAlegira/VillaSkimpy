@@ -6,27 +6,43 @@ public class IA_move : MonoBehaviour
 {
     public float tiempo,velocidad;
     public bool collision;
-    bool girando,getpunch1, getpunch2, getpunch3;
-    public Transform Punto_p;
+    bool girando,getpunch1, getpunch2, getpunch3,pegar;
+    public Transform Punto_p,perseguir;
     Animator anim;
     float y;
     int direccion;
     private void Start()
     {
         anim=gameObject.GetComponent<Animator>();
-        
+        perseguir = GameObject.Find("Heroe2").transform;
     }
     void Update()
     {
+        
         if (!collision)
         {
-            transform.LookAt(new Vector3(Punto_p.position.x, transform.position.y, Punto_p.position.z));
+            if (pegar)
+            {
+                transform.LookAt(new Vector3(perseguir.position.x, transform.position.y, perseguir.position.z));
+            }
+            else
+            {
+                transform.LookAt(new Vector3(Punto_p.position.x, transform.position.y, Punto_p.position.z));
+            }
             tiempo += 1 * Time.deltaTime;
             if (tiempo>=1)
             {
                 transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
                 //transform.transform.Rotate(new Vector3(0, y, 0));
-                anim.SetBool("caminar", true);
+                if (pegar)
+                {
+                    anim.SetBool("caminar", true);
+                    anim.SetBool("noAtack", false);
+                }
+                else
+                {
+                    anim.SetBool("caminar", true);
+                }
             }
             else
             {
@@ -66,8 +82,10 @@ public class IA_move : MonoBehaviour
             getpunch1 = other.GetComponent<Combate>().dam1;
             getpunch2 = other.GetComponent<Combate>().dam2;
             getpunch3 = other.GetComponent<Combate>().dam3;
+            other.transform.LookAt(gameObject.transform);
             if (getpunch1)
             {
+                pegar = true;
                 anim.SetBool("punch", true);
                 anim.SetBool("noAtack", false);
             }

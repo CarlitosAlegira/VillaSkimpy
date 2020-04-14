@@ -12,8 +12,8 @@ public class Movimeinto : MonoBehaviour
     int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
-    bool idle,agachado,pararse,agac_vel,onslide;
-    public bool keyframe1, atacking,atack_run, menu;
+    bool idle,pararse,agac_vel,onslide;
+    public bool keyframe1, agachado, atacking,atack_run, menu;
     
     void Start()
     {
@@ -118,10 +118,12 @@ public class Movimeinto : MonoBehaviour
         move.y = -grav;
     }
     
-    void slide()
+    public void slide()
     {
         if (agachado)
         {
+            jugador.GetComponent<CharacterController>().center = (new Vector3(0, 0.92f, 0));
+            jugador.GetComponent<CharacterController>().height = 1.67f;
             if (pox != 0 || poy != 0)
             {
                 anim.SetBool("Agacharse", false);

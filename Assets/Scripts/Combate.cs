@@ -31,6 +31,10 @@ public class Combate : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && !run_atack)
         {
+            if (gameObject.GetComponent<Movimeinto>().agachado)
+            {
+                gameObject.GetComponent<Movimeinto>().slide();
+            }
             combo += 1;
             if (combo>3)
             {
