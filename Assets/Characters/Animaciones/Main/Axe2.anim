@@ -73082,17 +73082,17 @@ AnimationClip:
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
+  - time: 1
+    functionName: damage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
   - time: 1.7428571
     functionName: "se\xF1ales"
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
-    messageOptions: 0
-  - time: 1.8571428
-    functionName: damage
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 4
     messageOptions: 0

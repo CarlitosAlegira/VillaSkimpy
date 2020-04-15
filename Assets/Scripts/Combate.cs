@@ -6,7 +6,7 @@ public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
     bool com1, com2, com3;
-    public bool atack,run_atack,Running, dam1, dam2, dam3;
+    public bool atack,run_atack,Running, dam1, dam2, dam3,rec_golpe;
     float timer;
     Animator anim;
     int combo;
@@ -24,12 +24,23 @@ public class Combate : MonoBehaviour
         pox = Input.GetAxis("Horizontal");
         poy = Input.GetAxis("Vertical");
         changeweapon(Weapon);
-        if (Input.GetMouseButtonDown(0)&&Running)
+        if (rec_golpe)
+        {
+            anim.SetBool("daño",true);
+            anim.SetBool("quieto",false);
+            animaciones_combate(0);
+            atack = false;
+        }
+        else
+        {
+            anim.SetBool("daño",false);
+        }
+        if (Input.GetMouseButtonDown(0)&&Running && !rec_golpe)
         {
             run_atack = true;
             run_animation();
         }
-        if (Input.GetMouseButtonDown(0) && !run_atack)
+        if (Input.GetMouseButtonDown(0) && !run_atack && !rec_golpe)
         {
             if (gameObject.GetComponent<Movimeinto>().agachado)
             {
@@ -47,14 +58,14 @@ public class Combate : MonoBehaviour
             //Debug.Log(combo);
             atack = true;
         }
-        if (atack)
+        if (atack && !rec_golpe)
         {
             combat_system();
         }
         else
         {
             timer += Time.deltaTime;
-            if (timer>=3)
+            if (timer>=2)
             {
                 gameObject.GetComponent<Movimeinto>().atacking = false;
                 if (pox != 0 || poy != 0)

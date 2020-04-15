@@ -104510,17 +104510,17 @@ AnimationClip:
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
+  - time: 1.6333333
+    functionName: damage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 6
+    messageOptions: 0
   - time: 2.8333333
     functionName: "se\xF1ales"
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 3
-    messageOptions: 0
-  - time: 3
-    functionName: damage
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 6
     messageOptions: 0
