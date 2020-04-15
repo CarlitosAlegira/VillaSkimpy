@@ -5867,15 +5867,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 193f29f265c1f374fb96121b28a2461b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -161.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 193f29f265c1f374fb96121b28a2461b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.28
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 193f29f265c1f374fb96121b28a2461b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.3
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 193f29f265c1f374fb96121b28a2461b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12094,6 +12094,7 @@ MonoBehaviour:
   dam1: 0
   dam2: 0
   dam3: 0
+  rec_golpe: 0
   Weapon: 0
   wep1: {fileID: 1477763720}
   wep2: {fileID: 1630917574}
@@ -12547,6 +12548,7 @@ MonoBehaviour:
   dam1: 0
   dam2: 0
   dam3: 0
+  rec_golpe: 0
   Weapon: 0
   wep1: {fileID: 1657558039}
   wep2: {fileID: 578329591}
@@ -15079,6 +15081,7 @@ MonoBehaviour:
   dam1: 0
   dam2: 0
   dam3: 0
+  rec_golpe: 0
   Weapon: 0
   wep1: {fileID: 1651483651}
   wep2: {fileID: 1807576133}
