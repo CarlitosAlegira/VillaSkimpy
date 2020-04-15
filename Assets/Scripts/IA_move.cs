@@ -14,7 +14,7 @@ public class IA_move : MonoBehaviour
     private void Start()
     {
         anim=gameObject.GetComponent<Animator>();
-        perseguir = GameObject.FindGameObjectWithTag("Player").transform;
+        perseguir = GameObject.Find("Heroe2").transform;
     }
     void Update()
     {
