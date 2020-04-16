@@ -3909,7 +3909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cd76f9b2ee8204bacee1d8b0c98bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
+  velocidad: 4.5
   jugador: {fileID: 709980008}
   camaraP: {fileID: 733876241}
   keyframe1: 0
@@ -4614,6 +4614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hero_name: {fileID: 322772235}
   hero: 0
+  zona: 0
 --- !u!4 &965281932
 Transform:
   m_ObjectHideFlags: 0
@@ -8298,7 +8299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cd76f9b2ee8204bacee1d8b0c98bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
+  velocidad: 3.5
   jugador: {fileID: 1462877354}
   camaraP: {fileID: 733876241}
   keyframe1: 0
@@ -13402,6 +13403,11 @@ PrefabInstance:
       propertyPath: camaraP
       value: 
       objectReference: {fileID: 733876241}
+    - target: {fileID: 880511434914086423, guid: c48fe2f0a928f7e4896e019bc19c9c17,
+        type: 3}
+      propertyPath: velocidad
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 880511435983699781, guid: c48fe2f0a928f7e4896e019bc19c9c17,
         type: 3}
       propertyPath: m_Name

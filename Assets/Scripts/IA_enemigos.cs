@@ -16,6 +16,8 @@ public class IA_enemigos : MonoBehaviour
         objetivo = GameObject.FindGameObjectWithTag("Player");
         anim=gameObject.GetComponent<Animator>();
         Punto_p = objetivo.transform;
+        atacking = true;
+        anim.SetBool("punch", true);
     }
 
     // Update is called once per frame
@@ -50,10 +52,6 @@ public class IA_enemigos : MonoBehaviour
                 {
                     anim.SetBool("caminar", true);
                     anim.SetBool("noAtack", false);
-                }
-                else
-                {
-                    anim.SetBool("caminar", true);
                 }
             }
             else
