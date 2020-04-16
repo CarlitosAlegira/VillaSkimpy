@@ -8,20 +8,15 @@ public class Datos : MonoBehaviour
 {
     public TextMeshProUGUI hero_name;
     string nombre;
-    public int hero;
+    public int hero,zona;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void nombre_jugador()
     {

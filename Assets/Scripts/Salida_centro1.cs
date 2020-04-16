@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Salida_centro1 : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class Salida_centro1 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            EditorSceneManager.LoadScene(1);
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Selectcharacter : MonoBehaviour
 {
@@ -10,13 +10,14 @@ public class Selectcharacter : MonoBehaviour
     public AudioClip Select;
     AudioSource LoQueSuena;
     Animator a1, a2, a3;
-    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3;
+    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3,h1,h2,h3;
     public Image img;
-    int aa,ab;
+    int aa,ab,per;
     bool step1;
     float timer;
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         LoQueSuena = GetComponent<AudioSource>();
         a1 = c1.GetComponent<Animator>();
         a2 = c2.GetComponent<Animator>();
@@ -41,6 +42,21 @@ public class Selectcharacter : MonoBehaviour
             }
         }
     }
+    void activar_per()
+    {
+        if (per==1)
+        {
+            h1.SetActive(true);
+        }
+        else if (per==2)
+        {
+            h2.SetActive(true);
+        }
+        else if (per==3)
+        {
+            h3.SetActive(true);
+        }
+    }
     public void Selectedcharacter(int num)
     {
         aa = Random.Range(1, 10);
@@ -48,6 +64,7 @@ public class Selectcharacter : MonoBehaviour
         b1.SetActive(false);
         b2.SetActive(false);
         b3.SetActive(false);
+        per = num;
 
 
         switch (num)
@@ -56,18 +73,24 @@ public class Selectcharacter : MonoBehaviour
                 a1.SetBool("selected",true);
                 a2.SetInteger("no_s", aa);
                 a3.SetInteger("no_s", ab);
+                Destroy(h2);
+                Destroy(h3);
                 LoQueSuena.Play();
                 break;
             case 2:
                 a2.SetBool("selected", true);
                 a1.SetInteger("no_s", aa);
                 a3.SetInteger("no_s", ab);
+                Destroy(h1);
+                Destroy(h3);
                 LoQueSuena.Play();
                 break;
             case 3:
                 a3.SetBool("selected", true);
                 a2.SetInteger("no_s", aa);
                 a1.SetInteger("no_s", ab);
+                Destroy(h2);
+                Destroy(h1);
                 LoQueSuena.Play();
                 break;
             default:
@@ -79,6 +102,7 @@ public class Selectcharacter : MonoBehaviour
     }
     public void guardar()
     {
-        EditorSceneManager.LoadScene(1);
+        activar_per();
+        SceneManager.LoadScene(1);
     }
 }

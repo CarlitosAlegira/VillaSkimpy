@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Salida_zona1 : MonoBehaviour
 {
@@ -17,10 +17,11 @@ public class Salida_zona1 : MonoBehaviour
             
             if (si)
             {
+                GameObject.Find("Datos_player").GetComponent<Datos>().zona=1;
                 mostrar.SetActive(false);
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                EditorSceneManager.LoadScene(2);
+                SceneManager.LoadScene(2);
                 si = false;
                 no = false;
                 is_menu = true;

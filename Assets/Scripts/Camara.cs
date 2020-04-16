@@ -37,7 +37,7 @@ public class Camara : MonoBehaviour
     void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position,pos.position+distancia,vel);
-        distancia = Quaternion.AngleAxis(Input.GetAxis("Mouse X")*sensibilidad,Vector3.up)* distancia;
+        distancia = Quaternion.AngleAxis(Input.GetAxis("Mouse X")* sensibilidad,Vector3.up)*distancia;
         transform.LookAt(centro.transform);
     }
 }

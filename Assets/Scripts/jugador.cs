@@ -8,7 +8,7 @@ public class jugador : MonoBehaviour
     GameObject datos,camara,bosque;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);/*
         //camara = GameObject.Find("Main Camera");
         datos = GameObject.Find("Datos_player");
         if (datos.GetComponent<Datos>().hero == 1)
@@ -31,7 +31,7 @@ public class jugador : MonoBehaviour
             //camara.GetComponent<Camara>().centro = c3;
             Destroy(h2);
             Destroy(h1);
-        }
+        }*/
     }
 
 }
