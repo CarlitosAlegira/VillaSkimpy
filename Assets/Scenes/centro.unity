@@ -11363,11 +11363,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 21a2a2e12001f824eb08505d375a34bc, type: 2}
-  m_TreeDistance: 2249
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 75
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 50
+  m_DetailObjectDistance: 100
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 1
   m_SplatMapDistance: 39
