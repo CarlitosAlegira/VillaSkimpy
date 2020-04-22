@@ -6,7 +6,7 @@ public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
     bool com1, com2, com3;
-    public bool atack,run_atack,Running, dam1, dam2, dam3,rec_golpe;
+    public bool atack,run_atack,Running, dam1, dam2, dam3,rec_golpe,menu;
     float timer;
     Animator anim;
     int combo;
@@ -21,6 +21,7 @@ public class Combate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        menu = gameObject.GetComponent<Movimeinto>().menu;
         pox = Input.GetAxis("Horizontal");
         poy = Input.GetAxis("Vertical");
         changeweapon(Weapon);
@@ -35,12 +36,12 @@ public class Combate : MonoBehaviour
         {
             anim.SetBool("daño",false);
         }
-        if (Input.GetMouseButtonDown(0)&&Running && !rec_golpe)
+        if (Input.GetMouseButtonDown(0)&&Running && !rec_golpe&&!menu)
         {
             run_atack = true;
             run_animation();
         }
-        if (Input.GetMouseButtonDown(0) && !run_atack && !rec_golpe)
+        if (Input.GetMouseButtonDown(0) && !run_atack && !rec_golpe && !menu)
         {
             if (gameObject.GetComponent<Movimeinto>().agachado)
             {
@@ -58,7 +59,7 @@ public class Combate : MonoBehaviour
             //Debug.Log(combo);
             atack = true;
         }
-        if (atack && !rec_golpe)
+        if (atack && !rec_golpe && !menu)
         {
             combat_system();
         }

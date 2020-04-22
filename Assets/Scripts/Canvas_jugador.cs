@@ -30,15 +30,9 @@ public class Canvas_jugador : MonoBehaviour
     {
         switch (arma)
         {
-            case 1:
-                a1.SetActive(false);
-                a2.SetActive(true);
-                a3.SetActive(false);
-                a4.SetActive(false);
-                break;
             case 2:
                 a1.SetActive(false);
-                a2.SetActive(false);
+                a2.SetActive(true);
                 a3.SetActive(false);
                 a4.SetActive(false);
                 break;
@@ -49,6 +43,10 @@ public class Canvas_jugador : MonoBehaviour
                 a4.SetActive(false);
                 break;
             case 4:
+                a1.SetActive(false);
+                a2.SetActive(false);
+                a3.SetActive(false);
+                a4.SetActive(true);
                 break;
             default:
                 a1.SetActive(true);
