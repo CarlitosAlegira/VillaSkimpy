@@ -8,6 +8,9 @@ public class Canvas_jugador : MonoBehaviour
     public float vida;
     public Image barra;
     public GameObject a1, a2, a3, a4;
+    //public Canvas CaMuerte;
+    public RawImage RI;
+    public GameObject CosasMuerte;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -20,7 +23,18 @@ public class Canvas_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        barra.fillAmount = vida/100;
+            barra.fillAmount = vida/100;
+        if (vida<=0)
+        {
+            float alphaactual = RI.color.a;
+            RI.color = new Color(RI.color.r, RI.color.g, RI.color.b, RI.color.a + 0.02f);
+            if (alphaactual >= 1)
+            {
+                Muerte();
+            }
+        }
+            
+            
     }
     public void daño(float damage)
     {
@@ -55,5 +69,10 @@ public class Canvas_jugador : MonoBehaviour
                 a4.SetActive(false);
                 break;
         }
+    }
+    
+    void Muerte()
+    {
+        CosasMuerte.SetActive(true);
     }
 }
