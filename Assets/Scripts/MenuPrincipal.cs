@@ -25,4 +25,8 @@ public class MenuPrincipal : MonoBehaviour
         Application.Quit();
         Debug.Log("Saliendo");
     }
+    public void MenPrincipal()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 }
