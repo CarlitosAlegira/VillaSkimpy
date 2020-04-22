@@ -61,7 +61,15 @@ public class Selectcharacter : MonoBehaviour
     public void Selectedcharacter(int num)
     {
         aa = Random.Range(1, 10);
-        ab = Random.Range(1, 10);
+        if (aa>5)
+        {
+            ab = 1;
+        }
+        else if (aa<=5)
+        {
+            ab = 8;
+        }
+
         b1.SetActive(false);
         b2.SetActive(false);
         b3.SetActive(false);
@@ -105,6 +113,6 @@ public class Selectcharacter : MonoBehaviour
     {
         activar_per();
         ui_jugador.SetActive(true);
-        SceneManager.LoadScene(2);
+        Cargar_nivel.cargar("centro");
     }
 }

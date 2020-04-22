@@ -10381,6 +10381,7 @@ MonoBehaviour:
   inv: {fileID: 467274310}
   mos_arma: {fileID: 1046714528}
   armas: 
+  menus2: 0
 --- !u!1 &1491862409
 GameObject:
   m_ObjectHideFlags: 0
@@ -12869,6 +12870,7 @@ MonoBehaviour:
   inv: {fileID: 467274310}
   mos_arma: {fileID: 1046714528}
   armas: 
+  menus2: 0
 --- !u!1 &1787981367
 GameObject:
   m_ObjectHideFlags: 0
@@ -15492,7 +15494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1883899495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15551,7 +15553,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1883899498
 RectTransform:
@@ -15691,6 +15693,7 @@ MonoBehaviour:
   inv: {fileID: 467274310}
   mos_arma: {fileID: 1046714528}
   armas: 
+  menus2: 0
 --- !u!1 &1910443376
 GameObject:
   m_ObjectHideFlags: 0

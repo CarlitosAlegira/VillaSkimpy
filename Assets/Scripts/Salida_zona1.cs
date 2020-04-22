@@ -12,16 +12,18 @@ public class Salida_zona1 : MonoBehaviour
         if (other.tag=="Player" && !is_menu)
         {
             mostrar.SetActive(true);
-            other.GetComponent<Movimeinto>().menu=true;
+            other.GetComponent<Inventario>().menus2 = true;
+            other.GetComponent<Movimeinto>().menu = true;
             Cursor.lockState = CursorLockMode.None;
             
             if (si)
             {
                 GameObject.Find("Datos_player").GetComponent<Datos>().zona=1;
                 mostrar.SetActive(false);
+                other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                SceneManager.LoadScene(3);
+                Cargar_nivel.cargar("Bosque");
                 si = false;
                 no = false;
                 is_menu = true;
@@ -29,6 +31,7 @@ public class Salida_zona1 : MonoBehaviour
             else if(no)
             {
                 mostrar.SetActive(false);
+                other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 si = false;

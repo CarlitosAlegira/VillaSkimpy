@@ -18,7 +18,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void EmpezarNuevoJuego()
     {
-        SceneManager.LoadScene("base", LoadSceneMode.Single);
+        Cargar_nivel.cargar("base");
     }
     public void Salir()
     {
