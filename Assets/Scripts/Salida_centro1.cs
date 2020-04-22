@@ -10,7 +10,7 @@ public class Salida_centro1 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            Cargar_nivel.cargar("centro");
         }
     }
 }

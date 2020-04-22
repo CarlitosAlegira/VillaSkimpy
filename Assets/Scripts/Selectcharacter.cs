@@ -105,6 +105,6 @@ public class Selectcharacter : MonoBehaviour
     {
         activar_per();
         ui_jugador.SetActive(true);
-        SceneManager.LoadScene(2);
+        Cargar_nivel.cargar("centro");
     }
 }
