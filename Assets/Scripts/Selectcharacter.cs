@@ -104,6 +104,6 @@ public class Selectcharacter : MonoBehaviour
     public void guardar()
     {
         activar_per();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

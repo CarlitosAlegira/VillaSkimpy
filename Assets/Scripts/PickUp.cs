@@ -7,7 +7,6 @@ public class PickUp : MonoBehaviour
 {
     Rect pos;
     bool mes;
-    // Start is called before the first frame update
     private void OnGUI()
     {
         if (mes)

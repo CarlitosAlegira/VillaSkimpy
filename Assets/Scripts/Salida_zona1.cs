@@ -21,7 +21,7 @@ public class Salida_zona1 : MonoBehaviour
                 mostrar.SetActive(false);
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
                 si = false;
                 no = false;
                 is_menu = true;

@@ -11,7 +11,7 @@ public class Combate : MonoBehaviour
     Animator anim;
     int combo;
     public int Weapon;
-    public GameObject wep1, wep2, wep3;
+    public GameObject wep1, wep2, wep3, inv;
     private float pox, poy;
     void Start()
     {
@@ -85,6 +85,11 @@ public class Combate : MonoBehaviour
             {
 
             }
+        }
+
+        if (true)
+        {
+
         }
     }
     void combat_system()
