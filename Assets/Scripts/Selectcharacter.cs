@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Selectcharacter : MonoBehaviour
 {
     // Start is called before the first frame update
+   
     public AudioClip Select;
     AudioSource LoQueSuena;
     Animator a1, a2, a3;

@@ -18,7 +18,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void EmpezarNuevoJuego()
     {
-        SceneManager.LoadScene("SelectCharacter", LoadSceneMode.Single);
+        SceneManager.LoadScene("base", LoadSceneMode.Single);
     }
     public void Salir()
     {
