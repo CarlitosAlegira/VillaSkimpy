@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 84490429}
   - component: {fileID: 84490428}
   - component: {fileID: 84490430}
+  - component: {fileID: 84490431}
   m_Layer: 0
   m_Name: Seleccion
   m_TagString: Untagged
@@ -596,6 +597,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &84490431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84490427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5241072902b57842b0afe29667730a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &89859362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: ea4722dd4e648a043a4c2af8f27e0793,
@@ -4316,6 +4329,7 @@ GameObject:
   - component: {fileID: 550943491}
   - component: {fileID: 550943490}
   - component: {fileID: 550943492}
+  - component: {fileID: 550943493}
   m_Layer: 0
   m_Name: MusicaFondo
   m_TagString: Untagged
@@ -4443,6 +4457,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b7f989f4ee8657469988570bc1b16f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &550943493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550943489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5241072902b57842b0afe29667730a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &562635029 stripped

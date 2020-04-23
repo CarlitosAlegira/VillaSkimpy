@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Canvas_jugador : MonoBehaviour
 {
     public float vida;
-    bool bb=false;
     public Image barra;
     public GameObject a1, a2, a3, a4;
     //public Canvas CaMuerte;
@@ -24,7 +23,7 @@ public class Canvas_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            barra.fillAmount = vida/100;
+        barra.fillAmount = vida/100;
         if (vida<=0)
         {
             float alphaactual = RI.color.a;
