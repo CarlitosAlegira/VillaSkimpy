@@ -14,7 +14,6 @@ public class MenuPrincipal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     public void EmpezarNuevoJuego()
     {

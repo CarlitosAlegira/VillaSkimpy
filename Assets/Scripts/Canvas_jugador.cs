@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Canvas_jugador : MonoBehaviour
 {
     public float vida;
+    bool bb=false;
     public Image barra;
     public GameObject a1, a2, a3, a4;
     //public Canvas CaMuerte;
@@ -13,7 +14,7 @@ public class Canvas_jugador : MonoBehaviour
     public GameObject CosasMuerte;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
@@ -74,5 +75,6 @@ public class Canvas_jugador : MonoBehaviour
     void Muerte()
     {
         CosasMuerte.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 }

@@ -17,6 +17,10 @@ public class MOpciones : MonoBehaviour
         Brillo = 0.5f;
         Volumen = 0.5f;
     }
+    private void Update()
+    {
+        Destroy(GameObject.Find("DontDestroyOnLoad"));
+    }
 
     // Update is called once per frame
     public void AjustaBrillo()
