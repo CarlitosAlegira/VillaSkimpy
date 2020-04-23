@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gestion_spawns : MonoBehaviour
 {
     public GameObject player;
-    [SerializeField] Transform bosque, llanura, petroleo, basico;
+    [SerializeField] Transform bosque, caza, petroleo, basico;
     int Zona;
     private void Awake()
     {
@@ -17,10 +17,11 @@ public class Gestion_spawns : MonoBehaviour
                 player.transform.position = bosque.position;
                 player.transform.rotation = bosque.rotation;
                 break;
-            /*case 2:
-                player.transform.position = bosque.position;
-                player.transform.rotation = bosque.rotation;
+            case 2:
+                player.transform.position = caza.position;
+                player.transform.rotation = caza.rotation;
                 break;
+                /*
             case 3:
                 player.transform.position = llanura.position;
                 player.transform.rotation = llanura.rotation;

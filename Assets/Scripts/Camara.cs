@@ -8,6 +8,7 @@ public class Camara : MonoBehaviour
     public Vector3 distancia;
     public float vel, sensibilidad;
     public Camera cam;
+    bool menu;
     Transform pos;
     private void Start()
     {
@@ -36,8 +37,12 @@ public class Camara : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position,pos.position+distancia,vel);
-        distancia = Quaternion.AngleAxis(Input.GetAxis("Mouse X")* sensibilidad,Vector3.up)*distancia;
-        transform.LookAt(centro.transform);
+        menu = objetivo.GetComponent<Movimeinto>().menu;
+        if (!menu)
+        {
+            transform.position = Vector3.Lerp(transform.position, pos.position + distancia, vel);
+            distancia = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * sensibilidad, Vector3.up) * distancia;
+            transform.LookAt(centro.transform);
+        }
     }
 }

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bosque.unity
     guid: 3d11d3ae0d94bbb4e91358c9484f00d0
+  - enabled: 1
+    path: Assets/Scenes/Cazadores.unity
+    guid: cd98a8ad869f65c46bfa88a98add1241
   m_configObjects: {}

@@ -8,10 +8,6 @@ public class Spawn1 : MonoBehaviour
     [SerializeField] Transform spawn;
     private void Awake()
     {
-        if (true)
-        {
-
-        }
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = spawn.position;
         player.transform.rotation = spawn.rotation;
