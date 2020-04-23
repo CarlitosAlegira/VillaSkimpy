@@ -10,7 +10,10 @@ public class MOpciones : MonoBehaviour
     public Slider Sl1, Sl2;
     AudioSource As;
     public float Brillo, Volumen;
-   
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         As = GetComponent<AudioSource>();
@@ -18,8 +21,8 @@ public class MOpciones : MonoBehaviour
         Volumen = 0.5f;
     }
     private void Update()
-    {
-        Destroy(GameObject.Find("DontDestroyOnLoad"));
+    { 
+
     }
 
 
