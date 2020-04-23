@@ -18,17 +18,17 @@ public class IA_Animals : MonoBehaviour
         if (!collision)
         {
             tiempo += 1 * Time.deltaTime;
-            if (tiempo >= 1)
+            if (tiempo >= 2)
             {
                 transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
                 transform.transform.Rotate(new Vector3(0, y, 0));
-                //anim.SetBool("caminar", true);
+                anim.SetBool("caminar", true);
             }
             else
             {
-                //anim.SetBool("caminar", false);
+                anim.SetBool("caminar", false);
             }
-            if (tiempo >= Random.Range(5, 30))
+            if (tiempo >= Random.Range(10, 30))
             {
                 girar();
                 girando = true;
@@ -58,6 +58,7 @@ public class IA_Animals : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         collision = false;
+        y = 0;
     }
     private void OnTriggerEnter(Collider other)
     {
