@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MenuPrincipal : MonoBehaviour
+
+public class MenuVictoria : MonoBehaviour
 {
     void Start()
     {
@@ -12,18 +14,22 @@ public class MenuPrincipal : MonoBehaviour
 
     void Update()
     {
+        
     }
-    public void EmpezarNuevoJuego()
+
+    public void irMenuPrincipal()
     {
-        Cargar_nivel.cargar("base");
+        SceneManager.LoadScene("MenuPrincipal");
     }
+
+    public void juegoNuevo()
+    {
+        SceneManager.LoadScene("base");
+    }
+
     public void Salir()
     {
         Application.Quit();
         Debug.Log("Saliendo");
-    }
-    public void MenPrincipal()
-    {
-        SceneManager.LoadScene("MenuPrincipal");
     }
 }

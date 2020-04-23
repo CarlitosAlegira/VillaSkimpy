@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MOpciones : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     public Slider Sl1, Sl2;
     AudioSource As;
     public float Brillo, Volumen;
@@ -22,7 +22,7 @@ public class MOpciones : MonoBehaviour
         Destroy(GameObject.Find("DontDestroyOnLoad"));
     }
 
-    // Update is called once per frame
+
     public void AjustaBrillo()
     {
         Brillo = Sl1.value;

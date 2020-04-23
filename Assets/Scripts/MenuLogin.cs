@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MenuPrincipal : MonoBehaviour
+public class MenuLogin : MonoBehaviour
 {
+
     void Start()
     {
         
@@ -12,18 +14,24 @@ public class MenuPrincipal : MonoBehaviour
 
     void Update()
     {
+        
     }
-    public void EmpezarNuevoJuego()
+
+    public void verificarLogin()
     {
-        Cargar_nivel.cargar("base");
+        Debug.Log("Verificando Log in");
+        SceneManager.LoadScene("MenuPrincipal");
     }
+
+    public void verificarRegistro()
+    {
+        Debug.Log("Verificando Registro");
+    }
+
     public void Salir()
     {
         Application.Quit();
         Debug.Log("Saliendo");
     }
-    public void MenPrincipal()
-    {
-        SceneManager.LoadScene("MenuPrincipal");
-    }
+
 }
