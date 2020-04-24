@@ -39,7 +39,7 @@ public class Movimeinto : MonoBehaviour
                     anim.SetFloat("idle", rand);
                     idle = false;
                 }
-                if (timer >= 9)
+                if (timer >= 6)
                 {
                     rand = 0;
                     anim.SetFloat("idle", rand);
@@ -50,6 +50,7 @@ public class Movimeinto : MonoBehaviour
         }
         else
         {
+            anim.SetFloat("idle", 0);
             anim.SetBool("quieto", false);
             timer = 0;
             idle = true;
