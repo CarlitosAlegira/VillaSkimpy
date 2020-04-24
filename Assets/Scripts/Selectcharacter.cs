@@ -11,7 +11,7 @@ public class Selectcharacter : MonoBehaviour
     public AudioClip Select;
     AudioSource LoQueSuena;
     Animator a1, a2, a3;
-    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3,h1,h2,h3;
+    public GameObject c1, c2, c3, ambiente,panel_name,error,b1,b2,b3,h1,h2,h3;
     public Image img;
     int aa,ab,per;
     bool step1;
@@ -64,10 +64,12 @@ public class Selectcharacter : MonoBehaviour
         if (aa>5)
         {
             ab = 1;
+            ab = 8;
         }
         else if (aa<=5)
         {
             ab = 8;
+            ab = 1;
         }
 
         b1.SetActive(false);
@@ -106,7 +108,6 @@ public class Selectcharacter : MonoBehaviour
                 break;
                 
         }
-        panel.SetActive(false);
         step1 = true;
     }
     public void guardar()

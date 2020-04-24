@@ -21,6 +21,7 @@ public class Datos : MonoBehaviour
     public void nombre_jugador()
     {
         nombre = hero_name.text;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().nombre(nombre);
     }
     public void Character(int num)
     {
