@@ -8,6 +8,7 @@ TagManager:
   - Centro
   - Puntos
   - Aldeano
+  - barra_vida
   layers:
   - Default
   - TransparentFX

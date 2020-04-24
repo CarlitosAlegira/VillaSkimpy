@@ -6,7 +6,7 @@ public class Inventario : MonoBehaviour
 {
     public GameObject arma1, arma2, arma3, arma4,inv,mos_arma;
     public bool[] armas;
-    public bool menus2;
+    public bool menus2,trans;
     private void Start()
     {
         armas = new bool[5];
@@ -24,7 +24,10 @@ public class Inventario : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             inv.SetActive(false);
-            mos_arma.SetActive(true);
+            if (trans)
+            {
+                mos_arma.SetActive(true);
+            }
             gameObject.GetComponent<Movimeinto>().menu = false;
         }
         if (menus2)

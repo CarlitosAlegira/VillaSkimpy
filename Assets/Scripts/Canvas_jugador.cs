@@ -8,7 +8,7 @@ public class Canvas_jugador : MonoBehaviour
     public float vida;
     bool bb=false;
     public Image barra;
-    public GameObject a1, a2, a3, a4;
+    public GameObject a1, a2, a3, a4,barra_vida,showarm;
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
@@ -24,12 +24,12 @@ public class Canvas_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            barra.fillAmount = vida/100;
+        barra.fillAmount = vida/100;
+        vida -= 10 * Time.deltaTime;
         if (vida<=0)
         {
-            float alphaactual = RI.color.a;
-            RI.color = new Color(RI.color.r, RI.color.g, RI.color.b, RI.color.a + 0.02f);
-            if (alphaactual >= 1)
+            RI.color += new Color(0,0,0,0.1f*Time.deltaTime);
+            if (RI.color.a >= 1)
             {
                 Muerte();
             }
@@ -76,5 +76,11 @@ public class Canvas_jugador : MonoBehaviour
     {
         CosasMuerte.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+    }
+    
+    public void act_desc_Hud()
+    {
+        barra_vida.SetActive(!barra_vida.activeInHierarchy);
+        showarm.SetActive(!showarm.activeInHierarchy);
     }
 }

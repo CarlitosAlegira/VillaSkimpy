@@ -35,5 +35,7 @@ public class Gestion_spawns : MonoBehaviour
                 player.transform.rotation = basico.rotation;
                 break;
         }
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
+        player.GetComponent<Inventario>().trans = true;
     }
 }

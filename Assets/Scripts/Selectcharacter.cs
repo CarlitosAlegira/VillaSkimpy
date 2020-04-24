@@ -11,7 +11,7 @@ public class Selectcharacter : MonoBehaviour
     public AudioClip Select;
     AudioSource LoQueSuena;
     Animator a1, a2, a3;
-    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3,h1,h2,h3,ui_jugador;
+    public GameObject c1, c2, c3, panel, ambiente,panel_name,error,b1,b2,b3,h1,h2,h3;
     public Image img;
     int aa,ab,per;
     bool step1;
@@ -112,7 +112,6 @@ public class Selectcharacter : MonoBehaviour
     public void guardar()
     {
         activar_per();
-        ui_jugador.SetActive(true);
         Cargar_nivel.cargar("centro");
     }
 }
