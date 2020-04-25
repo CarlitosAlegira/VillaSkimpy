@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Canvas_jugador : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class Canvas_jugador : MonoBehaviour
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
+
+    //variables pausa juego
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
+
+
     private void Awake()
     {
             DontDestroyOnLoad(gameObject);
@@ -35,9 +42,22 @@ public class Canvas_jugador : MonoBehaviour
                 Muerte();
             }
         }
-            
-            
+
+        //verificar si se pausa el juego
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+                    
     }
+
     public void daño(float damage)
     {
         vida -= damage;
@@ -87,5 +107,33 @@ public class Canvas_jugador : MonoBehaviour
     {
         barra_vida.SetActive(!barra_vida.activeInHierarchy);
         showarm.SetActive(!showarm.activeInHierarchy);
+    }
+
+    //creo mis metodos pausa
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void MenuPrincipal()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Has Cargado el menu principal");
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void Salir()
+    {
+        Debug.Log("Has salido");
+        Application.Quit();
     }
 }
