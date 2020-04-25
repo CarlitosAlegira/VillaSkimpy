@@ -7,6 +7,7 @@ public class Inventario : MonoBehaviour
     public GameObject arma1, arma2, arma3, arma4,inv,mos_arma;
     public bool[] armas;
     public bool menus2,trans;
+    public int Active;
     private void Start()
     {
         armas = new bool[5];
@@ -57,6 +58,7 @@ public class Inventario : MonoBehaviour
     }
     public void select_arm(int num)
     {
+        Active = num;
         switch (num)
         {
             case 1:

@@ -16,10 +16,12 @@ public class Gestion_spawns : MonoBehaviour
             case 1:
                 player.transform.position = bosque.position;
                 player.transform.rotation = bosque.rotation;
+                GameObject.Find("Datos_player").GetComponent<Datos>().zona = 0;
                 break;
             case 2:
                 player.transform.position = caza.position;
                 player.transform.rotation = caza.rotation;
+                GameObject.Find("Datos_player").GetComponent<Datos>().zona = 0;
                 break;
                 /*
             case 3:
