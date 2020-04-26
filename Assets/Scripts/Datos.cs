@@ -66,6 +66,10 @@ public class Datos : MonoBehaviour
             {
                 guardar_partida(añadir);
             }
+            else
+            {
+                GameObject.Find("data").GetComponent<guardar>().error();
+            }
 
             guardar_datos(Sdatos);
         }
