@@ -8,16 +8,23 @@ public class Datos : MonoBehaviour
 {
     public TextMeshProUGUI hero_name;
     string nombre;
-    public string nombre_save="prueba";
+    public string nombre_save;
     int a1, a2, a3;
     public int hero, zona;
+    bool repetido;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
     public void nombre_jugador()
     {
-        nombre = hero_name.text;
+        nombre = hero_name.text+"1";
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().nombre(nombre);
+    }
+    public void carga(string name,int her)
+    {
+        nombre = name;
+        hero = her;
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().nombre(nombre);
     }
     public void Character(int num)
@@ -45,12 +52,39 @@ public class Datos : MonoBehaviour
         string prueba = PlayerPrefs.GetString(nombre_save,"none");
         if (prueba=="none")
         {
-            PlayerPrefs.SetString(nombre_save, Sdatos);
-            PlayerPrefs.Save();
+            string añadir = PlayerPrefs.GetString("Partidas","none");
+            string[] val = añadir.Split(",".ToCharArray());
+            repetido = false;
+            for (int i = 0; i < val.Length; i++)
+            {
+                if (val[i] == nombre_save)
+                {
+                    repetido = true;
+                }
+            }
+            if (!repetido)
+            {
+                guardar_partida(añadir);
+            }
+
+            guardar_datos(Sdatos);
         }
         else
         {
-            Debug.Log("repetido");
+            GameObject.Find("data").GetComponent<guardar>().error();
         }
+    }
+    void  guardar_partida(string anadir)
+    {
+        string N_data = anadir + nombre_save + ",";
+        Debug.Log(N_data);
+        PlayerPrefs.SetString("Partidas", N_data);
+        PlayerPrefs.Save();
+    }
+    void guardar_datos(string Sdatos)
+    {
+        PlayerPrefs.SetString(nombre_save, Sdatos);
+        Debug.Log(Sdatos);
+        PlayerPrefs.Save();
     }
 }

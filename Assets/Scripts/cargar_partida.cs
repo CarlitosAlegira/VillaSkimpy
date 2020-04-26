@@ -6,16 +6,26 @@ using TMPro;
 public class cargar_partida : MonoBehaviour
 {
     public GameObject pref,b;
+    string datos_paso;
     //public TextMeshProUGUI partida;
     private void Start()
     {
-        string prueba = PlayerPrefs.GetString("Daniel1", "none");
-        if (prueba != "none")
+        string añadir = PlayerPrefs.GetString("Partidas");
+        string[] nombres_p = añadir.Split(",".ToCharArray());
+        for (int i = 0; i < nombres_p.Length; i++)
         {
-            //partida.text ="daniel";
+            Debug.Log(nombres_p[i]);
+            string prueba = PlayerPrefs.GetString(nombres_p[i], "none");
+            if (prueba != "none")
+            {
+                string[] datos = prueba.Split(",".ToCharArray());
+                datos_paso = datos[0];
 
-            b = Instantiate(pref) as GameObject;
-            b.transform.parent = gameObject.transform;
+                b = Instantiate(pref) as GameObject;
+                b.GetComponent<data_prefab>().datos(datos_paso);
+                b.GetComponent<data_prefab>().datos_player(datos);
+                b.transform.parent = gameObject.transform;
+            }
         }
     }
 }

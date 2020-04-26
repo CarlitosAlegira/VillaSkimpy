@@ -32,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 2254394153113899280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -133.4, y: 23.4}
-  m_SizeDelta: {x: -287.7619, y: -55.780304}
+  m_AnchorMin: {x: 0.033, y: 0.143}
+  m_AnchorMax: {x: 0.314, y: 0.919}
+  m_AnchoredPosition: {x: -0.1000061, y: -0.21660042}
+  m_SizeDelta: {x: 0.84277344, y: 1.4529572}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2254394152976440402
 CanvasRenderer:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 2254394153113899287}
   - component: {fileID: 2254394153113899286}
   - component: {fileID: 2254394153113899281}
+  - component: {fileID: -8629685041568537274}
   m_Layer: 5
   m_Name: Partidas
   m_TagString: Untagged
@@ -193,8 +194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.5, y: 0}
-  m_SizeDelta: {x: 421, y: 81.413574}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 332.61078, y: 64.32074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2254394153113899287
 CanvasRenderer:
@@ -275,7 +276,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2254394153113899286}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -8629685041568537274}
+        m_MethodName: cargar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-8629685041568537274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254394153113899283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c97e7ff0c6e6c488b5e0b0f3806283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partida: {fileID: 2254394153410202459}
 --- !u!1 &2254394153410202453
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,10 +333,10 @@ RectTransform:
   m_Father: {fileID: 2254394153113899280}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 62.6, y: -5.5}
-  m_SizeDelta: {x: -139.87573, y: -27.113781}
+  m_AnchorMin: {x: 0.39800003, y: 0.12745292}
+  m_AnchorMax: {x: 0.97700006, y: 0.70154715}
+  m_AnchoredPosition: {x: 0.099998474, y: 0}
+  m_SizeDelta: {x: -0.8757324, y: -0.113780975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2254394153410202456
 CanvasRenderer:

@@ -15,7 +15,7 @@ public class Canvas_jugador : MonoBehaviour
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
-
+    bool Ispause;
     //variables pausa juego
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
@@ -44,18 +44,22 @@ public class Canvas_jugador : MonoBehaviour
         }
 
         //verificar si se pausa el juego
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             if (GameIsPaused)
             {
+                Ispause = false;
                 Resume();
             }
             else
             {
-                Pause();
+                Ispause = true;
             }
         }
-                    
+        if (Ispause)
+        {
+            Pause();
+        } 
     }
 
     public void daño(float damage)
@@ -112,6 +116,8 @@ public class Canvas_jugador : MonoBehaviour
     //creo mis metodos pausa
     public void Resume()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -119,6 +125,8 @@ public class Canvas_jugador : MonoBehaviour
 
     void Pause()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
+        Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

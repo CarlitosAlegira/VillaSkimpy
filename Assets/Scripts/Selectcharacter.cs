@@ -64,12 +64,12 @@ public class Selectcharacter : MonoBehaviour
         if (aa>5)
         {
             ab = 1;
-            ab = 8;
+            aa = 8;
         }
         else if (aa<=5)
         {
             ab = 8;
-            ab = 1;
+            aa = 1;
         }
 
         b1.SetActive(false);
