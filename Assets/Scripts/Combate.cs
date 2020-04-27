@@ -11,7 +11,7 @@ public class Combate : MonoBehaviour
     Animator anim;
     int combo;
     public int Weapon;
-    public GameObject wep1, wep2, wep3, inv;
+    public GameObject wep1, wep2, wep3,wep4, inv,flecha,flecha_base;
     private float pox, poy;
     void Start()
     {
@@ -87,11 +87,6 @@ public class Combate : MonoBehaviour
 
             }
         }
-
-        if (true)
-        {
-
-        }
     }
     void combat_system()
     {
@@ -154,11 +149,15 @@ public class Combate : MonoBehaviour
             case 4:
                 anim.SetBool("Maza", true);
                 break;
+            case 5:
+                anim.SetBool("arco", true);
+                break;
             default:
                 anim.SetBool("punch", false);
                 anim.SetBool("Hacha", false);
                 anim.SetBool("Bate", false);
                 anim.SetBool("Maza", false);
+                anim.SetBool("arco", false);
                 break;
         }
     }
@@ -223,21 +222,48 @@ public class Combate : MonoBehaviour
                 wep1.SetActive(true);
                 wep2.SetActive(false);
                 wep3.SetActive(false);
+                wep4.SetActive(false);
                 break;
             case 3:
                 wep1.SetActive(false);
                 wep2.SetActive(true);
                 wep3.SetActive(false);
+                wep4.SetActive(false);
                 break;
             case 4:
                 wep1.SetActive(false);
                 wep2.SetActive(false);
                 wep3.SetActive(true);
+                wep4.SetActive(false);
+                break;
+            case 5:
+                wep1.SetActive(false);
+                wep2.SetActive(false);
+                wep3.SetActive(false);
+                wep4.SetActive(true);
                 break;
             default:
                 wep1.SetActive(false);
                 wep2.SetActive(false);
                 wep3.SetActive(false);
+                wep4.SetActive(false);
+                break;
+        }
+    }
+    public void arco(int num)
+    {
+        switch (num)
+        {
+            case 1:
+                flecha_base.SetActive(true);
+                break;
+            case 2:
+                Instantiate(flecha,flecha_base.transform.position,flecha_base.transform.rotation);
+                flecha_base.SetActive(false);
+                atack = false;
+                anim.SetBool("arco",false);
+                break;
+            default:
                 break;
         }
     }

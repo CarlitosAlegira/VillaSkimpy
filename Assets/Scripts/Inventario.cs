@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
-    public GameObject arma1, arma2, arma3, arma4,inv,mos_arma;
+    public GameObject arma1, arma2, arma3, arma4,arma5,inv,mos_arma;
     public bool[] armas;
     public bool menus2,trans;
     public int Active;
@@ -55,6 +55,10 @@ public class Inventario : MonoBehaviour
         {
             arma4.SetActive(true);
         }
+        if (armas[4])
+        {
+            arma5.SetActive(true);
+        }
     }
     public void select_arm(int num)
     {
@@ -87,6 +91,13 @@ public class Inventario : MonoBehaviour
                 {
                     gameObject.GetComponent<Combate>().Weapon = 4;
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(4);
+                }
+                break;
+            case 5:
+                if (armas[4])
+                {
+                    gameObject.GetComponent<Combate>().Weapon = 5;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(5);
                 }
                 break;
             default:

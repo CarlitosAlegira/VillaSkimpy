@@ -40,6 +40,12 @@ public class PickUp : MonoBehaviour
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(4);
                     other.GetComponent<Combate>().Weapon = 4;
                 }
+                else if (gameObject.name == "Arco")
+                {
+                    other.GetComponent<Inventario>().armas[4] = true;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(5);
+                    other.GetComponent<Combate>().Weapon = 5;
+                }
 
             }
         }

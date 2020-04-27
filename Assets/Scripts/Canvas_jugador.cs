@@ -11,7 +11,8 @@ public class Canvas_jugador : MonoBehaviour
     bool bb=false;
     public Image barra;
     public TextMeshProUGUI var_name;
-    public GameObject a1, a2, a3, a4,barra_vida,showarm;
+    public GameObject a1, a2, a3, a4,a5,barra_vida,showarm;
+    public GameObject show1,show2,show3,show4,show5;
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
@@ -75,24 +76,67 @@ public class Canvas_jugador : MonoBehaviour
                 a2.SetActive(true);
                 a3.SetActive(false);
                 a4.SetActive(false);
+                a5.SetActive(false);
+
+                show1.SetActive(false);
+                show2.SetActive(true);
+                show3.SetActive(false);
+                show4.SetActive(false);
+                show5.SetActive(false);
+
+
                 break;
             case 3:
                 a1.SetActive(false);
                 a2.SetActive(false);
                 a3.SetActive(true);
                 a4.SetActive(false);
+                a5.SetActive(false);
+
+                show1.SetActive(false);
+                show2.SetActive(false);
+                show3.SetActive(true);
+                show4.SetActive(false);
+                show5.SetActive(false);
                 break;
             case 4:
                 a1.SetActive(false);
                 a2.SetActive(false);
                 a3.SetActive(false);
                 a4.SetActive(true);
+                a5.SetActive(false);
+
+                show1.SetActive(false);
+                show2.SetActive(false);
+                show3.SetActive(false);
+                show4.SetActive(true);
+                show5.SetActive(false);
+                break;
+            case 5:
+                a1.SetActive(false);
+                a2.SetActive(false);
+                a3.SetActive(false);
+                a4.SetActive(false);
+                a5.SetActive(true);
+
+                show1.SetActive(false);
+                show2.SetActive(false);
+                show3.SetActive(false);
+                show4.SetActive(false);
+                show5.SetActive(true);
                 break;
             default:
                 a1.SetActive(true);
                 a2.SetActive(false);
                 a3.SetActive(false);
                 a4.SetActive(false);
+                a5.SetActive(false);
+
+                show1.SetActive(true);
+                show2.SetActive(false);
+                show3.SetActive(false);
+                show4.SetActive(false);
+                show5.SetActive(false);
                 break;
         }
     }
