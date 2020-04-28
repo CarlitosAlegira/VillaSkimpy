@@ -21,6 +21,7 @@ public class Movimeinto : MonoBehaviour
         grav = 9.8f;
         jugador = GetComponent<CharacterController>();
         anim = jugador.GetComponent<Animator>();
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

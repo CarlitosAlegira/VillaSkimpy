@@ -10314,7 +10314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63e7acceb2ed24091982971a0d06dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distancia: {x: 0, y: 1.85, z: -2}
+  distancia1: {x: 0, y: 1.85, z: 1}
+  distancia2: {x: 0, y: 2, z: -2}
   sensibilidad: 10
   cam: {fileID: 549458550}
 --- !u!1001 &552012016

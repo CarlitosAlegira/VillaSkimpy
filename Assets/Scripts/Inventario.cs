@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
-    public GameObject arma1, arma2, arma3, arma4,arma5,inv,mos_arma;
+    public GameObject arma1, arma2, arma3, arma4,arma5,inv,mos_arma,des;
     public bool[] armas;
     public bool menus2,trans;
     public int Active;
@@ -18,11 +18,14 @@ public class Inventario : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab) && !menus2)
         {
             mostrar_inv();
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
 
         }
         else if (!menus2)
         {
+            Cursor.visible = false;
+            des.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             inv.SetActive(false);
             if (trans)
@@ -39,6 +42,7 @@ public class Inventario : MonoBehaviour
 
     void mostrar_inv()
     {
+        des.SetActive(true);
         inv.SetActive(true);
         mos_arma.SetActive(false);
         arma1.SetActive(true);

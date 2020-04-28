@@ -144,6 +144,7 @@ public class Canvas_jugador : MonoBehaviour
     void Muerte()
     {
         CosasMuerte.SetActive(true);
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void nombre(string name)
@@ -161,6 +162,7 @@ public class Canvas_jugador : MonoBehaviour
     public void Resume()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -170,6 +172,7 @@ public class Canvas_jugador : MonoBehaviour
     void Pause()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

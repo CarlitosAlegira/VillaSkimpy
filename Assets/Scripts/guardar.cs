@@ -19,6 +19,7 @@ public class guardar : MonoBehaviour
                 canvas.SetActive(true);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = true;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
+                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }
         }
@@ -38,6 +39,7 @@ public class guardar : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         canvas.SetActive(false);
         panel_n.SetActive(true);
+        Cursor.visible=false;
         Cursor.lockState = CursorLockMode.Locked;
     }
     public void error()
