@@ -48,9 +48,9 @@ public class Camara2 : MonoBehaviour
 
                 //prueba += mouse * sensibilidad;
                 //prueba.y = Mathf.Clamp(prueba.y, -70, 70);
-                objetivo.transform.Rotate(0, Input.GetAxisRaw("Mouse X")*sensibilidad,0);
-                transform.Rotate(Input.GetAxisRaw("Mouse Y")*sensibilidad, 0, 0);
-                transform.position = objetivo.transform.position + distancia2;
+                objetivo.transform.Rotate(0, -Input.GetAxisRaw("Mouse X")*sensibilidad,0);
+                transform.Rotate(Input.GetAxisRaw("Mouse Y")*sensibilidad, -Input.GetAxisRaw("Mouse X"), 0);
+                transform.position = objetivo.transform.position + new Vector3(0,1.4f,0);
             }
             else
             {

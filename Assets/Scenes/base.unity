@@ -6497,6 +6497,7 @@ MonoBehaviour:
   velocidad: 4.5
   jugador: {fileID: 709980008}
   camaraP: {fileID: 733876241}
+  CamaraFPS: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0
@@ -14331,6 +14332,7 @@ MonoBehaviour:
   velocidad: 3.5
   jugador: {fileID: 1462877354}
   camaraP: {fileID: 733876241}
+  CamaraFPS: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0
@@ -19948,6 +19950,7 @@ MonoBehaviour:
   velocidad: 10
   jugador: {fileID: 1909407507}
   camaraP: {fileID: 733876241}
+  CamaraFPS: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0

@@ -7,7 +7,7 @@ public class Movimeinto : MonoBehaviour
     public float velocidad;
     private float pox, poy,pog,grav,timer,rand;
     public CharacterController jugador;
-    public Camera camaraP;
+    public Camera camaraP,CamaraFPS;
     string nombre_player;
     int cha_player;
     Vector3 move,datos_in,camFrente,camDerecha;
