@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: dc00030fb4538264aaf75aaf7043551e
+  - enabled: 1
+    path: Assets/Scenes/Petroleo.unity
+    guid: 1416e6ddabe9a5048a1b2e27e7047b90
   m_configObjects: {}

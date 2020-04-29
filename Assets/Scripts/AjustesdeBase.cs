@@ -7,17 +7,24 @@ public class AjustesdeBase : MonoBehaviour
 {
     // Start is called before the first frame update
     AudioSource LoQueSuena;
-    float fBrillo, fVolumen;
+    public float fBrillo, fVolumen;
     MOpciones Mo;
+    GameObject Go;
   
    
     
     void Start()
     {
+        Go = GameObject.Find("ContenedorOpciones");
+        LoQueSuena = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        fBrillo = Go.GetComponent<MOpciones>().Brillo;
+        fVolumen = Go.GetComponent<MOpciones>().Volumen;
+        RenderSettings.ambientIntensity = fBrillo;
+        LoQueSuena.volume = fVolumen;
     }
 }
