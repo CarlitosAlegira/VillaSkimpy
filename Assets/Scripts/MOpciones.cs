@@ -10,7 +10,10 @@ public class MOpciones : MonoBehaviour
     public Slider Sl1, Sl2;
     AudioSource As;
     public float Brillo, Volumen;
-   
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Start()
     {
         As = GetComponent<AudioSource>();

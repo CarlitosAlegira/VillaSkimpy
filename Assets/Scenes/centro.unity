@@ -30598,6 +30598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541828772}
   - component: {fileID: 1541828771}
+  - component: {fileID: 1541828773}
   m_Layer: 0
   m_Name: Sonido de fondo
   m_TagString: Untagged
@@ -30715,6 +30716,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541828773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541828770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7f989f4ee8657469988570bc1b16f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fBrillo: 0
+  fVolumen: 0
 --- !u!1 &1543281311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cd87a57fe61a0994181f45e4b65f1d1c,
