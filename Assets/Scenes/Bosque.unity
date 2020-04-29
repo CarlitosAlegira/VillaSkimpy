@@ -646,6 +646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &30086894
@@ -729,6 +734,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -1131,6 +1141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra1Colider (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,6 +1535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &143378086
@@ -1533,6 +1553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -1755,6 +1780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -2905,6 +2935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &462372565
@@ -3178,6 +3213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -3958,6 +3998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &663854607
@@ -4333,6 +4378,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra1Colider (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4624,6 +4674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -5211,6 +5266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &937392601
@@ -5673,6 +5733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!4 &1007996754 stripped
@@ -5853,6 +5918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8820809993334056290, guid: 0ce190ce4d1b643479cfe575952282a6,
         type: 3}
@@ -6164,6 +6234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -6615,6 +6690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -7070,6 +7150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra1Colider (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7153,6 +7238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -7888,6 +7978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra1Colider (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8471,6 +8566,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -9412,6 +9512,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &1889364164
@@ -9496,6 +9601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &1964622996
@@ -9509,6 +9619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -10107,6 +10222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra1Colider (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10259,6 +10379,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -10418,6 +10543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra1Colider (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
         type: 3}
@@ -10657,6 +10787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Piedra2Colider (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
@@ -11100,6 +11235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2Colider (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
 --- !u!1001 &2128730247
@@ -11322,92 +11462,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra2
       objectReference: {fileID: 0}
+    - target: {fileID: 8299088102484608350, guid: 0ce190ce4d1b643479cfe575952282a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce190ce4d1b643479cfe575952282a6, type: 3}
---- !u!1001 &4182725606282866151
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1007996754}
-    m_Modifications:
-    - target: {fileID: 539332208773716712, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_Name
-      value: Piedra1
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.7752731
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.19845039
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.5122483
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.57504314
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.23723882
-      objectReference: {fileID: 0}
-    - target: {fileID: 539332208773940936, guid: 56aa4bfeebbe28d4b824a0e7350fded0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.57504314
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 56aa4bfeebbe28d4b824a0e7350fded0, type: 3}
 --- !u!1001 &8272247856420477015
 PrefabInstance:
   m_ObjectHideFlags: 0
