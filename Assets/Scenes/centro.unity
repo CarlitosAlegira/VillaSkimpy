@@ -24085,11 +24085,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310411089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ebc89d4618149f429dc37eeef7da71b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9715075d57cfdeb48a84058b19f8f722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: 0
-  velocidad: 1.5
+  velocidad: 0
   collision: 0
 --- !u!1 &1313542260
 GameObject:
@@ -39661,7 +39661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: f572741502c64e44b8a94bec0e96990f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 332.312
+      value: 330.19
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: f572741502c64e44b8a94bec0e96990f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39669,7 +39669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: f572741502c64e44b8a94bec0e96990f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 310.11002
+      value: 312.31
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: f572741502c64e44b8a94bec0e96990f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -39778,11 +39778,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2062478409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ebc89d4618149f429dc37eeef7da71b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9715075d57cfdeb48a84058b19f8f722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: 0
-  velocidad: 1.5
+  velocidad: 0
   collision: 0
 --- !u!1001 &2066452748
 PrefabInstance:
