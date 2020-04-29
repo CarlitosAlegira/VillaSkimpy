@@ -17,7 +17,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void EmpezarNuevoJuego()
     {
-        Cargar_nivel.cargar("base");
+        Cargar_nivel.cargar("intro");
     }
     public void Salir()
     {

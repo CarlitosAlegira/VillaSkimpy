@@ -14,6 +14,7 @@ public class Salida_zona1 : MonoBehaviour
             mostrar.SetActive(true);
             other.GetComponent<Inventario>().menus2 = true;
             other.GetComponent<Movimeinto>().menu = true;
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             
             if (si)
@@ -22,6 +23,7 @@ public class Salida_zona1 : MonoBehaviour
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cargar_nivel.cargar("Bosque");
                 si = false;
@@ -33,6 +35,7 @@ public class Salida_zona1 : MonoBehaviour
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 si = false;
                 no = false;
@@ -59,6 +62,7 @@ public class Salida_zona1 : MonoBehaviour
             mostrar.SetActive(false);
             si = false;
             no = false;
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             is_menu = false;
         }

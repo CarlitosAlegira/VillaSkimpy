@@ -12,7 +12,8 @@ public class Canvas_jugador : MonoBehaviour
     public Image barra;
     public TextMeshProUGUI var_name;
     public GameObject a1, a2, a3, a4,a5,barra_vida,showarm;
-    public GameObject show1,show2,show3,show4,show5;
+    public GameObject show1,show2,show3,show4,show5,C_mision,Hub_mision;
+    public TextMeshProUGUI C_text, C_text2;
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
@@ -20,6 +21,7 @@ public class Canvas_jugador : MonoBehaviour
     //variables pausa juego
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public int M_Active;
 
 
     private void Awake()
@@ -190,5 +192,30 @@ public class Canvas_jugador : MonoBehaviour
     {
         Debug.Log("Has salido");
         Application.Quit();
+    }
+
+
+    void mision(int num)
+    {
+        if (num == 1)
+        {
+
+        }
+        else if (num == 2)
+        {
+
+        }
+        else if (num == 2)
+        {
+
+        }
+    }
+    public void rechazar_mision()
+    {
+        GameObject.Find("mision1").GetComponent<Misiones>().salir();
+    }
+    public void aceptar_mision()
+    {
+        GameObject.Find("mision1").GetComponent<Misiones>().aceptar();
     }
 }
