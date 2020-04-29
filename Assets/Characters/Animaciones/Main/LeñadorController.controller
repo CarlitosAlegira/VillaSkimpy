@@ -37,10 +37,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: idleLenador
+    m_ConditionEvent: Quieto
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: ataqueLenador
+    m_ConditionEvent: Ataque
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Camina
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2562078596412846356}
@@ -93,10 +96,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: ataqueLenador
+    m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: correrLenador
+    m_ConditionEvent: Camina
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Quieto
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8679801792105079729}
@@ -149,10 +155,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: correrLenador
+    m_ConditionEvent: Camina
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: ataqueLenador
+    m_ConditionEvent: Ataque
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Quieto
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 629567487354242120}
@@ -177,10 +186,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: idleLenador
+    m_ConditionEvent: Quieto
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: ataqueLenador
+    m_ConditionEvent: Ataque
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Camina
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 629567487354242120}
@@ -205,19 +217,19 @@ AnimatorController:
   m_Name: "Le\xF1adorController"
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: idleLenador
+  - m_Name: Quieto
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: correrLenador
+  - m_Name: Camina
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: ataqueLenador
+  - m_Name: Ataque
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -273,10 +285,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: idleLenador
+    m_ConditionEvent: Quieto
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: correrLenador
+    m_ConditionEvent: Camina
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Ataque
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2562078596412846356}
@@ -301,10 +316,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: correrLenador
+    m_ConditionEvent: Camina
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: idleLenador
+    m_ConditionEvent: Quieto
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Ataque
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8679801792105079729}
