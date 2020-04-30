@@ -236,5 +236,9 @@ public class Canvas_jugador : MonoBehaviour
         {
             C_text2.text = "Investiga las montañas";
         }
+        else if (tip_mision == 3)
+        {
+            C_text2.text = "Destruye los puestos de tala"+"0/5";
+        }
     }
 }
