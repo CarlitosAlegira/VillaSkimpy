@@ -10,7 +10,7 @@ public class Inventario : MonoBehaviour
     public int Active;
     private void Start()
     {
-        armas = new bool[5];
+        armas=new bool[5];
         armas[0] = true;
     }
     private void Update()

@@ -14,8 +14,9 @@ public class cargar_partida : MonoBehaviour
         string[] nombres_p = añadir.Split(",".ToCharArray());
         for (int i = 0; i < nombres_p.Length; i++)
         {
-            Debug.Log(nombres_p[i]);
+            
             string prueba = PlayerPrefs.GetString(nombres_p[i], "none");
+            Debug.Log(prueba);
             if (prueba != "none")
             {
                 string[] datos = prueba.Split(",".ToCharArray());

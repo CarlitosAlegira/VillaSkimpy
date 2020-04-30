@@ -9,6 +9,5 @@ public class carga_p : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         data_player = data;
-        Debug.Log(data_player);
     }
 }
