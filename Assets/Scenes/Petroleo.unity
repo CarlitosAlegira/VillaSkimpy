@@ -230,17 +230,17 @@ PrefabInstance:
     - target: {fileID: 2767827323117570656, guid: 29d9b52423c5e8648ab1a0b699d129ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 198.42632
+      value: 195.08
       objectReference: {fileID: 0}
     - target: {fileID: 2767827323117570656, guid: 29d9b52423c5e8648ab1a0b699d129ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 371.9421
+      value: 344.9
       objectReference: {fileID: 0}
     - target: {fileID: 2767827323117570656, guid: 29d9b52423c5e8648ab1a0b699d129ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.528894
+      value: 67.49
       objectReference: {fileID: 0}
     - target: {fileID: 2767827323117570656, guid: 29d9b52423c5e8648ab1a0b699d129ee,
         type: 3}
@@ -385,8 +385,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 297608154}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -658,8 +662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 352606127}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -820,8 +828,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 413196519}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -1049,8 +1061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 479950962}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -1203,8 +1219,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 499878387}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -1767,8 +1787,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 651823930}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -1921,8 +1945,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 660672230}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -1998,8 +2026,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 714722237}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -2210,8 +2242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 882172998}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -2281,8 +2317,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 987132736}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -2509,8 +2549,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1141698953}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -2649,8 +2693,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1188467555}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -3155,8 +3203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1380530394}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -3470,8 +3522,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1561687957}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -3602,8 +3658,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1581259717}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -3778,8 +3838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1595383634}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -4603,8 +4667,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 1998979321}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -4903,8 +4971,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
+  VidaMax: 0
   anim: {fileID: 2140207177}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 0}
+  BarraVida: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
