@@ -5226,8 +5226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fca0cfdfc04a147a3fe84a9314323e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
   anim: {fileID: 789026615}
   objetivo: {fileID: 0}
+  "ParticulaDa\xF1o": {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -5290,6 +5292,19 @@ CapsuleCollider:
   m_Height: 1.939148
   m_Direction: 1
   m_Center: {x: 0.0031223297, y: 0.94070435, z: 0}
+--- !u!135 &789026618
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789026612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 1.04, z: 0}
 --- !u!1 &799988864
 GameObject:
   m_ObjectHideFlags: 0

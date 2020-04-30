@@ -145,6 +145,7 @@ public class Canvas_jugador : MonoBehaviour
     
     void Muerte()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
         CosasMuerte.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

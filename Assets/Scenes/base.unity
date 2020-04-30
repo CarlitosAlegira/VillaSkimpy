@@ -582,7 +582,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36.65
+  m_fontSize: 32.4
   m_fontSizeBase: 65.66
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 84490429}
   - component: {fileID: 84490428}
   - component: {fileID: 84490430}
+  - component: {fileID: 84490431}
   m_Layer: 0
   m_Name: Seleccion
   m_TagString: Untagged
@@ -844,6 +845,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &84490431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84490427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7f989f4ee8657469988570bc1b16f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fBrillo: 0
+  fVolumen: 0
 --- !u!4 &89859362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: ea4722dd4e648a043a4c2af8f27e0793,
@@ -4999,7 +5014,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.9
+  m_fontSize: 35.35
   m_fontSizeBase: 65.66
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10272,8 +10287,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279449580
+  m_fontColor: {r: 0.9254902, g: 0.21563953, b: 0.0745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10291,7 +10306,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50.45
+  m_fontSize: 44.55
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1

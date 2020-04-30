@@ -10,14 +10,16 @@ public class IA_Lenador: MonoBehaviour
     {
         IDLE, FOLLOW, ATTACK
     }
+    public float vida;
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo;
+    public GameObject objetivo, ParticulaDaño;
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2;
     void Start()
     {
+        vida = 150f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
         disReferencia = 10;
@@ -70,15 +72,15 @@ public class IA_Lenador: MonoBehaviour
     }
     void idle()
     {
+        DarDaño(2);
         anim.SetBool("Quieto", true);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        Debug.Log("quieto");
         nav1.SetDestination(transform.position);
     }
     void follow()
     {
-        Debug.Log("seguir");
+        DarDaño(2);
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", true);
         anim.SetBool("Ataque", false);
@@ -86,12 +88,64 @@ public class IA_Lenador: MonoBehaviour
     }
     void attack()
     {
-        Debug.Log("atacar");
+        //Debug.Log("atacar");
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", true);
         nav1.SetDestination(transform.position);
+        
     }
-    
+    void morido()
+    {
+        if (vida<=0)
+        {
+            //animacion morido
+        }
+    }
+    public void DarDaño(int s)
+    {
+        if (s==1)
+        {
+            objetivo.GetComponent<Combate>().rec_golpe = true;
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(20f);
+        }
+        else if (s==2)
+        {
+            objetivo.GetComponent<Combate>().rec_golpe = false;
+        }
+    }
+    public void RecibeDaño(float nim)
+    {
+        Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0,0.5f,0), transform.rotation);
+        //poner animacion de daño al enemigo
+        anim.SetBool("Ddaño", true);
+        vida -= nim;
+    }
+    public void desactivar()
+    {
+        anim.SetBool("Ddaño", false);
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        { 
+            if (other.GetComponent<Combate>().dam1)
+            {
+                RecibeDaño(15);
+            }
+            else if (other.GetComponent<Combate>().dam2)
+            {
+                RecibeDaño(15);
+            }
+            else if (other.GetComponent<Combate>().dam3)
+            {
+                RecibeDaño(15);
+            }
+            else
+            {
+            }
+        }
+    }
+
 
 }

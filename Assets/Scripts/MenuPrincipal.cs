@@ -26,6 +26,9 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void MenPrincipal()
     {
+        Destroy(GameObject.Find("Canvas_base"));
+        Destroy(GameObject.Find("jugador"));
+        Destroy(GameObject.Find("Datos_player"));
         SceneManager.LoadScene("MenuPrincipal");
     }
 }
