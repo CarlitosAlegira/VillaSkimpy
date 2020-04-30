@@ -17,7 +17,6 @@ public class Canvas_jugador : MonoBehaviour
     //public Canvas CaMuerte;
     public RawImage RI;
     public GameObject CosasMuerte;
-    bool Ispause;
     //variables pausa juego
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
@@ -36,10 +35,10 @@ public class Canvas_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        barra.fillAmount = vida/100;
-        if (vida<=0)
+        barra.fillAmount = vida / 100;
+        if (vida <= 0)
         {
-            RI.color += new Color(0,0,0,0.1f*Time.deltaTime);
+            RI.color += new Color(0, 0, 0, 0.1f * Time.deltaTime);
             if (RI.color.a >= 1)
             {
                 Muerte();
@@ -51,18 +50,13 @@ public class Canvas_jugador : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Ispause = false;
                 Resume();
             }
             else
             {
-                Ispause = true;
+                Pause();
             }
         }
-        if (Ispause)
-        {
-            Pause();
-        } 
     }
 
     public void daño(float damage)
@@ -164,12 +158,14 @@ public class Canvas_jugador : MonoBehaviour
     //creo mis metodos pausa
     public void Resume()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+        
     }
 
     void Pause()
@@ -185,6 +181,13 @@ public class Canvas_jugador : MonoBehaviour
     public void MenuPrincipal()
     {
         Time.timeScale = 1f;
+        GameIsPaused = false;
+        pauseMenuUI.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Destroy(GameObject.Find("Datos_player"));
+        Destroy(GameObject.Find("jugador"));
+        Destroy(GameObject.Find("Canvas_base"));
         Debug.Log("Has Cargado el menu principal");
         SceneManager.LoadScene("MenuPrincipal");
     }
