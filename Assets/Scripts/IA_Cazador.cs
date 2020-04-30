@@ -11,7 +11,7 @@ public class IA_Cazador: MonoBehaviour
         IDLE, FOLLOW, ATTACK
     }
     public float vida, VidaMax, delay, fireRate;
-    float time = 3;
+    float time = 1.5f;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
@@ -112,7 +112,6 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         nav1.SetDestination(transform.position);
-        //InvokeRepeating("LanzarDardo", delay, fireRate);
         LanzarDardo();
     }
     void morido()
@@ -170,14 +169,13 @@ public class IA_Cazador: MonoBehaviour
     }
     public void LanzarDardo()
     {
-        // Instantiate(Dardo,gameObject.transform.position,Dardo.transform.rotation);
-        Debug.Log("tiempo:" + time);
+        //Debug.Log("tiempo:" + time);
         time -= Time.deltaTime;
         if (time<=0)
         {
             Instantiate(Dardo, DardoSpawn.transform.position, DardoSpawn.transform.rotation);
-            Debug.Log("tiempo dentro del if:" + time);
-            time = 3;
+           // Debug.Log("tiempo dentro del if:" + time);
+            time = 1.5f;
         }
     }
 

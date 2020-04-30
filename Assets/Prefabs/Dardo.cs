@@ -18,7 +18,7 @@ public class Dardo : MonoBehaviour
         
         if (coll)
         {
-            //Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 1.5f);
         }
         else
         {
