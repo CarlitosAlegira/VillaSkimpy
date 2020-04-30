@@ -10,7 +10,8 @@ public class IA_Cazador: MonoBehaviour
     {
         IDLE, FOLLOW, ATTACK
     }
-    public float vida, VidaMax;
+    public float vida, VidaMax, delay, fireRate;
+    float time = 3;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
@@ -20,6 +21,8 @@ public class IA_Cazador: MonoBehaviour
     public float disActual, disReferencia, disReferencia2;
     void Start()
     {
+        delay = 1;
+        fireRate = 1.5f;
         VidaMax = 200f;
         vida = 150f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
@@ -27,6 +30,7 @@ public class IA_Cazador: MonoBehaviour
         disReferencia = 30;
         disReferencia2 = 5f;
         currentstate = Stados.IDLE;
+
     }
 
     // Update is called once per frame
@@ -108,7 +112,8 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         nav1.SetDestination(transform.position);
-        // Instantiate(objToSpawn, playerPosition + (playerForward * 0.5f), playerRotation) as Rigidbody;
+        //InvokeRepeating("LanzarDardo", delay, fireRate);
+        LanzarDardo();
     }
     void morido()
     {
@@ -166,7 +171,14 @@ public class IA_Cazador: MonoBehaviour
     public void LanzarDardo()
     {
         // Instantiate(Dardo,gameObject.transform.position,Dardo.transform.rotation);
-        Instantiate(Dardo, DardoSpawn.transform.position, DardoSpawn.transform.rotation);
+        Debug.Log("tiempo:" + time);
+        time -= Time.deltaTime;
+        if (time<=0)
+        {
+            Instantiate(Dardo, DardoSpawn.transform.position, DardoSpawn.transform.rotation);
+            Debug.Log("tiempo dentro del if:" + time);
+            time = 3;
+        }
     }
 
 }

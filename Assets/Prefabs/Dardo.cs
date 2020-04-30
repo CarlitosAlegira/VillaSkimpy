@@ -22,16 +22,16 @@ public class Dardo : MonoBehaviour
         }
         else
         {
-            transform.Translate(0, 0.2f, 0);
+            transform.Translate(0, 0, .5f);
             //gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(1,0,0));
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         coll = true;
-        transform.Translate(0, 0, 0);
         if (other.tag=="Player")
         {
+            transform.Translate(0, 0, 0);
             GameObject.FindGameObjectWithTag("Player").GetComponent<Canvas_jugador>().daño(10);
         }
     }
