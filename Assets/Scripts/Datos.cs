@@ -6,11 +6,11 @@ using TMPro;
 
 public class Datos : MonoBehaviour
 {
-    public TextMeshProUGUI hero_name;
+    public Text hero_name;
     string nombre;
     public string nombre_save;
-    int a1, a2, a3;
-    public int hero, zona;
+    int a1, a2, a3,a4;
+    public int hero,mision,progreso, zona;
     bool repetido;
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class Datos : MonoBehaviour
     }
     public void nombre_jugador()
     {
-        nombre = hero_name.text+"1";
+        nombre = hero_name.text.Trim();
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().nombre(nombre);
     }
     public void carga(string name,int her)
@@ -33,7 +33,7 @@ public class Datos : MonoBehaviour
     }
     public void Guardar()
     {
-
+        
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().armas[1])
         {
             a1 = 1;
@@ -46,9 +46,13 @@ public class Datos : MonoBehaviour
         {
             a3 = 1;
         }
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().armas[4])
+        {
+            a4 = 1;
+        }
         string Sdatos = nombre + "," + GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().vida + "," +
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().Active + "," + a1 + "," + a2 + "," + a3 + "," +
-                hero + "," + zona;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().Active + "," + a1 + "," + a2 + "," + a3 + "," + a4 + "," +
+                hero + "," + mision + "," + progreso;
         string prueba = PlayerPrefs.GetString(nombre_save,"none");
         if (prueba=="none")
         {
@@ -75,6 +79,7 @@ public class Datos : MonoBehaviour
         }
         else
         {
+            Debug.Log("paso");
             GameObject.Find("data").GetComponent<guardar>().error();
         }
     }
@@ -90,5 +95,6 @@ public class Datos : MonoBehaviour
         PlayerPrefs.SetString(nombre_save, Sdatos);
         Debug.Log(Sdatos);
         PlayerPrefs.Save();
+        GameObject.Find("data").GetComponent<guardar>().boton_volver();
     }
 }

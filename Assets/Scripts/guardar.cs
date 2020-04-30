@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class guardar : MonoBehaviour
 {
     public GameObject canvas,panel_error,panel_n;
-    public TextMeshProUGUI nombre_partida;
+    public Text nombre_partida;
     string nombre;
 
     private void OnTriggerStay(Collider other)
@@ -26,12 +26,9 @@ public class guardar : MonoBehaviour
     }
      public void verificar_datos()
     {
-        nombre = nombre_partida.text + "1";
+        nombre = nombre_partida.text.Trim();
         GameObject.Find("Datos_player").GetComponent<Datos>().nombre_save = nombre;
-        Debug.Log(nombre);
         GameObject.Find("Datos_player").GetComponent<Datos>().Guardar();
-        panel_n.SetActive(true);
-        canvas.SetActive(false);
     }
     public void boton_volver()
     {
@@ -39,13 +36,13 @@ public class guardar : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         canvas.SetActive(false);
         panel_n.SetActive(true);
+        panel_error.SetActive(false);
         Cursor.visible=false;
         Cursor.lockState = CursorLockMode.Locked;
     }
     public void error()
     {
         panel_n.SetActive(false);
-        canvas.SetActive(true);
         panel_error.SetActive(true);
     }
     public void reescribir()
