@@ -10,15 +10,17 @@ public class IA_Lenador: MonoBehaviour
     {
         IDLE, FOLLOW, ATTACK
     }
-    public float vida;
+    public float vida, VidaMax;
+    //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo, ParticulaDaño;
+    public GameObject objetivo, ParticulaDaño, BarraVida;
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2;
     void Start()
     {
+        VidaMax = 200f;
         vida = 150f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
@@ -32,6 +34,10 @@ public class IA_Lenador: MonoBehaviour
     {
         behaviour();
         checkConditions();
+        float z = vida /VidaMax;
+        Vector3 EscalaBarra = new Vector3(1, 1, z);
+        BarraVida.transform.localScale = EscalaBarra;
+        Debug.Log("vida actual:" + z);
     }
 
     void checkConditions()
@@ -99,7 +105,7 @@ public class IA_Lenador: MonoBehaviour
     {
         if (vida<=0)
         {
-            //animacion morido
+            vida = 0;
         }
     }
     public void DarDaño(int s)
