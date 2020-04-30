@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class IA_Lenador: MonoBehaviour
+public class IA_Cazador: MonoBehaviour
 {
     // Start is called before the first frame update
     enum Stados
@@ -24,8 +24,8 @@ public class IA_Lenador: MonoBehaviour
         vida = 150f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
-        disReferencia = 10;
-        disReferencia2 = 1.5f;
+        disReferencia = 30;
+        disReferencia2 = 5f;
         currentstate = Stados.IDLE;
     }
 
