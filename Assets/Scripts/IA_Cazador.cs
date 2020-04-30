@@ -15,7 +15,7 @@ public class IA_Cazador: MonoBehaviour
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo, ParticulaDaño, BarraVida;
+    public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn;
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2;
     void Start()
@@ -108,7 +108,7 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         nav1.SetDestination(transform.position);
-        
+        // Instantiate(objToSpawn, playerPosition + (playerForward * 0.5f), playerRotation) as Rigidbody;
     }
     void morido()
     {
@@ -163,6 +163,10 @@ public class IA_Cazador: MonoBehaviour
             }
         }
     }
-
+    public void LanzarDardo()
+    {
+        // Instantiate(Dardo,gameObject.transform.position,Dardo.transform.rotation);
+        Instantiate(Dardo, DardoSpawn.transform.position, DardoSpawn.transform.rotation);
+    }
 
 }
