@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Misiones : MonoBehaviour
 {
-    public int mision;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag=="Player")
@@ -22,8 +21,8 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(true);
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(false);
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(false);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = 1;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
-                    mision = 1;
                 }
                 if (gameObject.name=="mision2")
                 {
@@ -36,41 +35,17 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(true);
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(false);
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(false);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = 2;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
-                    mision = 2;
                 }
             }
         }
-    }
-    public void aceptar()
-    {
-        salir();
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().Hub_mision.SetActive(true);
-        if (mision == 1)
-        {
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_text2.text = "Investiga el Bosque";
-        }
-        else if (mision == 2)
-        {
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_text2.text = "Investiga las montañas";
-        }
-    }
-    public void salir()
-    {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_text.text = " ";
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(false);
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(true);
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(true);
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
-            salir();
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().rechazar_mision();
         }
     }
 }

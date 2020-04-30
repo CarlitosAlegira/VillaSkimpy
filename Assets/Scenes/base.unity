@@ -1365,8 +1365,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1883899500}
-        m_MethodName: salir
+      - m_Target: {fileID: 1883899499}
+        m_MethodName: rechazar_mision
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3106,8 +3106,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1883899500}
-        m_MethodName: aceptar
+      - m_Target: {fileID: 1883899499}
+        m_MethodName: aceptar_mision
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20418,6 +20418,7 @@ MonoBehaviour:
   CosasMuerte: {fileID: 1669823080}
   pauseMenuUI: {fileID: 1422367636}
   M_Active: 0
+  tip_mision: 0
 --- !u!114 &1883899500
 MonoBehaviour:
   m_ObjectHideFlags: 0

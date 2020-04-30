@@ -20,7 +20,7 @@ public class Canvas_jugador : MonoBehaviour
     //variables pausa juego
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public int M_Active;
+    public int M_Active,tip_mision;
 
 
     private void Awake()
@@ -79,8 +79,6 @@ public class Canvas_jugador : MonoBehaviour
                 show3.SetActive(false);
                 show4.SetActive(false);
                 show5.SetActive(false);
-
-
                 break;
             case 3:
                 a1.SetActive(false);
@@ -216,10 +214,27 @@ public class Canvas_jugador : MonoBehaviour
     }
     public void rechazar_mision()
     {
-        GameObject.Find("mision1").GetComponent<Misiones>().salir();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        C_text.text = " ";
+        C_mision.SetActive(false);
+        barra_vida.SetActive(true);
+        showarm.SetActive(true);
     }
     public void aceptar_mision()
     {
-        GameObject.Find("mision1").GetComponent<Misiones>().aceptar();
+        rechazar_mision();
+        Hub_mision.SetActive(true);
+        if (tip_mision == 1)
+        {
+            C_text2.text = "Investiga el Bosque";
+
+        }
+        else if (tip_mision == 2)
+        {
+            C_text2.text = "Investiga las montañas";
+        }
     }
 }

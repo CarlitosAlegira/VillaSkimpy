@@ -22,7 +22,7 @@ public class Dardo : MonoBehaviour
         }
         else
         {
-            transform.Translate(0.2f, 0, 0);
+            transform.Translate(0, 0.2f, 0);
             //gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(1,0,0));
         }
     }
