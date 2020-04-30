@@ -38,6 +38,22 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = 2;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
+
+
+                if (gameObject.name == "misiones1")
+                {
+                    other.GetComponent<Movimeinto>().menu = true;
+                    other.GetComponent<Inventario>().menus2 = true;
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_text.text = "Hey hola veo que vienes del pueblo.\n Te tengo que advertir que en esta zona hay varios grupos de leñadores que estan acabando con nuestro bosque. \n \n Si nos quieres ayudar podrias empezar destruyendo los puestos de tala";
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(true);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(true);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(false);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(false);
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = 4;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
+                }
             }
         }
     }
