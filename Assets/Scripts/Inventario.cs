@@ -25,7 +25,7 @@ public class Inventario : MonoBehaviour
         else if (!menus2)
         {
             Cursor.visible = false;
-            des.SetActive(false);
+            //des.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             inv.SetActive(false);
             if (trans)
@@ -42,7 +42,7 @@ public class Inventario : MonoBehaviour
 
     void mostrar_inv()
     {
-        des.SetActive(true);
+        //des.SetActive(true);
         inv.SetActive(true);
         mos_arma.SetActive(false);
         arma1.SetActive(true);

@@ -66,7 +66,7 @@ public class Combate : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if (timer>=2)
+            if (timer>=1)
             {
                 gameObject.GetComponent<Movimeinto>().atacking = false;
                 if (pox != 0 || poy != 0)

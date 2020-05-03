@@ -9,6 +9,7 @@ TagManager:
   - Puntos
   - Aldeano
   - barra_vida
+  - tala
   layers:
   - Default
   - TransparentFX

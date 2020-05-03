@@ -15,9 +15,11 @@ public class IA_Lenador: MonoBehaviour
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo, ParticulaDaño, BarraVida;
+    public GameObject objetivo, ParticulaDaño, BarraVida,b;
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2;
+    bool habilitado=true,vivo=true,call;
+    public GameObject zona;
     void Start()
     {
         VidaMax = 200f;
@@ -32,34 +34,45 @@ public class IA_Lenador: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        behaviour();
-        checkConditions();
+        if (vivo)
+        {
+            behaviour();
+            checkConditions();
+        }
         float z = vida /VidaMax;
         Vector3 EscalaBarra = new Vector3(1, 1, z);
         BarraVida.transform.localScale = EscalaBarra;
         if (vida <= 0)
         {
-            morido();
+            vida = 0;
+            if (!call)
+            {
+                morido();
+                call = true;
+            }
         }
     }
 
     void checkConditions()
     {
-        disActual = Vector3.Distance(objetivo.transform.position, transform.position);
-        if (disActual <= disReferencia)
+        if (vivo)
         {
-            if (disActual <= disReferencia2)
+            disActual = Vector3.Distance(objetivo.transform.position, transform.position);
+            if (disActual <= disReferencia)
             {
-                currentstate = Stados.ATTACK;
+                if (disActual <= disReferencia2)
+                {
+                    currentstate = Stados.ATTACK;
+                }
+                else
+                {
+                    currentstate = Stados.FOLLOW;
+                }
             }
             else
             {
-                currentstate = Stados.FOLLOW;
+                currentstate = Stados.IDLE;
             }
-        }
-        else
-        {
-            currentstate = Stados.IDLE;
         }
     }
     void behaviour()
@@ -118,13 +131,16 @@ public class IA_Lenador: MonoBehaviour
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", true);
         vida = 0;
+        vivo = false;
+        zona.GetComponent<zona_enemigos>().n_enemigos += 1;
+        Destroy(gameObject,8);
     }
     public void DarDaño(int s)
     {
         if (s==1)
         {
             objetivo.GetComponent<Combate>().rec_golpe = true;
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(20f);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10f);
         }
         else if (s==2)
         {
@@ -133,7 +149,8 @@ public class IA_Lenador: MonoBehaviour
     }
     public void RecibeDaño(float nim)
     {
-        Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0,0.5f,0), transform.rotation);
+        b=Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0,0.5f,0), transform.rotation);
+        Destroy(b,2);
         //poner animacion de daño al enemigo
         anim.SetBool("Ddaño", true);
         vida -= nim;
@@ -141,25 +158,16 @@ public class IA_Lenador: MonoBehaviour
     public void desactivar()
     {
         anim.SetBool("Ddaño", false);
+        habilitado = true;
     }
     public void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         { 
-            if (other.GetComponent<Combate>().dam1)
+            if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(15);
-            }
-            else if (other.GetComponent<Combate>().dam2)
-            {
-                RecibeDaño(15);
-            }
-            else if (other.GetComponent<Combate>().dam3)
-            {
-                RecibeDaño(15);
-            }
-            else
-            {
+                RecibeDaño(200);
+                habilitado = false;
             }
         }
     }

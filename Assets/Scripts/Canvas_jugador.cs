@@ -20,7 +20,7 @@ public class Canvas_jugador : MonoBehaviour
     //variables pausa juego
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public int M_Active,tip_mision;
+    public int M_Active,tip_mision,prog_mision;
 
 
     private void Awake()
@@ -236,9 +236,9 @@ public class Canvas_jugador : MonoBehaviour
         {
             C_text2.text = "Investiga las montañas";
         }
-        else if (tip_mision == 3)
+        else if (tip_mision == 4)
         {
-            C_text2.text = "Destruye los puestos de tala"+"0/5";
+            C_text2.text = "Destruye los puestos de tala "+ prog_mision+"/5";
         }
     }
 }
