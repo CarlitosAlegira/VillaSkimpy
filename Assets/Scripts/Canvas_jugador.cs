@@ -12,7 +12,7 @@ public class Canvas_jugador : MonoBehaviour
     public Image barra;
     public TextMeshProUGUI var_name;
     public GameObject a1, a2, a3, a4,a5,barra_vida,showarm;
-    public GameObject show1,show2,show3,show4,show5,C_mision,Hub_mision;
+    public GameObject show1,show2,show3,show4,show5,C_mision,Hub_mision,peligro;
     public TextMeshProUGUI C_text, C_text2;
     //public Canvas CaMuerte;
     public RawImage RI;
@@ -226,11 +226,11 @@ public class Canvas_jugador : MonoBehaviour
     public void aceptar_mision()
     {
         rechazar_mision();
+        Hub_mision.SetActive(false);
         Hub_mision.SetActive(true);
         if (tip_mision == 1)
         {
             C_text2.text = "Investiga el Bosque";
-
         }
         else if (tip_mision == 2)
         {
@@ -252,5 +252,19 @@ public class Canvas_jugador : MonoBehaviour
         {
             C_text2.text = "destruye las petroleras " + prog_mision + "/5";
         }
+    }
+    public void zona_peligro()
+    {
+        Hub_mision.SetActive(false);
+        Hub_mision.SetActive(true);
+        peligro.SetActive(!peligro.activeInHierarchy);
+        if (!peligro.activeInHierarchy)
+        {
+            aceptar_mision();
+        }
+    }
+    public void zona_progreso(int ene,int p)
+    {
+        C_text2.text = "enemigos derrotados " + ene + "/" + p;
     }
 }

@@ -6,13 +6,17 @@ public class zona_enemigos : MonoBehaviour
 {
     public GameObject p_tala1, p_tala2, p_tala3, tienda;
     public int n_enemigos,dest,enemigos_base;
-    bool p,p2;
+    bool p,p2,entro;
     void Start()
     {
         
     }
     void Update()
     {
+        if (entro)
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
+        }
         if (n_enemigos >= enemigos_base && !p2)
         {
             p_tala1.GetComponent<destruir>().dest = true;
@@ -26,6 +30,22 @@ public class zona_enemigos : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
             p = true;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
+            entro = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
+            entro = false;
         }
     }
 }

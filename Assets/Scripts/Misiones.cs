@@ -25,7 +25,7 @@ public class Misiones : MonoBehaviour
                 {
                     other.GetComponent<Movimeinto>().menu = true;
                     other.GetComponent<Inventario>().menus2 = true;
-                    mis= "Hey hola veo que ya has liberado nuestros bosque de esos malvados leñadores.\n Pero bueno tu labor aun no esta terminada. \n \n hemos visto merodeando unos cazadores y nos dimos cuenta de que nuestros animales han desaparecido investiga la zona de las montañas y liberalos";
+                    mis= "Hey hola veo que ya has liberado nuestros bosque de esos malvados leñadores.\n Pero bueno tu labor aun no esta terminada. \n \nHemos visto merodeando unos cazadores y nos dimos cuenta de que nuestros animales han desaparecido investiga la zona de las montañas y liberalos";
                     pon_mision(mis,2);
                     GameObject.Find("Datos_player").GetComponent<Datos>().mision = 2;
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
