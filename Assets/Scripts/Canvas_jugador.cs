@@ -236,9 +236,21 @@ public class Canvas_jugador : MonoBehaviour
         {
             C_text2.text = "Investiga las montañas";
         }
+        else if (tip_mision == 3)
+        {
+            C_text2.text = "Investiga el lago";
+        }
         else if (tip_mision == 4)
         {
             C_text2.text = "Destruye los puestos de tala "+ prog_mision+"/5";
+        }
+        else if (tip_mision == 5)
+        {
+            C_text2.text = "Libera los animales " + prog_mision + "/5";
+        }
+        else if (tip_mision == 6)
+        {
+            C_text2.text = "destruye las petroleras " + prog_mision + "/5";
         }
     }
 }

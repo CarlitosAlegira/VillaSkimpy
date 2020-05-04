@@ -25725,7 +25725,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 21a2a2e12001f824eb08505d375a34bc, type: 2}
-  m_TreeDistance: 1000
+  m_TreeDistance: 175
   m_TreeBillboardDistance: 75
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 1

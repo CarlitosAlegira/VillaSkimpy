@@ -15,6 +15,8 @@ public class Spawn1 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = spawn.position;
         player.transform.rotation = spawn.rotation;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
+        player.GetComponent<Inventario>().trans = true;
     }
     private void Start()
     {

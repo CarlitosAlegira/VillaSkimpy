@@ -5,15 +5,18 @@ using UnityEngine;
 public class destruir : MonoBehaviour
 {
     public bool dest;
-    public GameObject particulas;
+    public GameObject particulas,zona;
+    GameObject b;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag=="Player")
         {
             if (dest && Input.GetKeyDown(KeyCode.E))
             {
-                Instantiate(particulas,transform.position,particulas.transform.rotation);
-                Destroy(gameObject,3);
+                b=Instantiate(particulas,transform.position,particulas.transform.rotation);
+                Destroy(gameObject,2);
+                Destroy(b, 4);
+                zona.GetComponent<zona_enemigos>().dest += 1;
             }
         }
     }

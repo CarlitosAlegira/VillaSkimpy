@@ -12,6 +12,8 @@ public class Combate : MonoBehaviour
     int combo;
     public int Weapon;
     public GameObject wep1, wep2, wep3,wep4, inv,flecha,flecha_base;
+    public AudioClip s_bat, s_axe, s_punch, s_maz;
+    public AudioSource son;
     private float pox, poy;
     void Start()
     {
@@ -194,18 +196,21 @@ public class Combate : MonoBehaviour
         {
             case 1:
                 dam1 = true;
+                son.Play();
                 break;
             case 2:
                 dam1 = false;
                 break;
             case 3:
                 dam2 = true;
+                son.Play();
                 break;
             case 4:
                 dam2 = false;
                 break;
             case 5:
                 dam3 = true;
+                son.Play();
                 break;
             case 6:
                 dam3 = false;
@@ -223,18 +228,23 @@ public class Combate : MonoBehaviour
                 wep2.SetActive(false);
                 wep3.SetActive(false);
                 wep4.SetActive(false);
+                son.clip = s_bat;
                 break;
             case 3:
                 wep1.SetActive(false);
                 wep2.SetActive(true);
                 wep3.SetActive(false);
                 wep4.SetActive(false);
+                son.clip = s_axe;
+
                 break;
             case 4:
                 wep1.SetActive(false);
                 wep2.SetActive(false);
                 wep3.SetActive(true);
                 wep4.SetActive(false);
+                son.clip = s_maz;
+
                 break;
             case 5:
                 wep1.SetActive(false);
@@ -247,6 +257,7 @@ public class Combate : MonoBehaviour
                 wep2.SetActive(false);
                 wep3.SetActive(false);
                 wep4.SetActive(false);
+                son.clip = s_punch;
                 break;
         }
     }

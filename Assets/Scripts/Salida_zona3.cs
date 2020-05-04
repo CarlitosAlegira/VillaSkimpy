@@ -21,6 +21,8 @@ public class Salida_zona3 : MonoBehaviour
             {
                 GameObject.Find("Datos_player").GetComponent<Datos>().zona=3;
                 mostrar.SetActive(false);
+                GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
+                other.GetComponent<Inventario>().trans = false;
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.visible = false;
