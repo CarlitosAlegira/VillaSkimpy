@@ -8,7 +8,7 @@ public class IA_Cazador: MonoBehaviour
     // Start is called before the first frame update
     enum Stados
     {
-        IDLE, FOLLOW, ATTACK
+        IDLE, FOLLOW, ATTACKDISTANCE, ATTACKMELE
     }
     public float vida, VidaMax, delay, fireRate,XPos,YPos,Zpos;
     float time = 1.5f;
@@ -16,10 +16,11 @@ public class IA_Cazador: MonoBehaviour
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn, Observador, Observando, Rifle;
+    public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn, Observador, Observando, Rifle, b;
     public ParticleSystem Particula;
-    public float disActual, disReferencia, disReferencia2;
+    public float disActual, disReferencia, disReferencia2,disReferencia3;
     private Vector3 PosicionAMirar;
+    bool habilitado = true, vivo = true,call;
     void Start()
     {
         delay = 1;
@@ -30,7 +31,8 @@ public class IA_Cazador: MonoBehaviour
         Observando = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
         disReferencia = 30;
-        disReferencia2 = 5f;
+        disReferencia2 = 8f;
+        disReferencia3 = 1.85f;
         currentstate = Stados.IDLE;
 
     }
@@ -38,35 +40,57 @@ public class IA_Cazador: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        behaviour();
-        checkConditions();
+        if (vivo)
+        {
+            behaviour();
+            checkConditions();
+        }
+        
         float z = vida /VidaMax;
         Vector3 EscalaBarra = new Vector3(1, 1, z);
         BarraVida.transform.localScale = EscalaBarra;
         if (vida <= 0)
         {
-            morido();
+            vida = 0;
+                if (!call)
+                {
+                 morido();
+                 call = true;
+                }
+            
         }
     }
 
     void checkConditions()
     {
-        disActual = Vector3.Distance(objetivo.transform.position, transform.position);
-        if (disActual <= disReferencia)
+        if (vivo)
         {
-            if (disActual <= disReferencia2)
+            disActual = Vector3.Distance(objetivo.transform.position, transform.position);
+            if (disActual <= disReferencia)
             {
-                currentstate = Stados.ATTACK;
+                if (disActual <= disReferencia2)
+                {
+                    if (disActual <= disReferencia3)
+                    {
+                        currentstate = Stados.ATTACKMELE;
+                    }
+                    else
+                    {
+                        currentstate = Stados.ATTACKDISTANCE;
+                    }
+                }
+                else
+                {
+
+                    currentstate = Stados.FOLLOW;
+                }
             }
             else
             {
-                currentstate = Stados.FOLLOW;
+                currentstate = Stados.IDLE;
             }
         }
-        else
-        {
-            currentstate = Stados.IDLE;
-        }
+        
     }
     void behaviour()
     {
@@ -78,8 +102,11 @@ public class IA_Cazador: MonoBehaviour
             case Stados.FOLLOW:
                 follow();
                 break;
-            case Stados.ATTACK:
-                attack();
+            case Stados.ATTACKDISTANCE:
+                attackDistance();
+                break;
+            case Stados.ATTACKMELE:
+                attackMele();
                 break;
             default:
                 break;
@@ -93,6 +120,7 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Ataque", false);
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
+        anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
     }
     void follow()
@@ -103,9 +131,10 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Ataque", false);
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
+        anim.SetBool("Cacha", false);
         nav1.SetDestination(objetivo.transform.position);
     }
-    void attack()
+    void attackDistance()
     {
         //Debug.Log("atacar");
         anim.SetBool("Quieto", false);
@@ -113,8 +142,19 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Ataque", true);
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
+        anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
         LanzarDardo();
+    }
+    void attackMele()
+    {
+        anim.SetBool("Quieto", false);
+        anim.SetBool("Camina", false);
+        anim.SetBool("Ataque", false);
+        anim.SetBool("Daño", false);
+        anim.SetBool("Muerte", false);
+        anim.SetBool("Cacha", true);
+        nav1.SetDestination(transform.position);
     }
     void morido()
     {
@@ -123,7 +163,10 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Ataque", false);
         anim.SetBool("Daño", false);
         anim.SetBool("Muerte", true);
+        anim.SetBool("Cacha", false);
         vida = 0;
+        vivo = false;
+        Destroy(gameObject, 8);
     }
     public void DarDaño(int s)
     {
@@ -139,7 +182,8 @@ public class IA_Cazador: MonoBehaviour
     }
     public void RecibeDaño(float nim)
     {
-        Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0,0.5f,0), transform.rotation);
+        b = Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        Destroy(b, 2);
         //poner animacion de daño al enemigo
         anim.SetBool("Ddaño", true);
         vida -= nim;
@@ -147,43 +191,27 @@ public class IA_Cazador: MonoBehaviour
     public void desactivar()
     {
         anim.SetBool("Ddaño", false);
+        habilitado = true;
     }
     public void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
-        { 
-            if (other.GetComponent<Combate>().dam1)
+        {
+            if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(15);
-            }
-            else if (other.GetComponent<Combate>().dam2)
-            {
-                RecibeDaño(15);
-            }
-            else if (other.GetComponent<Combate>().dam3)
-            {
-                RecibeDaño(15);
-            }
-            else
-            {
+                RecibeDaño(200);
+                habilitado = false;
             }
         }
     }
     public void LanzarDardo()
     {
-        //Debug.Log("tiempo:" + time);
         PosicionAMirar = Observando.transform.position;
-        //PosicionAMirar.x = XPos;
-        // FALTA AJUSTAR EL PUNTO DE MIRA PARA QUE APUNTE PARA EL JUGADOR
-        //PosicionAMirar += new Vector3(0,-25,0);
         Observador.transform.LookAt(PosicionAMirar + new Vector3(XPos, YPos, Zpos));
         time -= Time.deltaTime;
         if (time<=0)
         {
             Instantiate(Dardo, DardoSpawn.transform.position, Rifle.transform.rotation);
-            //Quaternion.LookRotation(new Vector3(0, 0, 0))
-           // Debug.Log("tiempo dentro del if:" + time);
-           
             time = 1.5f;
         }
     }
