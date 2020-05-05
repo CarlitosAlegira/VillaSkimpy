@@ -10,15 +10,16 @@ public class IA_Cazador: MonoBehaviour
     {
         IDLE, FOLLOW, ATTACK
     }
-    public float vida, VidaMax, delay, fireRate;
+    public float vida, VidaMax, delay, fireRate,XPos,YPos,Zpos;
     float time = 1.5f;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
-    public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn;
+    public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn, Observador, Observando, Rifle;
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2;
+    private Vector3 PosicionAMirar;
     void Start()
     {
         delay = 1;
@@ -26,6 +27,7 @@ public class IA_Cazador: MonoBehaviour
         VidaMax = 200f;
         vida = 150f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
+        Observando = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
         disReferencia = 30;
         disReferencia2 = 5f;
@@ -170,13 +172,19 @@ public class IA_Cazador: MonoBehaviour
     public void LanzarDardo()
     {
         //Debug.Log("tiempo:" + time);
+        PosicionAMirar = Observando.transform.position;
+        //PosicionAMirar.x = XPos;
+        // FALTA AJUSTAR EL PUNTO DE MIRA PARA QUE APUNTE PARA EL JUGADOR
+        //PosicionAMirar += new Vector3(0,-25,0);
+        Observador.transform.LookAt(PosicionAMirar + new Vector3(XPos, YPos, Zpos));
         time -= Time.deltaTime;
         if (time<=0)
         {
-            Instantiate(Dardo, DardoSpawn.transform.position, DardoSpawn.transform.rotation);
+            Instantiate(Dardo, DardoSpawn.transform.position, Rifle.transform.rotation);
+            //Quaternion.LookRotation(new Vector3(0, 0, 0))
            // Debug.Log("tiempo dentro del if:" + time);
+           
             time = 1.5f;
         }
     }
-
 }

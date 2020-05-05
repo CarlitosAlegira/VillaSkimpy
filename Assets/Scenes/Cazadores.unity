@@ -484,10 +484,12 @@ MonoBehaviour:
   objetivo: {fileID: 0}
   "ParticulaDa\xF1o": {fileID: 0}
   BarraVida: {fileID: 0}
+  b: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
   disReferencia2: 0
+  zona: {fileID: 0}
 --- !u!4 &116504230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4431429744085825124, guid: f8bdfd11b2d57a6488502e1f1f8a8d6e,
@@ -677,14 +679,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124219337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.784, y: 1.506, z: -0.065}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.5769668, y: 0.41675285, z: 0.5814717, w: -0.39410308}
+  m_LocalPosition: {x: -0.023018267, y: 0.024765534, z: 0.53553367}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
   m_Children:
   - {fileID: 1635826086}
-  m_Father: {fileID: 1895878747}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 966434711}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.744, y: 4.7110004, z: 8.957001}
 --- !u!1001 &148833990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1522,27 +1524,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.45023426
+      value: -0.341303
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6334264
+      value: 0.47509143
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5115996
+      value: 0.6614313
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.366505
+      value: 0.46937096
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -78
+      value: -108.4
       objectReference: {fileID: 0}
     - target: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1566,6 +1568,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfcb332d67619214087fa9778edd768a, type: 3}
+--- !u!1 &291562054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1215029005244844, guid: cfcb332d67619214087fa9778edd768a,
+    type: 3}
+  m_PrefabInstance: {fileID: 291562053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &347519915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2821,10 +2829,12 @@ MonoBehaviour:
   objetivo: {fileID: 0}
   "ParticulaDa\xF1o": {fileID: 0}
   BarraVida: {fileID: 0}
+  b: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
   disReferencia2: 0
+  zona: {fileID: 0}
 --- !u!136 &691859732
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3513,6 +3523,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400048, guid: c50977585afb5634781ecb77c01b356c,
     type: 3}
   m_PrefabInstance: {fileID: 890859817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &966434711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4384874954717432, guid: cfcb332d67619214087fa9778edd768a,
+    type: 3}
+  m_PrefabInstance: {fileID: 291562053}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971366705
 PrefabInstance:
@@ -5222,6 +5238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DardoS
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492782009628778991, guid: 05a6ec23b3499ed478dc69e2c8fc500c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a6ec23b3499ed478dc69e2c8fc500c, type: 3}
@@ -7188,10 +7209,12 @@ MonoBehaviour:
   objetivo: {fileID: 0}
   "ParticulaDa\xF1o": {fileID: 0}
   BarraVida: {fileID: 0}
+  b: {fileID: 0}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
   disReferencia2: 0
+  zona: {fileID: 0}
 --- !u!4 &1937951444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4431429744085825124, guid: eb4fa4206614cdc41990a7417a722d24,
@@ -7925,12 +7948,18 @@ MonoBehaviour:
   VidaMax: 0
   delay: 0
   fireRate: 0
+  XPos: 0
+  YPos: 0
+  Zpos: 0
   anim: {fileID: 1895878744}
   objetivo: {fileID: 0}
   "ParticulaDa\xF1o": {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   BarraVida: {fileID: 256664905}
   Dardo: {fileID: 688797134420594567, guid: 3d15a7a0ad46dce4baa928222f6e617b, type: 3}
   DardoSpawn: {fileID: 124219337}
+  Observador: {fileID: 2084338788}
+  Observando: {fileID: 0}
+  Rifle: {fileID: 291562054}
   Particula: {fileID: 0}
   disActual: 0
   disReferencia: 0
@@ -8085,7 +8114,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1895878747}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2120332463
 PrefabInstance:
