@@ -5,10 +5,13 @@ using UnityEngine;
 public class Misiones : MonoBehaviour
 {
     string mis;
+    int m, p;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag=="Player")
         {
+            m=GameObject.Find("Datos_player").GetComponent<Datos>().mision;
+            p=GameObject.Find("Datos_player").GetComponent<Datos>().progreso;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (gameObject.name == "mision1")
@@ -21,7 +24,7 @@ public class Misiones : MonoBehaviour
                     pon_mision(mis,1);
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
-                if (gameObject.name=="mision2")
+                else if (gameObject.name=="mision2" && m==1 && p==5)
                 {
                     other.GetComponent<Movimeinto>().menu = true;
                     other.GetComponent<Inventario>().menus2 = true;
@@ -31,8 +34,7 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
-
-                if (gameObject.name == "mision3")
+                else if (gameObject.name == "mision3" && m == 2 && p == 5)
                 {
                     other.GetComponent<Movimeinto>().menu = true;
                     other.GetComponent<Inventario>().menus2 = true;
@@ -41,6 +43,12 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Datos_player").GetComponent<Datos>().mision = 3;
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
+                }
+                else
+                {
+                    other.GetComponent<Movimeinto>().menu = true;
+                    other.GetComponent<Inventario>().menus2 = true;
+                    error_mision();
                 }
 
 
@@ -89,5 +97,16 @@ public class Misiones : MonoBehaviour
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(false);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(false);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = tip;
+    }
+    void error_mision()
+    {
+        mis = "Hum por el momento no tengo nada que pedirte\nPero puedes busca a alguno de los otros aldeanos \nTal vez ellos nesesiten ayuda\nO puedes regresar mas tarde puede que tenga alguna tarea para ti";
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_text.text = mis;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = 10;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().C_mision.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().barra_vida.SetActive(false);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().showarm.SetActive(false);
     }
 }

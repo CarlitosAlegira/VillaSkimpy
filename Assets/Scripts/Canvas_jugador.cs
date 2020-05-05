@@ -197,21 +197,6 @@ public class Canvas_jugador : MonoBehaviour
     }
 
 
-    void mision(int num)
-    {
-        if (num == 1)
-        {
-
-        }
-        else if (num == 2)
-        {
-
-        }
-        else if (num == 2)
-        {
-
-        }
-    }
     public void rechazar_mision()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
@@ -231,14 +216,17 @@ public class Canvas_jugador : MonoBehaviour
         if (tip_mision == 1)
         {
             C_text2.text = "Investiga el Bosque";
+            M_Active = 1;
         }
         else if (tip_mision == 2)
         {
             C_text2.text = "Investiga las montañas";
+            M_Active = 2;
         }
         else if (tip_mision == 3)
         {
             C_text2.text = "Investiga el lago";
+            M_Active = 4;
         }
         else if (tip_mision == 4)
         {
@@ -251,6 +239,10 @@ public class Canvas_jugador : MonoBehaviour
         else if (tip_mision == 6)
         {
             C_text2.text = "destruye las petroleras " + prog_mision + "/5";
+        }
+        else if(tip_mision==10)
+        {
+            Hub_mision.SetActive(false);
         }
     }
     public void zona_peligro()
@@ -266,5 +258,20 @@ public class Canvas_jugador : MonoBehaviour
     public void zona_progreso(int ene,int p)
     {
         C_text2.text = "enemigos derrotados " + ene + "/" + p;
+    }
+    public void terminar_zona()
+    {
+        if (tip_mision == 4)
+        {
+            C_text2.text = "Elimina los puestos";
+        }
+        else if (tip_mision == 5)
+        {
+            C_text2.text = "Libera el animal";
+        }
+        else if (tip_mision == 6)
+        {
+            C_text2.text = "Elimina las petroleras";
+        }
     }
 }

@@ -17,6 +17,7 @@ public class destruir : MonoBehaviour
                 Destroy(gameObject,2);
                 Destroy(b, 4);
                 zona.GetComponent<zona_enemigos>().dest += 1;
+                dest = false;
             }
         }
     }

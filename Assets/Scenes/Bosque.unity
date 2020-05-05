@@ -23946,6 +23946,10 @@ MonoBehaviour:
   p_tala2: {fileID: 1728128791}
   p_tala3: {fileID: 1844080618}
   tienda: {fileID: 690372818}
+  par1: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
+  par2: {fileID: 175238, guid: 26d069e6f78e6f8478e4dc0152bd6939, type: 3}
+  par3: {fileID: 110790, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
+  par4: {fileID: 1000014067870652, guid: e52cb234d3b33aa418999460dbf19113, type: 3}
   n_enemigos: 0
   dest: 0
   enemigos_base: 8
@@ -37125,6 +37129,10 @@ MonoBehaviour:
   p_tala2: {fileID: 605723349}
   p_tala3: {fileID: 1361392078}
   tienda: {fileID: 1296692140}
+  par1: {fileID: 0}
+  par2: {fileID: 0}
+  par3: {fileID: 0}
+  par4: {fileID: 0}
   n_enemigos: 0
   dest: 0
   enemigos_base: 6

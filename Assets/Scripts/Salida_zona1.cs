@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Salida_zona1 : MonoBehaviour
 {
-    public GameObject mostrar;
+    public GameObject mostrar,paso,den;
     bool si,no,is_menu;
+    int pod;
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag=="Player" && !is_menu)
+        pod=GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().M_Active;
+        if (other.tag=="Player" && !is_menu&& pod==1)
         {
             mostrar.SetActive(true);
+            paso.SetActive(true);
             other.GetComponent<Inventario>().menus2 = true;
             other.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
@@ -22,6 +25,7 @@ public class Salida_zona1 : MonoBehaviour
                 GameObject.Find("Datos_player").GetComponent<Datos>().zona=1;
                 GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
                 other.GetComponent<Inventario>().trans = false;
+                paso.SetActive(false);
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
@@ -34,6 +38,29 @@ public class Salida_zona1 : MonoBehaviour
             }
             else if(no)
             {
+                paso.SetActive(false);
+                mostrar.SetActive(false);
+                other.GetComponent<Inventario>().menus2 = false;
+                other.GetComponent<Movimeinto>().menu = false;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                si = false;
+                no = false;
+                is_menu = true;
+            }
+        }
+        else if (!is_menu)
+        {
+            mostrar.SetActive(true);
+            den.SetActive(true);
+            other.GetComponent<Inventario>().menus2 = true;
+            other.GetComponent<Movimeinto>().menu = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            if (si)
+            {
+                paso.SetActive(false);
+                den.SetActive(false);
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
