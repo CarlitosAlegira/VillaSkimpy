@@ -6,11 +6,12 @@ public class Dardo : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool coll = false;
-    GameObject gg;
+    GameObject gg, gg2;
     float velocidad = 10;
     void Start()
     {
         gg = GameObject.Find("Canvas_base");
+        gg2 = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class Dardo : MonoBehaviour
         
         if (coll==true)
         {
-            Destroy(gameObject,0.1f);
+            Destroy(gameObject,5.1f);
         }
         else
         {
@@ -34,6 +35,10 @@ public class Dardo : MonoBehaviour
             coll = true;
             //transform.Translate(0, 0, 0);
             gg.GetComponent<Canvas_jugador>().daño(10);
+            //gameObject.GetComponent<Rigidbody>().AddForce(transform.forward*-velocidad);
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            //FALA HACER QUE EL DARDO SE QUEDE PEGADO AL PERSONAJE
+
         }
     }
 }
