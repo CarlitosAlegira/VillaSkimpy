@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniMapScript : MonoBehaviour
+public class MiniMapaScript : MonoBehaviour
 {
     Transform player;
     GameObject Jugador;
