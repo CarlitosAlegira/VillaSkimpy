@@ -7,7 +7,7 @@ public class Dardo : MonoBehaviour
     // Start is called before the first frame update
     public bool coll = false;
     GameObject gg, gg2;
-    float velocidad = 10;
+    float velocidad = 30;
     void Start()
     {
         gg = GameObject.Find("Canvas_base");
@@ -20,7 +20,7 @@ public class Dardo : MonoBehaviour
         
         if (coll==true)
         {
-            Destroy(gameObject,5.1f);
+            Destroy(gameObject,1.5f);
         }
         else
         {
@@ -38,6 +38,7 @@ public class Dardo : MonoBehaviour
             //gameObject.GetComponent<Rigidbody>().AddForce(transform.forward*-velocidad);
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             //FALA HACER QUE EL DARDO SE QUEDE PEGADO AL PERSONAJE
+            gameObject.transform.parent = gg2.transform;
 
         }
     }

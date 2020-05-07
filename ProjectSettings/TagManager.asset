@@ -10,6 +10,7 @@ TagManager:
   - Aldeano
   - barra_vida
   - tala
+  - Tierra
   layers:
   - Default
   - TransparentFX
