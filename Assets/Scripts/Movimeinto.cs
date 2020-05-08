@@ -14,6 +14,7 @@ public class Movimeinto : MonoBehaviour
     Animator anim;
     bool idle,pararse,agac_vel,onslide;
     public bool keyframe1, agachado, atacking,atack_run, menu;
+    bool CH, CH2;
     
     void Start()
     {
@@ -180,4 +181,5 @@ public class Movimeinto : MonoBehaviour
         camFrente = camFrente.normalized;
         camDerecha = camDerecha.normalized;
     }
+
 }
