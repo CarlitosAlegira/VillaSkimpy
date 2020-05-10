@@ -1,32 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class boss1 : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject hacha, tronco, encerrar,zona;
-    bool empezar,saltar;
+    public GameObject hacha, tronco, encerrar,zona,bar_vida,correr;
+    public Image barra;
+    bool empezar,saltar,habilitado,muerto,a1,a2,a3,aturdir,lanzar,huir;
    //Vector3 distancia;
-    float distancia;
+    float distancia,salt_vel,vida,timer;
     Animator anim;
     int at;
     void Start()
     {
+        habilitado = true;
         objetivo =GameObject.FindGameObjectWithTag("Player");
         anim = gameObject.GetComponent<Animator>();
         gameObject.transform.LookAt(objetivo.transform);
+        vida = 1000;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (empezar)
+        barra.fillAmount = vida / 1000;
+        if (empezar && !muerto && !aturdir)
         {
             distancia = Vector3.Distance(gameObject.transform.position, objetivo.transform.position);
             //Debug.Log(distancia);
             if (distancia <= 8)
             {
+
+                lanzar = false;
                 at = Random.Range(1, 2);
                 Debug.Log(at);
                 anim.SetInteger("ataque", at);
@@ -41,16 +47,43 @@ public class boss1 : MonoBehaviour
             }
             else if (distancia >8 && distancia <20)
             {
+                lanzar = false;
                 anim.SetInteger("ataque", 3);
             }
-            else if (distancia >= 20)
+            else if (distancia >= 20 && !lanzar)
             {
                 anim.SetInteger("ataque", 4);
+            }
+            else
+            {
+                mirar();
+                anim.SetInteger("ataque", 0);
+                gameObject.transform.Translate(Vector3.forward*5*Time.deltaTime);
+            }
+        }
+        if (vida <= 0)
+        {
+            anim.SetBool("stun", true);
+            anim.SetBool("muerte", true);
+            muerto = true;
+            if (huir)
+            {
+                ganar();
+            }
+        }
+        if (aturdir)
+        {
+            timer += Time.deltaTime;
+            if (timer>=5)
+            {
+                timer = 0;
+                anim.SetBool("stun", false);
+                aturdir = false;
             }
         }
         if (saltar)
         {
-            transform.Translate(0, 0, 10 * Time.deltaTime);
+            transform.Translate(0, 0, salt_vel/2 * Time.deltaTime);
         }
     }
 
@@ -71,10 +104,12 @@ public class boss1 : MonoBehaviour
     public void comenzar()
     {
         empezar = true;
+        bar_vida.SetActive(true);
         anim.SetBool("start", true);
     }
     public void sal(int val)
     {
+        mirar();
         if (val==1)
         {
             saltar = true;
@@ -86,10 +121,68 @@ public class boss1 : MonoBehaviour
     }
     public void mirar()
     {
-        gameObject.transform.LookAt(objetivo.transform);
+        gameObject.transform.LookAt(new Vector3(objetivo.transform.position.x, transform.position.y, objetivo.transform.position.z));
+        salt_vel = distancia;
     }
     public void ter()
     {
         zona.GetComponent<ZonaFinal_1>().terminar();
+    }
+    public void damage(float dm)
+    {
+        vida -= dm;
+        if (vida<=775 && vida>=725&&!a1)
+        {
+            anim.SetBool("stun",true);
+            aturdir = true;
+            a1 = true;
+        }
+        if (vida <= 525 && vida >= 475&&!a2)
+        {
+            anim.SetBool("stun", true);
+            aturdir = true;
+            a2 = true;
+        }
+        if (vida <= 275 && vida >= 225&&!a3)
+        {
+            anim.SetBool("stun", true);
+            aturdir = true;
+            a3 = true;
+        }
+    }
+    public void ganar()
+    {
+        encerrar.SetActive(false);
+        gameObject.transform.LookAt(new Vector3(correr.transform.position.x, transform.position.y, correr.transform.position.z));
+        transform.Translate(0, 0,5* Time.deltaTime);
+        timer += Time.deltaTime;
+        if (timer>=30)
+        {
+            Destroy(gameObject);
+            zona.GetComponent<ZonaFinal_1>().can_win.SetActive(true);
+            objetivo.GetComponent<Inventario>().menus2 = true;
+            objetivo.GetComponent<Movimeinto>().menu = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    public void desactivar()
+    {
+        lanzar = true;
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
+            {
+                damage(500*Time.deltaTime);
+                //habilitado = false;
+            }
+        }
+    }
+    public void huyendo()
+    {
+        huir = true;
     }
 }

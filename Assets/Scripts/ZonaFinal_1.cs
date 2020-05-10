@@ -5,8 +5,8 @@ using UnityEngine;
 public class ZonaFinal_1 : MonoBehaviour
 {
     public Camera cinematica,basica;
-    public GameObject cam;
-    public GameObject jaxon,can;
+    public GameObject cam,hac;
+    public GameObject jaxon,can,can_win;
     Animator anim;
     bool f;
     void Start()
@@ -48,5 +48,15 @@ public class ZonaFinal_1 : MonoBehaviour
     {
         cinematica.enabled = false;
         basica.enabled = true;
+    }
+    public void win()
+    {
+        can_win.SetActive(false);
+        hac.SetActive(true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Destroy(gameObject);
     }
 }

@@ -140,7 +140,7 @@ public class IA_Lenador: MonoBehaviour
         if (s==1)
         {
             objetivo.GetComponent<Combate>().rec_golpe = true;
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10f);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(5f);
         }
         else if (s==2)
         {
