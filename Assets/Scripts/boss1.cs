@@ -5,7 +5,7 @@ using UnityEngine;
 public class boss1 : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject hacha, tronco, encerrar;
+    public GameObject hacha, tronco, encerrar,zona;
     bool empezar,saltar;
    //Vector3 distancia;
     float distancia;
@@ -13,7 +13,7 @@ public class boss1 : MonoBehaviour
     int at;
     void Start()
     {
-        objetivo =GameObject.Find("piedra");
+        objetivo =GameObject.FindGameObjectWithTag("Player");
         anim = gameObject.GetComponent<Animator>();
         gameObject.transform.LookAt(objetivo.transform);
     }
@@ -57,11 +57,15 @@ public class boss1 : MonoBehaviour
     public void mostrar()
     {
         hacha.SetActive(!hacha.activeInHierarchy);
-        cerrar();
     }
     public void cerrar()
     {
         encerrar.SetActive(!encerrar.activeInHierarchy);
+        zona.GetComponent<ZonaFinal_1>().can.SetActive(false);
+        objetivo.GetComponent<Inventario>().menus2 = false;
+        objetivo.GetComponent<Movimeinto>().menu = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         comenzar();
     }
     public void comenzar()
@@ -83,5 +87,9 @@ public class boss1 : MonoBehaviour
     public void mirar()
     {
         gameObject.transform.LookAt(objetivo.transform);
+    }
+    public void ter()
+    {
+        zona.GetComponent<ZonaFinal_1>().terminar();
     }
 }

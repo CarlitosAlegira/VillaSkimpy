@@ -29,11 +29,11 @@ public class zona_enemigos : MonoBehaviour
         }
         if (!p && dest >= 4)
         {
+            p = true;
             parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Datos>().progreso += 1;
+            GameObject.Find("Datos_player").GetComponent<Datos>().progreso += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
-            p = true;
             gameObject.SetActive(false);
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
         }
