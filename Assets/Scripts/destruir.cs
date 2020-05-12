@@ -7,6 +7,8 @@ public class destruir : MonoBehaviour
     public bool dest;
     public GameObject particulas,zona;
     GameObject b;
+    public AudioClip exp;
+    public AudioSource sonido;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag=="Player")
@@ -18,6 +20,8 @@ public class destruir : MonoBehaviour
                 Destroy(b, 4);
                 zona.GetComponent<zona_enemigos>().dest += 1;
                 dest = false;
+                sonido.clip = exp;
+                sonido.Play();
             }
         }
     }

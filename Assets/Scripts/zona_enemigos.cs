@@ -8,6 +8,8 @@ public class zona_enemigos : MonoBehaviour
     GameObject b1, b2, b3, b4;
     public int n_enemigos,dest,enemigos_base;
     bool p,p2,entro;
+    public AudioClip normal, zona_e,win;
+    public AudioSource sonido_p,sonido_e;
     void Start()
     {
     }
@@ -16,6 +18,11 @@ public class zona_enemigos : MonoBehaviour
         if (entro)
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
+            if (sonido_p.clip == normal)
+            {
+                sonido_p.clip = zona_e;
+                sonido_p.Play();
+            }
         }
         if (n_enemigos >= enemigos_base && !p2)
         {
@@ -52,6 +59,11 @@ public class zona_enemigos : MonoBehaviour
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
             entro = false;
+            if (sonido_p.clip == zona_e)
+            {
+                sonido_p.clip = normal;
+                sonido_p.Play();
+            }
         }
     }
     void parti()
@@ -64,5 +76,10 @@ public class zona_enemigos : MonoBehaviour
         Destroy(b3, 4);
         b4 = Instantiate(par4, transform.position, par4.transform.rotation);
         Destroy(b4, 8);
+        if (sonido_e.clip != win)
+        {
+            sonido_e.clip = win;
+            sonido_e.Play();
+        }
     }
 }
