@@ -21,6 +21,7 @@ public class IA_Cazador: MonoBehaviour
     public float disActual, disReferencia, disReferencia2,disReferencia3;
     private Vector3 PosicionAMirar;
     bool habilitado = true, vivo = true,call;
+    public GameObject zona;
     void Start()
     {
         delay = 1;
@@ -166,7 +167,8 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Cacha", false);
         vida = 0;
         vivo = false;
-        Destroy(gameObject, 8);
+        zona.GetComponent<zona_enemigos_caza>().n_enemigos += 1;
+        Destroy(gameObject, 4);
     }
     public void DarDaño(int s)
     {
