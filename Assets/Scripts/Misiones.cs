@@ -24,7 +24,7 @@ public class Misiones : MonoBehaviour
                     pon_mision(mis,1);
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
-                else if (gameObject.name=="mision2" && m==1 && p==5)
+                else if (gameObject.name=="mision2" /*&& m==1 && p==5*/)
                 {
                     other.GetComponent<Movimeinto>().menu = true;
                     other.GetComponent<Inventario>().menus2 = true;

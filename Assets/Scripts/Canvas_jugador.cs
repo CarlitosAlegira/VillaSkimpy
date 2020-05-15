@@ -267,7 +267,7 @@ public class Canvas_jugador : MonoBehaviour
         }
         else if (tip_mision == 5)
         {
-            C_text2.text = "Libera el animal";
+            C_text2.text = "Libera Jaula(s)";
         }
         else if (tip_mision == 6)
         {

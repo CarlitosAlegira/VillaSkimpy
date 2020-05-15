@@ -35,6 +35,7 @@ public class zona_enemigos_caza : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
             p2 = true;
             entro = false;
+            Debug.Log("Terminando if");
         }
         if (!p && dest >= cuantodest)
         {
@@ -43,7 +44,7 @@ public class zona_enemigos_caza : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             GameObject.Find("Datos_player").GetComponent<Datos>().progreso += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
         }
     }
