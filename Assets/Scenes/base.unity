@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5002394, g: 0.5495805, b: 0.5921079, a: 1}
+  m_IndirectSpecularColor: {r: 0.5002456, g: 0.5495799, b: 0.5921337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21075,7 +21075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de919835c5b74204db0c5d398722a5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 1000000
   barra: {fileID: 2037892906}
   var_name: {fileID: 1215621450}
   a1: {fileID: 1503180691}
@@ -21395,7 +21395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.109000005, y: 0.0485915}
   m_AnchorMax: {x: 0.76857275, y: 0.36400002}
-  m_AnchoredPosition: {x: -0.1000061, y: -0.30000687}
+  m_AnchoredPosition: {x: -0.1000061, y: -0.30001068}
   m_SizeDelta: {x: 0.20909119, y: -0.6242447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000796561

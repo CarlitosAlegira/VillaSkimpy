@@ -18,11 +18,11 @@ public class zona_enemigos_caza : MonoBehaviour
         if (entro)
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
-          /*  if (sonido_p.clip == normal)
+            if (sonido_p.clip == normal)
             {
                 sonido_p.clip = zona_e;
                 sonido_p.Play();
-            }*/
+            }
         }
         if (n_enemigos == enemigos_base && !p2)
         {
@@ -40,7 +40,7 @@ public class zona_enemigos_caza : MonoBehaviour
         if (!p && dest >= cuantodest)
         {
             p = true;
-            //parti();
+            parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             GameObject.Find("Datos_player").GetComponent<Datos>().progreso += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
@@ -62,23 +62,23 @@ public class zona_enemigos_caza : MonoBehaviour
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
             entro = false;
-           /* if (sonido_p.clip == zona_e)
+            if (sonido_p.clip == zona_e)
             {
                 sonido_p.clip = normal;
                 sonido_p.Play();
-            }*/
+            }
         }
     }
     void parti()
     {
-        b1 = Instantiate(par1, transform.position, par1.transform.rotation);
+        /*b1 = Instantiate(par1, transform.position, par1.transform.rotation);
         Destroy(b1, 4);
         b2 = Instantiate(par2, transform.position, par2.transform.rotation);
         Destroy(b2, 4);
         b3 = Instantiate(par3, transform.position, par3.transform.rotation);
         Destroy(b3, 4);
         b4 = Instantiate(par4, transform.position, par4.transform.rotation);
-        Destroy(b4, 8);
+        Destroy(b4, 8);*/
         if (sonido_e.clip != win)
         {
             sonido_e.clip = win;

@@ -234,7 +234,7 @@ public class Canvas_jugador : MonoBehaviour
         }
         else if (tip_mision == 5)
         {
-            C_text2.text = "Libera los animales " + prog_mision + "/5";
+            C_text2.text = "Libera los grupos de animales " + prog_mision + "/4";
         }
         else if (tip_mision == 6)
         {
