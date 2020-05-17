@@ -12,6 +12,8 @@ public class ZonaFinal_1 : MonoBehaviour
     void Start()
     {
         anim = cam.GetComponent<Animator>();
+
+        basica = GameObject.Find("Main").GetComponent<Camera>();
     }
 
     private void OnTriggerEnter(Collider other)
