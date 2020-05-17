@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class cargando : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Camera sec;
+    private void Awake()
+    {
+        sec.enabled = true;
+    }
     void Start()
     {
         string nivel_carga = Cargar_nivel.siguiente_nivel;

@@ -9,6 +9,8 @@ public class Gestion_spawns : MonoBehaviour
     int Zona;
     private void Awake()
     {
+        GameObject.Find("Main").SetActive(true);
+        GameObject.Find("Main").GetComponent<Camera>().enabled = true;
         Zona = GameObject.Find("Datos_player").GetComponent<Datos>().zona;
         player = GameObject.FindGameObjectWithTag("Player");
         switch (Zona)
