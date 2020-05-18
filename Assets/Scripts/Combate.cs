@@ -38,6 +38,10 @@ public class Combate : MonoBehaviour
         {
             anim.SetBool("daño",false);
         }
+        if (pox!=0||poy!=0)
+        {
+            combo = 0;
+        }
         if (Input.GetMouseButtonDown(0)&&Running && !rec_golpe&&!menu)
         {
             run_atack = true;
@@ -68,7 +72,7 @@ public class Combate : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if (timer>=1)
+            if (timer>=0.5f)
             {
                 gameObject.GetComponent<Movimeinto>().atacking = false;
                 if (pox != 0 || poy != 0)

@@ -17,6 +17,7 @@ public class Spawn1 : MonoBehaviour
         player.transform.rotation = spawn.rotation;
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
         player.GetComponent<Inventario>().trans = true;
+        GameObject.Find("Main").GetComponent<Camera>().enabled = true;
     }
     private void Start()
     {

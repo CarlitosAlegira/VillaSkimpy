@@ -35,6 +35,7 @@ public class Salida_zona1 : MonoBehaviour
                 si = false;
                 no = false;
                 is_menu = true;
+                GameObject.Find("Main").GetComponent<Camera>().enabled = false;
             }
             else if(no)
             {
