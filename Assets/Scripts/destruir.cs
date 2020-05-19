@@ -15,12 +15,12 @@ public class destruir : MonoBehaviour
         {
             if (dest && Input.GetKeyDown(KeyCode.E))
             {
-                b=Instantiate(particulas,transform.position,particulas.transform.rotation);
+                sonido.clip = exp;
+                b =Instantiate(particulas,transform.position,particulas.transform.rotation);
                 Destroy(gameObject,2);
                 Destroy(b, 4);
                 zona.GetComponent<zona_enemigos>().dest += 1;
                 dest = false;
-                sonido.clip = exp;
                 sonido.Play();
             }
         }
