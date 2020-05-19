@@ -47,7 +47,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -87,7 +87,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Muerte
@@ -153,7 +153,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Muerte
@@ -186,19 +186,19 @@ AnimatorStateMachine:
     m_Position: {x: 810, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7780698391442722097}
-    m_Position: {x: 680, y: 340, z: 0}
+    m_Position: {x: 570, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8450997511572932576}
     m_Position: {x: 10, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1702097026519673600}
-    m_Position: {x: 320, y: 90, z: 0}
+    m_Position: {x: 270, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6779704344197061232}
-    m_Position: {x: 610, y: 110, z: 0}
+    m_Position: {x: 550, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1786467572635995657}
-    m_Position: {x: 300, y: 330, z: 0}
+    m_Position: {x: 120, y: 260, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7250348648722328573}
@@ -229,7 +229,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -272,7 +272,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Cacha
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8450997511572932576}
@@ -306,7 +306,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -427,37 +427,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Camina
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Ataque
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: "Dda\xF1o"
+    m_Controller: {fileID: 0}
+  - m_Name: "Da\xF1o"
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Muerte
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Cacha
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -489,7 +489,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -529,7 +529,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -580,7 +580,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -620,7 +620,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Muerte
@@ -657,7 +657,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -694,7 +694,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -734,7 +734,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Muerte
@@ -774,7 +774,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -811,7 +811,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -851,7 +851,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -888,7 +888,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -928,7 +928,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Muerte
@@ -965,7 +965,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte
@@ -993,7 +993,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1691631599875322358}
@@ -1058,7 +1058,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Ataque
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "Dda\xF1o"
+    m_ConditionEvent: "Da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Muerte

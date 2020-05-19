@@ -20,7 +20,7 @@ public class IA_Cazador: MonoBehaviour
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2,disReferencia3;
     private Vector3 PosicionAMirar;
-    bool habilitado = true, vivo = true,call;
+    bool habilitado = true, vivo = true, call;
     public GameObject zona;
     void Start()
     {
@@ -187,7 +187,7 @@ public class IA_Cazador: MonoBehaviour
         b = Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
         Destroy(b, 2);
         //poner animacion de daño al enemigo
-        anim.SetBool("Ddaño", true);
+        anim.SetBool("Daño", true);
         vida -= nim;
     }
     public void desactivar()
@@ -201,7 +201,7 @@ public class IA_Cazador: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(200);
+                RecibeDaño(20);
                 habilitado = false;
             }
         }
