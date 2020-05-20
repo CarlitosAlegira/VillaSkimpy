@@ -11,6 +11,7 @@ TagManager:
   - barra_vida
   - tala
   - Tierra
+  - hacha
   layers:
   - Default
   - TransparentFX
