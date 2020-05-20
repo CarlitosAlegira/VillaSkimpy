@@ -274,4 +274,24 @@ public class Canvas_jugador : MonoBehaviour
             C_text2.text = "Elimina las petroleras";
         }
     }
+    public void varios(int ene)
+    {
+        switch (ene)
+        {
+            case 1:
+                C_text2.text = "Derrota a Jaxon";
+                break;
+            case 2:
+                C_text2.text = "Derrota a Dominic";
+                break;
+            case 3:
+                C_text2.text = "Derrota a Mason";
+                break;
+            case 4:
+                C_text2.text = "Vuelve al pueblo";
+                break;
+            default:
+                break;
+        }
+    }
 }
