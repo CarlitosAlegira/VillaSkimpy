@@ -319,8 +319,8 @@ public class IA_Dominic: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(200);
-                habilitado = false;
+                RecibeDaño(200*Time.deltaTime);
+                //habilitado = false;
             }
         }
     }

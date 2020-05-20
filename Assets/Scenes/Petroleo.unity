@@ -14203,7 +14203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a682ddacc7fd6ce46b866df4c827eeb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part: {fileID: 2754511725090168872, guid: 369cdf6b6e3835a40bf1c429f1f12527, type: 3}
+  part: {fileID: 1000012037247386, guid: 023905e3604baaf4880f23405bfb5a0a, type: 3}
   spawn: {fileID: 1689565300}
 --- !u!4 &1689565300
 Transform:
