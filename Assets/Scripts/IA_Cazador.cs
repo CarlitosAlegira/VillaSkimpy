@@ -201,7 +201,7 @@ public class IA_Cazador: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(20);
+                RecibeDaño(200);
                 habilitado = false;
             }
         }

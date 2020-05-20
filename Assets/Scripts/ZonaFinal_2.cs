@@ -25,12 +25,13 @@ public class ZonaFinal_2 : MonoBehaviour
             other.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            mostrar();
         }
     }
     void Update()
     {
         Debug.Log(GameObject.Find("Datos_player").GetComponent<Datos>().progreso);
-        if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso==4 && !f)
+        if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso== 4 && !f)
         {
             activar();
             f = true;
@@ -38,9 +39,11 @@ public class ZonaFinal_2 : MonoBehaviour
     }
     void activar()
     {
-        cinematica.enabled = true;
-        basica.enabled = false;
-        anim.SetBool("entro",true);
+        Debug.Log("entra al activar");
+        //CINEMATICA
+       // cinematica.enabled = true;
+       // basica.enabled = false;
+       // anim.SetBool("entro",true);
     }
     public void mostrar()
     {
@@ -48,11 +51,12 @@ public class ZonaFinal_2 : MonoBehaviour
     }
     public void terminar()
     {
-        cinematica.enabled = false;
-        basica.enabled = true;
+        //cinematica.enabled = false;
+        //basica.enabled = true;
     }
     public void win()
     {
+        // al dar click en el boton del canvas se ejecuta esto
         can_win.SetActive(false);
         Arco.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;

@@ -40,7 +40,7 @@ public class zona_enemigos_caza : MonoBehaviour
         if (!p && dest >= cuantodest)
         {
             p = true;
-            parti();
+            //parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             GameObject.Find("Datos_player").GetComponent<Datos>().progreso += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();

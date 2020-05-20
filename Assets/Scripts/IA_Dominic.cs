@@ -12,23 +12,23 @@ public class IA_Dominic: MonoBehaviour
     }
     public float vida, VidaMax, delay, fireRate, XPos, YPos, Zpos, timeLeft = 5;
     public float vidaE1=1500, vidaE2=1000, vidaE3=500;
-    float time = 1.5f;
+    float time = 1.5f, timesito;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
     NavMeshAgent nav1;
     public GameObject objetivo, ParticulaDaño, BarraVida, Dardo, DardoSpawn, Observador, Observando, Rifle, b, encerrar, correr;
     public ParticleSystem Particula;
-    public float disActual, disReferencia, disReferencia2, disReferencia3, timer;
+    public float disActual, disReferencia, disReferencia2, disReferencia3, timer; 
     private Vector3 PosicionAMirar;
-    bool habilitado = true, vivo = true, call, vp=true, vp2=true, vp3=true;
+    bool habilitado = true, vivo = true, call, vp = true, vp2 = true, vp3 = true, pvez=true;
     public GameObject zona;
     void Start()
     {
         delay = 1;
         fireRate = 1.5f;
         VidaMax = 2000f;
-        vida = 1800f;
+        vida = 2000f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         Observando = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
@@ -46,18 +46,17 @@ public class IA_Dominic: MonoBehaviour
         {
             behaviour();
             checkConditions();
-        }
-        
+        } 
         float z = vida /VidaMax;
-        //Vector3 EscalaBarra = new Vector3(1, 1, z);
-        //BarraVida.transform.localScale = EscalaBarra;
+        Vector3 EscalaBarra = new Vector3(1, 1, z);
+        BarraVida.transform.localScale = EscalaBarra;
         if (vida <= 0)
         {
             vida = 0;
                 if (!call)
                 {
                  morido();
-                 call = true;
+                 //call = true;
                 }
             
         }
@@ -225,7 +224,16 @@ public class IA_Dominic: MonoBehaviour
         anim.SetBool("muerte", true);
         vida = 0;
         vivo = false;
-        ganar();
+        if (pvez)
+        {
+            Debug.Log("entra al ganar");
+            timesito += 1 * Time.deltaTime;
+            if (timesito >= 8)
+            {
+                ganar();
+            }
+            
+        }
         //zona.GetComponent<zona_enemigos_caza>().n_enemigos += 1;
         //Destroy(gameObject, 4);
     }
@@ -331,17 +339,38 @@ public class IA_Dominic: MonoBehaviour
     public void ganar()
     {
         encerrar.SetActive(false);
-        gameObject.transform.LookAt(new Vector3(correr.transform.position.x, transform.position.y, correr.transform.position.z));
-        transform.Translate(0, 0, 5 * Time.deltaTime);
+        //gameObject.transform.LookAt(new Vector3(correr.transform.position.x, transform.position.y, correr.transform.position.z));
+        //transform.Translate(0, 0, 5 * Time.deltaTime);
+        nav1.SetDestination(correr.transform.position);
+        anim.SetBool("quieto", false);
+        anim.SetBool("camina", false);
+        anim.SetBool("tiro", false);
+        anim.SetBool("cacha", false);
+        anim.SetBool("embestida", true);
+        anim.SetBool("daño", false);
+        anim.SetBool("muerte", false);
         timer += Time.deltaTime;
-        if (timer >= 30)
+        Debug.Log("timer: "+timer);
+        if (timer >= 15)
         {
             Destroy(gameObject);
+            Debug.Log("dentro del gg");
             zona.GetComponent<ZonaFinal_2>().can_win.SetActive(true);
             objetivo.GetComponent<Inventario>().menus2 = true;
             objetivo.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            pvez = false;
         }
+    }
+    public void cerrar()
+    {
+        encerrar.SetActive(!encerrar.activeInHierarchy);
+        zona.GetComponent<ZonaFinal_2>().canDialogo.SetActive(false);
+        objetivo.GetComponent<Inventario>().menus2 = false;
+        objetivo.GetComponent<Movimeinto>().menu = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //comenzar();
     }
 }

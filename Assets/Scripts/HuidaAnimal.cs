@@ -22,6 +22,7 @@ public class HuidaAnimal : MonoBehaviour
     {
         if (Huir && !p)
         {
+            //GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             if (tiempo3 >=3)
             {
                 if (tiempo2 >= 10)
