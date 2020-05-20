@@ -8,7 +8,8 @@ public class boss1 : MonoBehaviour
     GameObject objetivo;
     public GameObject hacha, tronco, encerrar,zona,bar_vida,correr;
     public Image barra;
-    bool empezar,saltar,habilitado,muerto,a1,a2,a3,aturdir,lanzar,huir,dm;
+    public bool dm;
+    bool empezar,saltar,habilitado,muerto,a1,a2,a3,aturdir,lanzar,huir;
    //Vector3 distancia;
     float distancia,salt_vel,vida,timer;
     Animator anim;

@@ -282,4 +282,12 @@ public class Combate : MonoBehaviour
                 break;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag=="hacha")
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10);
+            GameObject.Find("Jaxon").GetComponent<boss1>().dm=false;
+        }
+    }
 }
