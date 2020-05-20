@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class boss1 : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject hacha, tronco, encerrar,zona,bar_vida,correr;
+    public GameObject hacha, roca_b,roca_i, encerrar,zona,bar_vida,correr;
     public Image barra;
+    public bool dm;
     bool empezar,saltar,habilitado,muerto,a1,a2,a3,aturdir,lanzar,huir;
    //Vector3 distancia;
     float distancia,salt_vel,vida,timer;
@@ -31,18 +32,15 @@ public class boss1 : MonoBehaviour
             //Debug.Log(distancia);
             if (distancia <= 8)
             {
-
                 lanzar = false;
                 at = Random.Range(1, 2);
-                Debug.Log(at);
-                anim.SetInteger("ataque", at);
                 if (at == 1)
                 {
-
+                    anim.SetInteger("ataque", 1);
                 }
                 else
                 {
-
+                    anim.SetInteger("ataque", 2);
                 }
             }
             else if (distancia >8 && distancia <20)
@@ -53,6 +51,7 @@ public class boss1 : MonoBehaviour
             else if (distancia >= 20 && !lanzar)
             {
                 anim.SetInteger("ataque", 4);
+                roca_b.SetActive(true);
             }
             else
             {
@@ -184,5 +183,17 @@ public class boss1 : MonoBehaviour
     public void huyendo()
     {
         huir = true;
+    }
+    public void spawn_rock()
+    {
+        roca_b.SetActive(false);
+        roca_i.SetActive(true);
+    }
+    public void ataque_damage(int val)
+    {
+        if (val == 1)
+        {
+            dm = true;
+        }
     }
 }
