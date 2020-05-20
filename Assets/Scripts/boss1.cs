@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class boss1 : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject hacha, roca_b,roca_i, encerrar,zona,bar_vida,correr;
+    public GameObject hacha, roca_b,roca_i, encerrar,zona,bar_vida,correr, b;
     public Image barra;
     public bool dm;
     bool empezar,saltar,habilitado,muerto,a1,a2,a3,aturdir,lanzar,huir;
@@ -168,6 +168,7 @@ public class boss1 : MonoBehaviour
     public void desactivar()
     {
         lanzar = true;
+        hacha.SetActive(true);
     }
     public void OnTriggerStay(Collider other)
     {
@@ -186,8 +187,10 @@ public class boss1 : MonoBehaviour
     }
     public void spawn_rock()
     {
+        hacha.SetActive(false);
         roca_b.SetActive(false);
-        roca_i.SetActive(true);
+        b=Instantiate(roca_i,roca_b.transform.position,roca_b.transform.rotation);
+        Destroy(b, 10);
     }
     public void ataque_damage(int val)
     {
