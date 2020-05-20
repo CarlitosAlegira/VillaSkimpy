@@ -6,7 +6,6 @@ public class BossPetroleo : MonoBehaviour
 {
     GameObject objetivo;
     public GameObject hacha, roca_b, roca_i, encerrar, zona, bar_vida, correr, b;
-    public Image barra;
     public bool dm;
     bool empezar, saltar, habilitado, muerto, a1, a2, a3, aturdir, lanzar, huir;
     //Vector3 distancia;
@@ -24,7 +23,6 @@ public class BossPetroleo : MonoBehaviour
 
     void Update()
     {
-        barra.fillAmount = vida / 1000;
         if (empezar && !muerto && !aturdir)
         {
             distancia = Vector3.Distance(gameObject.transform.position, objetivo.transform.position);
