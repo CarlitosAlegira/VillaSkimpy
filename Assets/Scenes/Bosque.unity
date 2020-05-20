@@ -14181,7 +14181,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: df2209a9914584c4497c12e2d29ca77b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -790435773315590083, guid: df2209a9914584c4497c12e2d29ca77b,
         type: 3}
@@ -29780,7 +29780,7 @@ MonoBehaviour:
   par3: {fileID: 110790, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
   par4: {fileID: 1000014067870652, guid: e52cb234d3b33aa418999460dbf19113, type: 3}
   n_enemigos: 0
-  dest: 0
+  dest: 8
   enemigos_base: 8
   normal: {fileID: 8300000, guid: c8010e6c574a8ab4a89aeb0ecd7ee9e9, type: 3}
   zona_e: {fileID: 8300000, guid: f95d97d9b559d26439f0a78c29f4cb17, type: 3}
@@ -30061,7 +30061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 234c9679633449240aeaf169bae4706b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 234c9679633449240aeaf169bae4706b, type: 3}
       propertyPath: m_LocalPosition.x
