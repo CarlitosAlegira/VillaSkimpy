@@ -6,7 +6,7 @@ public class ZonaFinal_3 : MonoBehaviour
 {
     public Camera cinematica,basica;
     public GameObject cam,Arco;
-    public GameObject Dominic,canDialogo,can_win;
+    public GameObject Mason,canDialogo,can,can_win;
     Animator anim;
     bool f;
     void Start()
@@ -44,7 +44,7 @@ public class ZonaFinal_3 : MonoBehaviour
     }
     public void mostrar()
     {
-        Dominic.SetActive(true);
+        Mason.SetActive(true);
     }
     public void terminar()
     {

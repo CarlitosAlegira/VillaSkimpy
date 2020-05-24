@@ -35,6 +35,7 @@ public class IA_Petrolero: MonoBehaviour
         disReferencia2 = 8f;
         disReferencia3 = 1.85f;
         currentstate = Stados.IDLE;
+        Rifle.SetActive(false);
 
     }
 
@@ -73,10 +74,12 @@ public class IA_Petrolero: MonoBehaviour
                     if (disActual <= disReferencia3)
                     {
                         currentstate = Stados.ATTACKMELE;
+                        Rifle.SetActive(true);
                     }
                     else
                     {
                         currentstate = Stados.ATTACKDISTANCE;
+                        Rifle.SetActive(false);
                     }
                 }
                 else

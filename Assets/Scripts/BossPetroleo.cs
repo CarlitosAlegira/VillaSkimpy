@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossPetroleo : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject hacha, roca_b, roca_i, encerrar, zona, bar_vida, correr, b;
+    public GameObject arma, barril_b, barril_i, encerrar, zona, bar_vida, correr, b;
     public bool dm;
     bool empezar, saltar, habilitado, muerto, a1, a2, a3, aturdir, lanzar, huir;
     //Vector3 distancia;
@@ -48,7 +48,7 @@ public class BossPetroleo : MonoBehaviour
             else if (distancia >= 20 && !lanzar)
             {
                 anim.SetInteger("ataque", 4);
-                roca_b.SetActive(true);
+                barril_b.SetActive(true);
             }
             else
             {
@@ -85,12 +85,12 @@ public class BossPetroleo : MonoBehaviour
 
     public void mostrar()
     {
-        hacha.SetActive(!hacha.activeInHierarchy);
+        arma.SetActive(!arma.activeInHierarchy);
     }
     public void cerrar()
     {
         encerrar.SetActive(!encerrar.activeInHierarchy);
-        zona.GetComponent<ZonaFinal_1>().can.SetActive(false);
+        zona.GetComponent<ZonaFinal_3>().can.SetActive(false);
         objetivo.GetComponent<Inventario>().menus2 = false;
         objetivo.GetComponent<Movimeinto>().menu = false;
         Cursor.visible = false;
@@ -122,7 +122,7 @@ public class BossPetroleo : MonoBehaviour
     }
     public void ter()
     {
-        zona.GetComponent<ZonaFinal_1>().terminar();
+        zona.GetComponent<ZonaFinal_3>().terminar();
     }
     public void damage(float dm)
     {
@@ -155,7 +155,7 @@ public class BossPetroleo : MonoBehaviour
         if (timer >= 30)
         {
             Destroy(gameObject);
-            zona.GetComponent<ZonaFinal_1>().can_win.SetActive(true);
+            zona.GetComponent<ZonaFinal_3>().can_win.SetActive(true);
             objetivo.GetComponent<Inventario>().menus2 = true;
             objetivo.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
@@ -165,7 +165,7 @@ public class BossPetroleo : MonoBehaviour
     public void desactivar()
     {
         lanzar = true;
-        hacha.SetActive(true);
+        arma.SetActive(true);
     }
     public void OnTriggerStay(Collider other)
     {
@@ -184,9 +184,9 @@ public class BossPetroleo : MonoBehaviour
     }
     public void spawn_rock()
     {
-        hacha.SetActive(false);
-        roca_b.SetActive(false);
-        b = Instantiate(roca_i, roca_b.transform.position, roca_b.transform.rotation);
+        arma.SetActive(false);
+        barril_b.SetActive(false);
+        b = Instantiate(barril_i, barril_b.transform.position, barril_b.transform.rotation);
         Destroy(b, 10);
     }
     public void ataque_damage(int val)

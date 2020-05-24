@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class zona_enemigos_petroleo : MonoBehaviour
 {
-    public GameObject p_tala1, p_tala2, p_tala3, tienda,par1,par2,par3,par4;
+    public GameObject p_petroleo, p_petrolero2,par1,par2,par3,par4;
     GameObject b1, b2, b3, b4;
     public int n_enemigos,dest,enemigos_base;
     bool p,p2,entro;
@@ -26,15 +26,13 @@ public class zona_enemigos_petroleo : MonoBehaviour
         }
         if (n_enemigos >= enemigos_base && !p2)
         {
-            p_tala1.GetComponent<destruir>().dest = true;
-            p_tala2.GetComponent<destruir>().dest = true;
-            p_tala3.GetComponent<destruir>().dest = true;
-            tienda.GetComponent<destruir>().dest = true;
+            p_petroleo.GetComponent<destruir>().dest = true;
+            p_petrolero2.GetComponent<destruir>().dest = true;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
             p2 = true;
             entro = false;
         }
-        if (!p && dest >= 4)
+        if (!p && dest >= 2)
         {
             p = true;
             parti();
