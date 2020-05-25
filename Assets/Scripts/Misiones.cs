@@ -34,7 +34,7 @@ public class Misiones : MonoBehaviour
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
-                else if (gameObject.name == "mision3" && m == 2 && p == 5)
+                else if (gameObject.name == "mision3" /*&& m == 2 && p == 6*/)
                 {
                     other.GetComponent<Movimeinto>().menu = true;
                     other.GetComponent<Inventario>().menus2 = true;

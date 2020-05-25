@@ -238,7 +238,7 @@ public class Canvas_jugador : MonoBehaviour
         }
         else if (tip_mision == 6)
         {
-            C_text2.text = "destruye las petroleras " + prog_mision + "/5";
+            C_text2.text = "destruye las petroleras " + prog_mision + "/6";
         }
         else if(tip_mision==10)
         {

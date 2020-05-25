@@ -44,7 +44,7 @@ public class Frasco : MonoBehaviour
                 coll = true;
                 gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                // Debug.Log("charco");
-                Instantiate(CharcoLentitud, transform.position, Quaternion.LookRotation(new Vector3(0, 0, 0)));
+                Instantiate(CharcoLentitud, transform.position, CharcoLentitud.transform.rotation);
             }
         }
     }

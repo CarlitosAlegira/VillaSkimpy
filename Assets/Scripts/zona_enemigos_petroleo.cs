@@ -18,7 +18,7 @@ public class zona_enemigos_petroleo : MonoBehaviour
         if (entro)
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
-            if (sonido_p.clip == normal)
+           if (sonido_p.clip == normal)
             {
                 sonido_p.clip = zona_e;
                 sonido_p.Play();
@@ -26,8 +26,9 @@ public class zona_enemigos_petroleo : MonoBehaviour
         }
         if (n_enemigos >= enemigos_base && !p2)
         {
-            p_petroleo.GetComponent<destruir>().dest = true;
-            p_petrolero2.GetComponent<destruir>().dest = true;
+            Debug.Log("entro afsdfasdfasdfasfdasdfasf");
+            p_petroleo.GetComponent<Destruir_petroleo>().dest = true;
+            p_petrolero2.GetComponent<Destruir_petroleo>().dest = true;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
             p2 = true;
             entro = false;

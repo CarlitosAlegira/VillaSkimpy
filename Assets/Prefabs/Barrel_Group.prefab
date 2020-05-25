@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7930796565690803955}
   - component: {fileID: 5979411413803908416}
   - component: {fileID: 1304784605292510529}
-  - component: {fileID: 8764310026927583238}
+  - component: {fileID: 7251356366902180387}
   m_Layer: 0
   m_Name: Barrel_Group
   m_TagString: Untagged
@@ -88,9 +88,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8764310026927583238
+  m_Size: {x: 0.8383839, y: 0.85087025, z: 0.8113905}
+  m_Center: {x: 0.014740975, y: 0.4374041, z: 0.019905386}
+--- !u!114 &7251356366902180387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176157558901094853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4113d3795b341e148b43dda0101e04ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b0ce3fbb66bc334196bbed8f31c8379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dest: 0
