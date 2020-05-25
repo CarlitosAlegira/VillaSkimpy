@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZonaFinal_1 : MonoBehaviour
 {
     public Camera cinematica,basica;
-    public GameObject cam,hac;
+    public GameObject cam,hac,minimapa;
     public GameObject jaxon,can,can_win;
     Animator anim;
     bool f;
@@ -29,7 +29,6 @@ public class ZonaFinal_1 : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(GameObject.Find("Datos_player").GetComponent<Datos>().progreso);
         if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso==5 && !f)
         {
             activar();
@@ -39,6 +38,7 @@ public class ZonaFinal_1 : MonoBehaviour
     void activar()
     {
         cinematica.enabled = true;
+        minimapa.SetActive(false);
         basica.enabled = false;
         anim.SetBool("entro",true);
     }
@@ -50,6 +50,7 @@ public class ZonaFinal_1 : MonoBehaviour
     {
         cinematica.enabled = false;
         basica.enabled = true;
+        minimapa.SetActive(true);
     }
     public void win()
     {

@@ -27,7 +27,7 @@ public class zona_enemigos_caza : MonoBehaviour
         if (n_enemigos == enemigos_base && !p2)
         {
             
-            Debug.Log("habilitando abrir jaulas");
+            //Debug.Log("habilitando abrir jaulas");
             Jaula1.GetComponent<AbrirJaula>().dest = true;
             Jaula2.GetComponent<AbrirJaula>().dest = true;
             Jaula3.GetComponent<AbrirJaula>().dest = true;
@@ -35,7 +35,7 @@ public class zona_enemigos_caza : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
             p2 = true;
             entro = false;
-            Debug.Log("Terminando if");
+            //Debug.Log("Terminando if");
         }
         if (!p && dest >= cuantodest)
         {

@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Salida_centro1 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject minimapa;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
+            minimapa.SetActive(false);
             GameObject.Find("Main").GetComponent<Camera>().enabled = false;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
             other.GetComponent<Inventario>().trans = false;

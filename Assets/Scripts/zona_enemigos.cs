@@ -7,7 +7,7 @@ public class zona_enemigos : MonoBehaviour
     public GameObject p_tala1, p_tala2, p_tala3, tienda,par1,par2,par3,par4;
     GameObject b1, b2, b3, b4;
     public int n_enemigos,dest,enemigos_base;
-    bool p,p2,entro;
+    bool p,p2,finish;
     public AudioClip normal, zona_e,win;
     public AudioSource sonido_p,sonido_e;
     void Start()
@@ -15,24 +15,15 @@ public class zona_enemigos : MonoBehaviour
     }
     void Update()
     {
-        if (entro)
-        {
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
-            if (sonido_p.clip == normal)
-            {
-                sonido_p.clip = zona_e;
-                sonido_p.Play();
-            }
-        }
         if (n_enemigos >= enemigos_base && !p2)
         {
+            p2 = true;
             p_tala1.GetComponent<destruir>().dest = true;
             p_tala2.GetComponent<destruir>().dest = true;
             p_tala3.GetComponent<destruir>().dest = true;
             tienda.GetComponent<destruir>().dest = true;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
-            p2 = true;
-            entro = false;
+            finish = true;
         }
         if (!p && dest >= 4)
         {
@@ -43,6 +34,26 @@ public class zona_enemigos : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
             gameObject.SetActive(false);
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
+            if (gameObject.name== "Zona_enemigos1")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().bosque[0]=1;
+            }
+            else if (gameObject.name == "Zona_enemigos2")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().bosque[1] = 1;
+            }
+            else if(gameObject.name == "Zona_enemigos3")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().bosque[2] = 1;
+            }
+            else if(gameObject.name == "Zona_enemigos4")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().bosque[3] = 1;
+            }
+            else if(gameObject.name== "Zona_enemigos5")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().bosque[4]=1;
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -50,7 +61,19 @@ public class zona_enemigos : MonoBehaviour
         if (other.tag == "Player")
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
-            entro = true;
+            if (!finish)
+            {
+                GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
+            }
+            else
+            {
+                GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();
+            }
+            if (sonido_p.clip == normal)
+            {
+                sonido_p.clip = zona_e;
+                sonido_p.Play();
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -58,7 +81,6 @@ public class zona_enemigos : MonoBehaviour
         if (other.tag == "Player")
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
-            entro = false;
             if (sonido_p.clip == zona_e)
             {
                 sonido_p.clip = normal;

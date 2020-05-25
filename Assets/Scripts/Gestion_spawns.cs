@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gestion_spawns : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player,minimapa;
     [SerializeField] Transform bosque, caza, lago, basico;
     int Zona;
     private void Awake()
@@ -13,6 +13,7 @@ public class Gestion_spawns : MonoBehaviour
         GameObject.Find("Main").GetComponent<Camera>().enabled = true;
         Zona = GameObject.Find("Datos_player").GetComponent<Datos>().zona;
         player = GameObject.FindGameObjectWithTag("Player");
+        minimapa.SetActive(true);
         switch (Zona)
         {
             case 1:

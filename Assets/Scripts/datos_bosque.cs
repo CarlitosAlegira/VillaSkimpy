@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class datos_bosque : MonoBehaviour
 {
-    public GameObject campo1, campo2, campo3, campo4;
-    int f1, f2, f3, f4;
+    public GameObject campo1, campo2, campo3, campo4,campo5;
+    int f1, f2, f3, f4,f5;
     void Start()
     {
+        f1 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[0];
+        f2 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[1];
+        f3 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[2];
+        f4 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[3];
+        f5 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[4];
+
         zonas_activas();
     }
 
@@ -24,15 +30,19 @@ public class datos_bosque : MonoBehaviour
         }
         if (f2 == 1)
         {
-            campo1.SetActive(false);
+            campo2.SetActive(false);
         }
         if (f3 == 1)
         {
-            campo1.SetActive(false);
+            campo3.SetActive(false);
         }
         if (f4 == 1)
         {
-            campo1.SetActive(false);
+            campo4.SetActive(false);
+        }
+        if (f5==1)
+        {
+            campo5.SetActive(false);
         }
     }
 }

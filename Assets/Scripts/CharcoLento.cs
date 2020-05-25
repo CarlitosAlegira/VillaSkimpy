@@ -27,7 +27,7 @@ public class CharcoLento : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("dentro trigger: "+other);
+        //Debug.Log("dentro trigger: "+other);
         if (other.tag == "Player")
         {
             collEnter = true;

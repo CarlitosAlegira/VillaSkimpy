@@ -45,11 +45,11 @@ public class ScriptOilPum : MonoBehaviour
     {
         anim.SetBool("idleOil", true);
         anim.SetBool("accionOil", false);
-        Debug.Log("quieto");
+        //Debug.Log("quieto");
     }
     void accion()
     {
-        Debug.Log("seguir");
+        //Debug.Log("seguir");
         anim.SetBool("idleOil", false);
         anim.SetBool("accionOil", true);
     }

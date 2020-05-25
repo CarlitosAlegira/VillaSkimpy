@@ -122,7 +122,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", true);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+        anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -133,7 +133,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", true);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+        anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(objetivo.transform.position);
@@ -144,7 +144,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", true);
-        anim.SetBool("Daño", false);
+        anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -157,7 +157,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+        anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", true);
         nav1.SetDestination(transform.position);
@@ -167,7 +167,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+        anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", true);
         anim.SetBool("Cacha", false);
         vida = 0;

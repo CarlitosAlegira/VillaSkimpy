@@ -13,7 +13,7 @@ public class Movimeinto : MonoBehaviour
     Vector3 move,datos_in,camFrente,camDerecha;
     Animator anim;
     bool idle,pararse,agac_vel,onslide;
-    public bool keyframe1, agachado, atacking,atack_run, menu;
+    public bool keyframe1, agachado, atacking,atack_run, menu,nadando;
     bool CH, CH2;
     
     void Start()
@@ -29,7 +29,7 @@ public class Movimeinto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pox == 0 && poy == 0)
+        if (pox == 0 && poy == 0 &&!nadando)
         {
             anim.SetBool("quieto", true);
             timer += 1 * Time.deltaTime;
@@ -50,7 +50,7 @@ public class Movimeinto : MonoBehaviour
                 }
             }
         }
-        else
+        else if (!nadando)
         {
             anim.SetFloat("idle", 0);
             anim.SetBool("quieto", false);
@@ -60,6 +60,15 @@ public class Movimeinto : MonoBehaviour
             anim.SetFloat("Poy", poy);
             anim.SetBool("caminar", true);
             anim.SetBool("Combat", false);
+        }
+        if (pox == 0 && poy == 0 && nadando)
+        {
+            anim.SetBool("nadando", false);
+        }
+        else if (nadando)
+        {
+            anim.SetBool("nadando", true);
+            move = move * velocidad;
         }
         if (!atacking && !menu)
         {
@@ -77,7 +86,7 @@ public class Movimeinto : MonoBehaviour
         camara();
         move = datos_in.x* camDerecha + datos_in.z*camFrente;
         jugador.transform.LookAt(jugador.transform.position+move);
-        if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0) && pararse)
+        if (Input.GetKey(KeyCode.LeftShift) && !atacking && (pox != 0 || poy != 0) && pararse && !nadando)
         {
             if (atack_run)
             {
@@ -95,7 +104,7 @@ public class Movimeinto : MonoBehaviour
                 anim.SetBool("Agacharse", true);
             }
         }
-        else
+        else if (!nadando)
         {
             jugador.GetComponent<Combate>().Running = false;
             if (onslide)
@@ -114,11 +123,18 @@ public class Movimeinto : MonoBehaviour
                 move = move * velocidad;
             }
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !nadando)
         {
             slide();
         }
-        gravedad();
+        if (!nadando)
+        {
+            gravedad();
+        }
+        else
+        {
+            nogravedad();
+        }
 
         jugador.Move(move *Time.deltaTime);
     }
@@ -127,7 +143,11 @@ public class Movimeinto : MonoBehaviour
     {
         move.y = -grav;
     }
-    
+    void nogravedad()
+    {
+        move.y = 0;
+    }
+
     public void slide()
     {
         if (agachado)

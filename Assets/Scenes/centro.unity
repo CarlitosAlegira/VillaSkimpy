@@ -1754,7 +1754,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.086e-42, z: 0, w: 0.026123047}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.4e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11499,7 +11499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432877599}
   m_LocalRotation: {x: -0, y: 0.34512872, z: -0, w: 0.93855536}
-  m_LocalPosition: {x: -112, y: 31.19, z: -227.8}
+  m_LocalPosition: {x: -87.7, y: 31.19, z: -206.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 693813507}
@@ -16924,6 +16924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  minimapa: {fileID: 2126233707}
   bosque: {fileID: 1143825251}
   caza: {fileID: 432877600}
   lago: {fileID: 2125438244}
@@ -20631,6 +20632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mostrar: {fileID: 290388587}
+  minimapa: {fileID: 2126233707}
 --- !u!65 &858649173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20642,8 +20644,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.2727885, y: 1, z: 1}
+  m_Center: {x: -2.6363945, y: 0, z: 0.00000002542777}
 --- !u!33 &858649174
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20660,7 +20662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858649171}
   m_LocalRotation: {x: -0, y: -0.5968643, z: -0, w: 0.8023422}
-  m_LocalPosition: {x: 199.4, y: 120.2, z: 70.7}
+  m_LocalPosition: {x: 197.3, y: 120.2, z: 63.8}
   m_LocalScale: {x: 14.6, y: 50, z: 113.6}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27020,6 +27022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mostrar: {fileID: 222687878}
+  minimapa: {fileID: 2126233707}
 --- !u!65 &1104510644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46049,6 +46052,7 @@ MonoBehaviour:
   mostrar: {fileID: 1524682392}
   paso: {fileID: 1218777003}
   den: {fileID: 227749791}
+  minimapa: {fileID: 2126233707}
 --- !u!65 &1696929637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59605,7 +59609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2126233708
 Transform:
   m_ObjectHideFlags: 0

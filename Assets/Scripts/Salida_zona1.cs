@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Salida_zona1 : MonoBehaviour
 {
-    public GameObject mostrar,paso,den;
+    public GameObject mostrar,paso,den,minimapa;
     bool si,no,is_menu;
     int pod;
     private void OnTriggerStay(Collider other)
@@ -31,6 +31,7 @@ public class Salida_zona1 : MonoBehaviour
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                minimapa.SetActive(false);
                 Cargar_nivel.cargar("Bosque");
                 si = false;
                 no = false;

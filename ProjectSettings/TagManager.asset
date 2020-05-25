@@ -12,6 +12,7 @@ TagManager:
   - tala
   - Tierra
   - hacha
+  - agua
   layers:
   - Default
   - TransparentFX

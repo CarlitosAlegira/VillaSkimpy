@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Salida_zona2 : MonoBehaviour
 {
-    public GameObject mostrar;
+    public GameObject mostrar,minimapa;
     bool si,no,is_menu;
     private void OnTriggerStay(Collider other)
     {
@@ -27,6 +27,7 @@ public class Salida_zona2 : MonoBehaviour
                 other.GetComponent<Movimeinto>().menu = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                minimapa.SetActive(false);
                 Cargar_nivel.cargar("Cazadores");
                 si = false;
                 no = false;

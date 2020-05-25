@@ -12,9 +12,16 @@ public class Datos : MonoBehaviour
     int a1, a2, a3,a4;
     public int hero,mision,progreso, zona;
     bool repetido;
+    public int[]bosque,caza,petroleo;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }
+    private void Start()
+    {
+        bosque = new int[5];
+        caza = new int[5];
+        petroleo = new int[5];
     }
     public void nombre_jugador()
     {

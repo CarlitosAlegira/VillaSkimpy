@@ -30,7 +30,7 @@ public class ZonaFinal_2 : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(GameObject.Find("Datos_player").GetComponent<Datos>().progreso);
+        //Debug.Log(GameObject.Find("Datos_player").GetComponent<Datos>().progreso);
         if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso== 4 && !f)
         {
             activar();

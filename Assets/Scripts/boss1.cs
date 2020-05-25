@@ -51,7 +51,6 @@ public class boss1 : MonoBehaviour
             else if (distancia >= 20 && !lanzar)
             {
                 anim.SetInteger("ataque", 4);
-                roca_b.SetActive(true);
             }
             else
             {
@@ -169,6 +168,12 @@ public class boss1 : MonoBehaviour
     {
         lanzar = true;
         hacha.SetActive(true);
+        roca_b.SetActive(false);
+    }
+    public void activar()
+    {
+        hacha.SetActive(false);
+        roca_b.SetActive(true);
     }
     public void OnTriggerStay(Collider other)
     {

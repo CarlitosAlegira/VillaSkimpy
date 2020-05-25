@@ -8,6 +8,7 @@ public class Spawn1 : MonoBehaviour
     bool dest;
     GameObject player;
     [SerializeField] Transform spawn;
+    public GameObject minimapa;
     
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class Spawn1 : MonoBehaviour
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
         player.GetComponent<Inventario>().trans = true;
         GameObject.Find("Main").GetComponent<Camera>().enabled = true;
+        minimapa.SetActive(true);
     }
     private void Start()
     {
