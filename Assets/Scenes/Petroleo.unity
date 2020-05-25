@@ -22019,6 +22019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 1000012037247386, guid: 023905e3604baaf4880f23405bfb5a0a, type: 3}
+  tuto: {fileID: 0}
   spawn: {fileID: 1689565300}
   minimapa: {fileID: 506687612}
 --- !u!4 &1689565300

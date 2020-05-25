@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Gestion_spawns : MonoBehaviour
 {
-    public GameObject player,minimapa;
+    public GameObject player,minimapa,tutorial;
+    bool cancel;
     [SerializeField] Transform bosque, caza, lago, basico;
     int Zona;
     private void Awake()

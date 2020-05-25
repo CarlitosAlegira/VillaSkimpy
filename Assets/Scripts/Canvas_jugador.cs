@@ -226,7 +226,7 @@ public class Canvas_jugador : MonoBehaviour
         else if (tip_mision == 3)
         {
             C_text2.text = "Investiga el lago";
-            M_Active = 4;
+            M_Active = 3;
         }
         else if (tip_mision == 4)
         {

@@ -14,6 +14,7 @@ public class Salida_zona1 : MonoBehaviour
         if (other.tag=="Player" && !is_menu&& pod==1)
         {
             mostrar.SetActive(true);
+            den.SetActive(false);
             paso.SetActive(true);
             other.GetComponent<Inventario>().menus2 = true;
             other.GetComponent<Movimeinto>().menu = true;
@@ -26,6 +27,7 @@ public class Salida_zona1 : MonoBehaviour
                 GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().act_desc_Hud();
                 other.GetComponent<Inventario>().trans = false;
                 paso.SetActive(false);
+                den.SetActive(false);
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
@@ -41,6 +43,7 @@ public class Salida_zona1 : MonoBehaviour
             else if(no)
             {
                 paso.SetActive(false);
+                den.SetActive(false);
                 mostrar.SetActive(false);
                 other.GetComponent<Inventario>().menus2 = false;
                 other.GetComponent<Movimeinto>().menu = false;
