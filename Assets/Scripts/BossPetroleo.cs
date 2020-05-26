@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossPetroleo : MonoBehaviour
 {
     GameObject objetivo;
-    public GameObject arma, barril_b, barril_i, encerrar, zona, bar_vida, correr, b;
+    public GameObject hacha, roca_b, roca_i, encerrar, zona, bar_vida, correr, b;
+    public Image barra;
     public bool dm;
     bool empezar, saltar, habilitado, muerto, a1, a2, a3, aturdir, lanzar, huir;
     //Vector3 distancia;
@@ -23,6 +25,7 @@ public class BossPetroleo : MonoBehaviour
 
     void Update()
     {
+        barra.fillAmount = vida / 1000;
         if (empezar && !muerto && !aturdir)
         {
             distancia = Vector3.Distance(gameObject.transform.position, objetivo.transform.position);
@@ -48,7 +51,6 @@ public class BossPetroleo : MonoBehaviour
             else if (distancia >= 20 && !lanzar)
             {
                 anim.SetInteger("ataque", 4);
-                barril_b.SetActive(true);
             }
             else
             {
@@ -85,7 +87,7 @@ public class BossPetroleo : MonoBehaviour
 
     public void mostrar()
     {
-        arma.SetActive(!arma.activeInHierarchy);
+        hacha.SetActive(!hacha.activeInHierarchy);
     }
     public void cerrar()
     {
@@ -165,7 +167,13 @@ public class BossPetroleo : MonoBehaviour
     public void desactivar()
     {
         lanzar = true;
-        arma.SetActive(true);
+        hacha.SetActive(true);
+        roca_b.SetActive(false);
+    }
+    public void activar()
+    {
+        hacha.SetActive(false);
+        roca_b.SetActive(true);
     }
     public void OnTriggerStay(Collider other)
     {
@@ -184,9 +192,9 @@ public class BossPetroleo : MonoBehaviour
     }
     public void spawn_rock()
     {
-        arma.SetActive(false);
-        barril_b.SetActive(false);
-        b = Instantiate(barril_i, barril_b.transform.position, barril_b.transform.rotation);
+        hacha.SetActive(false);
+        roca_b.SetActive(false);
+        b = Instantiate(roca_i, roca_b.transform.position, roca_b.transform.rotation);
         Destroy(b, 10);
     }
     public void ataque_damage(int val)

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ZonaFinal_3 : MonoBehaviour
 {
-    public Camera cinematica,basica;
-    public GameObject cam,Arco;
-    public GameObject Mason,canDialogo,can,can_win;
+    public Camera cinematica, basica;
+    public GameObject cam, carta, minimapa;
+    public GameObject Mason, can, can_win;
     Animator anim;
     bool f;
     void Start()
@@ -18,9 +18,9 @@ public class ZonaFinal_3 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Player" && f)
+        if (other.tag == "Player" && f)
         {
-            canDialogo.SetActive(true);
+            can.SetActive(true);
             other.GetComponent<Inventario>().menus2 = true;
             other.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
@@ -29,8 +29,7 @@ public class ZonaFinal_3 : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(GameObject.Find("Datos_player").GetComponent<Datos>().progreso);
-        if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso==4 && !f)
+        if (GameObject.Find("Datos_player").GetComponent<Datos>().progreso == 6 && !f)
         {
             activar();
             f = true;
@@ -39,8 +38,9 @@ public class ZonaFinal_3 : MonoBehaviour
     void activar()
     {
         cinematica.enabled = true;
+        minimapa.SetActive(false);
         basica.enabled = false;
-        anim.SetBool("entro",true);
+        anim.SetBool("CinePetroleo", true);
     }
     public void mostrar()
     {
@@ -50,11 +50,12 @@ public class ZonaFinal_3 : MonoBehaviour
     {
         cinematica.enabled = false;
         basica.enabled = true;
+        minimapa.SetActive(true);
     }
     public void win()
     {
         can_win.SetActive(false);
-        Arco.SetActive(true);
+        carta.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
         Cursor.visible = false;

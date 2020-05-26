@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011425002278}
-  - component: {fileID: 205000013972878134}
+  - component: {fileID: 6588363214046738838}
   m_Layer: 0
   m_Name: Barrel_Blue
   m_TagString: Untagged
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000012771767580}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -46.38977, y: -1.770257, z: -88.67417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -33,34 +33,20 @@ Transform:
   - {fileID: 4000012312184724}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &205000013972878134
-LODGroup:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &6588363214046738838
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000012771767580}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0.40223706, z: 0}
-  m_Size: 0.8554741
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000013869466234}
-  - screenRelativeHeight: 0.125
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000012159633834}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000011504996260}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985bf7d282077a2499523380fdcb0d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vel: 5
 --- !u!1 &1000013640460394
 GameObject:
   m_ObjectHideFlags: 0
