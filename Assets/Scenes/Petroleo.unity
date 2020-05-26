@@ -16137,7 +16137,7 @@ MonoBehaviour:
   disReferencia: 0
   disReferencia2: 0
   disReferencia3: 0
-  zona: {fileID: 446926561}
+  zona: {fileID: 904399382}
 --- !u!95 &1058698197
 Animator:
   serializedVersion: 3
