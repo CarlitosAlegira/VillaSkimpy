@@ -22382,7 +22382,7 @@ PrefabInstance:
         type: 3}
       propertyPath: zona
       value: 
-      objectReference: {fileID: 1705856589}
+      objectReference: {fileID: 127650183}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29d9b52423c5e8648ab1a0b699d129ee, type: 3}
 --- !u!1 &1705856589 stripped
@@ -24347,7 +24347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 0
   particulas: {fileID: 0}
-  zona: {fileID: 1705856589}
+  zona: {fileID: 127650183}
   exp: {fileID: 0}
   sonido: {fileID: 0}
 --- !u!1001 &1878446517

@@ -41,7 +41,6 @@ public class ZonaFinal_2 : MonoBehaviour
     void activar()
     {
         Debug.Log("entra al activar");
-       //CINEMATICA
         cinematica.enabled = true;
         basica.enabled = false;
         MiniMap.SetActive(false);

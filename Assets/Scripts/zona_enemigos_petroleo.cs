@@ -18,13 +18,13 @@ public class zona_enemigos_petroleo : MonoBehaviour
         if (entro)
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
-           if (sonido_p.clip == normal)
+          /* if (sonido_p.clip == normal)
             {
                 sonido_p.clip = zona_e;
                 sonido_p.Play();
-            }
+            }*/
         }
-        if (n_enemigos >= enemigos_base && !p2)
+        if (n_enemigos == enemigos_base && !p2)
         {
             Debug.Log("entro afsdfasdfasdfasfdasdfasf");
             p_petroleo.GetComponent<Destruir_petroleo>().dest = true;
@@ -36,7 +36,7 @@ public class zona_enemigos_petroleo : MonoBehaviour
         if (!p && dest >= 2)
         {
             p = true;
-            parti();
+            //parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
             GameObject.Find("Datos_player").GetComponent<Datos>().progreso += 1;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
@@ -58,11 +58,11 @@ public class zona_enemigos_petroleo : MonoBehaviour
         {
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
             entro = false;
-            if (sonido_p.clip == zona_e)
+            /*if (sonido_p.clip == zona_e)
             {
                 sonido_p.clip = normal;
                 sonido_p.Play();
-            }
+            }*/
         }
     }
     void parti()
@@ -75,10 +75,10 @@ public class zona_enemigos_petroleo : MonoBehaviour
         Destroy(b3, 4);
         b4 = Instantiate(par4, transform.position, par4.transform.rotation);
         Destroy(b4, 8);
-        if (sonido_e.clip != win)
+       /* if (sonido_e.clip != win)
         {
             sonido_e.clip = win;
             sonido_e.Play();
-        }
+        }*/
     }
 }
