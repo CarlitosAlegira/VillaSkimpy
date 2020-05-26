@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class IA_Dominic: MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class IA_Dominic: MonoBehaviour
     }
     public float vida, VidaMax, delay, fireRate, XPos, YPos, Zpos, timeLeft = 5;
     public float vidaE1=1500, vidaE2=1000, vidaE3=500;
-    float time = 1.5f, timesito;
+    float time = 3.0f, timesito;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
@@ -22,7 +23,8 @@ public class IA_Dominic: MonoBehaviour
     public float disActual, disReferencia, disReferencia2, disReferencia3, timer; 
     private Vector3 PosicionAMirar;
     bool habilitado = true, vivo = true, call, vp = true, vp2 = true, vp3 = true, pvez=true;
-    public GameObject zona;
+    public GameObject zona, Bar_Vida;
+    public Image Vidaa;
     void Start()
     {
         delay = 1;
@@ -41,6 +43,7 @@ public class IA_Dominic: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vidaa.fillAmount = vida / VidaMax;
         if (vivo)
         {
             behaviour();
@@ -223,6 +226,7 @@ public class IA_Dominic: MonoBehaviour
         anim.SetBool("muerte", true);
         vida = 0;
         vivo = false;
+        Bar_Vida.SetActive(false);
         if (pvez)
         {
             Debug.Log("entra al ganar");
@@ -331,7 +335,7 @@ public class IA_Dominic: MonoBehaviour
         if (time<=0)
         {
             Instantiate(Dardo, DardoSpawn.transform.position, Rifle.transform.rotation);
-            time = 1.5f;
+            time = 3.0f;
         }
     }
 
@@ -370,6 +374,10 @@ public class IA_Dominic: MonoBehaviour
         objetivo.GetComponent<Movimeinto>().menu = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        //comenzar();
+        comenzar();
+    }
+    public void comenzar()
+    {
+        Bar_Vida.SetActive(true);
     }
 }

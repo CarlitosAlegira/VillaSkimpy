@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZonaFinal_2 : MonoBehaviour
 {
     public Camera cinematica,basica;
-    public GameObject cam,Arco;
+    public GameObject cam, Arco, MiniMap;
     public GameObject Dominic,canDialogo,can_win;
     Animator anim;
     bool f;
@@ -25,8 +25,8 @@ public class ZonaFinal_2 : MonoBehaviour
             other.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            //este mostrar tiene que ir en la cinematica.
-            //mostrar();
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().Hub_mision.SetActive(false);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().peligro.SetActive(false);
         }
     }
     void Update()
@@ -44,6 +44,7 @@ public class ZonaFinal_2 : MonoBehaviour
        //CINEMATICA
         cinematica.enabled = true;
         basica.enabled = false;
+        MiniMap.SetActive(false);
         anim.SetBool("Entro",true);
     }
     public void mostrar()
@@ -54,6 +55,7 @@ public class ZonaFinal_2 : MonoBehaviour
     {
         cinematica.enabled = false;
         basica.enabled = true;
+        MiniMap.SetActive(true);
     }
     public void win()
     {

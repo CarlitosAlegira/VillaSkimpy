@@ -274,13 +274,13 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6779704344197061232}
-    m_Position: {x: 890, y: 80, z: 0}
+    m_Position: {x: 850, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1786467572635995657}
     m_Position: {x: 110, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8879369759226403313}
-    m_Position: {x: 0, y: 520, z: 0}
+    m_Position: {x: 150, y: -250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5246998867412310525}
     m_Position: {x: -250, y: 160, z: 0}
@@ -393,7 +393,7 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: tiro
     m_EventTreshold: 0
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: "da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2
@@ -498,10 +498,10 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: camina
     m_EventTreshold: 0
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: tiro
     m_EventTreshold: 0
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: "da\xF1o"
     m_EventTreshold: 0
   - m_ConditionMode: 2

@@ -11,7 +11,7 @@ public class IA_Cazador: MonoBehaviour
         IDLE, FOLLOW, ATTACKDISTANCE, ATTACKMELE
     }
     public float vida, VidaMax, delay, fireRate,XPos,YPos,Zpos;
-    float time = 1.5f;
+    float time = 4.0f;
     //public float TamañoBarra;
     Stados currentstate;
     public Animator anim;
@@ -26,8 +26,8 @@ public class IA_Cazador: MonoBehaviour
     {
         delay = 1;
         fireRate = 1.5f;
-        VidaMax = 200f;
-        vida = 150f;
+        VidaMax = 90f;
+        vida = 90f;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         Observando = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
@@ -175,7 +175,7 @@ public class IA_Cazador: MonoBehaviour
         if (s==1)
         {
             objetivo.GetComponent<Combate>().rec_golpe = true;
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(20f);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(5f);
         }
         else if (s==2)
         {
@@ -214,7 +214,7 @@ public class IA_Cazador: MonoBehaviour
         if (time<=0)
         {
             Instantiate(Dardo, DardoSpawn.transform.position, Rifle.transform.rotation);
-            time = 1.5f;
+            time = 4.0f;
         }
     }
 }

@@ -77,15 +77,24 @@ AnimationClip:
       - serializedVersion: 3
         time: 12.083333
         value: 9.46
-        inSlope: 0.48178446
-        outSlope: 0.48178446
+        inSlope: 0.38686568
+        outSlope: 0.38686568
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 14.516666
+        time: 15.616667
         value: 10
+        inSlope: 0.28531465
+        outSlope: 0.28531465
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 19.233334
+        value: 11.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -120,7 +129,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 14.516666
+    m_StopTime: 19.233334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -196,15 +205,24 @@ AnimationClip:
       - serializedVersion: 3
         time: 12.083333
         value: 9.46
-        inSlope: 0.48178446
-        outSlope: 0.48178446
+        inSlope: 0.38686568
+        outSlope: 0.38686568
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 14.516666
+        time: 15.616667
         value: 10
+        inSlope: 0.28531465
+        outSlope: 0.28531465
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 19.233334
+        value: 11.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -236,14 +254,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 14.45
-    functionName: eventoT
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 14.45
+  - time: 19.033333
     functionName: eventoT
     data: 
     objectReferenceParameter: {fileID: 0}
