@@ -36,7 +36,6 @@ public class IA_Dominic: MonoBehaviour
         disReferencia2 = 5f;
         disReferencia3 = 1.85f;
         currentstate = Stados.IDLE;
-
     }
 
     // Update is called once per frame

@@ -25,7 +25,8 @@ public class ZonaFinal_2 : MonoBehaviour
             other.GetComponent<Movimeinto>().menu = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            mostrar();
+            //este mostrar tiene que ir en la cinematica.
+            //mostrar();
         }
     }
     void Update()
@@ -40,10 +41,10 @@ public class ZonaFinal_2 : MonoBehaviour
     void activar()
     {
         Debug.Log("entra al activar");
-        //CINEMATICA
-       // cinematica.enabled = true;
-       // basica.enabled = false;
-       // anim.SetBool("entro",true);
+       //CINEMATICA
+        cinematica.enabled = true;
+        basica.enabled = false;
+        anim.SetBool("Entro",true);
     }
     public void mostrar()
     {
@@ -51,8 +52,8 @@ public class ZonaFinal_2 : MonoBehaviour
     }
     public void terminar()
     {
-        //cinematica.enabled = false;
-        //basica.enabled = true;
+        cinematica.enabled = false;
+        basica.enabled = true;
     }
     public void win()
     {
