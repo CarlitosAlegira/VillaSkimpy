@@ -195,7 +195,6 @@ public class boss1 : MonoBehaviour
         hacha.SetActive(false);
         roca_b.SetActive(false);
         b=Instantiate(roca_i,roca_b.transform.position,roca_b.transform.rotation);
-        Destroy(b, 10);
     }
     public void ataque_damage(int val)
     {
