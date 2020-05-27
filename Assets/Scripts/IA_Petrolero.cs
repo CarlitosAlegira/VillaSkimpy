@@ -182,6 +182,7 @@ public class IA_Petrolero: MonoBehaviour
         vida = 0;
         vivo = false;
         zona.GetComponent<zona_enemigos_petroleo>().n_enemigos += 1;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(100);
         Destroy(gameObject, 8);
     }
     public void DarDaño(int s)

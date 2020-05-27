@@ -8,7 +8,7 @@ public class BossPetroleo : MonoBehaviour
     GameObject objetivo;
     public GameObject hacha, roca_b, roca_i, encerrar, zona, bar_vida, correr, b;
     public Image barra;
-    public bool dm;
+    public bool dm,cont;
     bool empezar, saltar, habilitado, muerto, a1, a2, a3, aturdir, lanzar, huir;
     //Vector3 distancia;
     float distancia, salt_vel, vida, timer;
@@ -61,6 +61,11 @@ public class BossPetroleo : MonoBehaviour
         }
         if (vida <= 0)
         {
+            if (!cont)
+            {
+                GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(1000);
+                cont = true;
+            }
             anim.SetBool("stun", true);
             anim.SetBool("muerte", true);
             muerto = true;
