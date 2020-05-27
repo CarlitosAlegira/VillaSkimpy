@@ -42,6 +42,30 @@ public class zona_enemigos_petroleo : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
             gameObject.SetActive(false);
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
+            if (gameObject.name == "zona_enemigos1")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[0] = 1;
+            }
+            else if (gameObject.name == "zona_enemigos2")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[1] = 1;
+            }
+            else if (gameObject.name == "zona_enemigos3")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[2] = 1;
+            }
+            else if (gameObject.name == "zona_enemigos4")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[3] = 1;
+            }
+            else if (gameObject.name == "zona_enemigos5")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[4] = 1;
+            }
+            else if (gameObject.name == "zona_enemigos6")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[5] = 1;
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
