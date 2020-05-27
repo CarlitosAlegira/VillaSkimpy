@@ -679,6 +679,7 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: faeba55ee8d6fc8408d713c4c42b5736, type: 3}
   sonido_p: {fileID: 476670577}
   sonido_e: {fileID: 0}
+  completeJ: 0
 --- !u!1001 &35701416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6680,6 +6681,7 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: faeba55ee8d6fc8408d713c4c42b5736, type: 3}
   sonido_p: {fileID: 476670577}
   sonido_e: {fileID: 0}
+  completeJ: 0
 --- !u!1001 &396991665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9424,6 +9426,7 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: faeba55ee8d6fc8408d713c4c42b5736, type: 3}
   sonido_p: {fileID: 476670577}
   sonido_e: {fileID: 0}
+  completeJ: 0
 --- !u!1 &466582976
 GameObject:
   m_ObjectHideFlags: 0
@@ -11318,17 +11321,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 5f9fbc12fe60a7248a75b5c038397ae6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 255.31
+      value: 224.1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5f9fbc12fe60a7248a75b5c038397ae6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 87.75
+      value: 85.89
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5f9fbc12fe60a7248a75b5c038397ae6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 240.12
+      value: 222.38
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5f9fbc12fe60a7248a75b5c038397ae6,
         type: 3}
@@ -11378,7 +11381,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5f9fbc12fe60a7248a75b5c038397ae6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f9fbc12fe60a7248a75b5c038397ae6, type: 3}
@@ -27586,6 +27589,7 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: faeba55ee8d6fc8408d713c4c42b5736, type: 3}
   sonido_p: {fileID: 476670577}
   sonido_e: {fileID: 0}
+  completeJ: 0
 --- !u!1001 &1445124682
 PrefabInstance:
   m_ObjectHideFlags: 0

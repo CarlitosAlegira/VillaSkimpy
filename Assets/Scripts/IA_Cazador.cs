@@ -20,7 +20,8 @@ public class IA_Cazador: MonoBehaviour
     public ParticleSystem Particula;
     public float disActual, disReferencia, disReferencia2,disReferencia3;
     private Vector3 PosicionAMirar;
-    bool habilitado = true, vivo = true, call;
+    public bool habilitado = true;
+    bool vivo = true, call;
     public GameObject zona;
     void Start()
     {
@@ -119,7 +120,7 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Quieto", true);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+        //anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -130,7 +131,7 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", true);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+       // anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(objetivo.transform.position);
@@ -141,7 +142,7 @@ public class IA_Cazador: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", true);
-        anim.SetBool("Daño", false);
+       // anim.SetBool("Daño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -149,20 +150,23 @@ public class IA_Cazador: MonoBehaviour
     }
     void attackMele()
     {
-        anim.SetBool("Quieto", false);
-        anim.SetBool("Camina", false);
-        anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
-        anim.SetBool("Muerte", false);
-        anim.SetBool("Cacha", true);
-        nav1.SetDestination(transform.position);
+        if (habilitado)
+        {
+            anim.SetBool("Quieto", false);
+            anim.SetBool("Camina", false);
+            anim.SetBool("Ataque", false);
+            // anim.SetBool("Daño", false);
+            anim.SetBool("Muerte", false);
+            anim.SetBool("Cacha", true);
+            nav1.SetDestination(transform.position);
+        }
     }
     void morido()
     {
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Daño", false);
+       // anim.SetBool("Daño", false);
         anim.SetBool("Muerte", true);
         anim.SetBool("Cacha", false);
         vida = 0;
@@ -189,12 +193,19 @@ public class IA_Cazador: MonoBehaviour
         Destroy(b, 2);
         //poner animacion de daño al enemigo
         anim.SetBool("Daño", true);
+        /* anim.SetBool("Quieto", false);
+         anim.SetBool("Camina", false);
+         anim.SetBool("Ataque", false);
+         anim.SetBool("Muerte", false);*/
+        //anim.SetBool("Cacha", false);
         vida -= nim;
     }
     public void desactivar()
     {
-        anim.SetBool("Ddaño", false);
+        Debug.Log("llamando a desactivar");
         habilitado = true;
+        anim.SetBool("Daño", false);
+        // anim.SetBool("Cacha", false);
     }
     public void OnTriggerStay(Collider other)
     {
@@ -202,7 +213,7 @@ public class IA_Cazador: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(200);
+                RecibeDaño(20);
                 habilitado = false;
             }
         }

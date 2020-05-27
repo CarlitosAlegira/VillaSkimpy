@@ -42,6 +42,7 @@ public class AbrirJaula : MonoBehaviour
                 animal7.GetComponent<HuidaAnimal>().Encerrado = false;
                 animal7.GetComponent<HuidaAnimal>().Huir = true;
                 zona.GetComponent<zona_enemigos_caza>().dest += 1;
+                zona.GetComponent<zona_enemigos_caza>().completeJ = true;
                 caja.GetComponent<BoxCollider>().isTrigger = true;
                 anim.SetBool("AbrirJaula", true);
                 anim.SetBool("CerrarJaula", false);

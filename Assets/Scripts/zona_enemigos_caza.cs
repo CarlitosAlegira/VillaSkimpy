@@ -10,6 +10,7 @@ public class zona_enemigos_caza : MonoBehaviour
     bool p,p2,entro;
     public AudioClip normal, zona_e,win;
     public AudioSource sonido_p,sonido_e;
+    public bool completeJ;
     void Start()
     {
     }
@@ -85,8 +86,12 @@ public class zona_enemigos_caza : MonoBehaviour
                 sonido_p.clip = normal;
                 sonido_p.Play();
             }
+            if (completeJ)
+            {
+                gameObject.SetActive(false);
+            }
         }
-        gameObject.SetActive(false);
+        
     }
     void parti()
     {
