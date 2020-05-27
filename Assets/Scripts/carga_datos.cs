@@ -20,36 +20,36 @@ public class carga_datos : MonoBehaviour
         a2= int.Parse(dato.GetComponent<carga_p>().data_player[4]);
         a3= int.Parse(dato.GetComponent<carga_p>().data_player[5]);
         a4 = int.Parse(dato.GetComponent<carga_p>().data_player[6]);
-        hero = int.Parse(dato.GetComponent<carga_p>().data_player[8]);
-        datos.GetComponent<Datos>().mision = int.Parse(dato.GetComponent<carga_p>().data_player[9]);
-        datos.GetComponent<Datos>().progreso = int.Parse(dato.GetComponent<carga_p>().data_player[10]);
-        datos.GetComponent<Datos>().bosque[0]= int.Parse(dato.GetComponent<carga_p>().data_player[11]);
-        datos.GetComponent<Datos>().bosque[1] = int.Parse(dato.GetComponent<carga_p>().data_player[12]);
-        datos.GetComponent<Datos>().bosque[2] = int.Parse(dato.GetComponent<carga_p>().data_player[13]);
-        datos.GetComponent<Datos>().bosque[3] = int.Parse(dato.GetComponent<carga_p>().data_player[14]);
-        datos.GetComponent<Datos>().bosque[4] = int.Parse(dato.GetComponent<carga_p>().data_player[15]);
-        datos.GetComponent<Datos>().caza[0] = int.Parse(dato.GetComponent<carga_p>().data_player[16]);
-        datos.GetComponent<Datos>().caza[1] = int.Parse(dato.GetComponent<carga_p>().data_player[17]);
-        datos.GetComponent<Datos>().caza[2] = int.Parse(dato.GetComponent<carga_p>().data_player[18]);
-        datos.GetComponent<Datos>().caza[3] = int.Parse(dato.GetComponent<carga_p>().data_player[19]);
-        datos.GetComponent<Datos>().petroleo[0] = int.Parse(dato.GetComponent<carga_p>().data_player[20]);
-        datos.GetComponent<Datos>().petroleo[1] = int.Parse(dato.GetComponent<carga_p>().data_player[21]);
-        datos.GetComponent<Datos>().petroleo[2] = int.Parse(dato.GetComponent<carga_p>().data_player[22]);
-        datos.GetComponent<Datos>().petroleo[3] = int.Parse(dato.GetComponent<carga_p>().data_player[23]);
-        datos.GetComponent<Datos>().petroleo[4] = int.Parse(dato.GetComponent<carga_p>().data_player[24]);
-        datos.GetComponent<Datos>().petroleo[5] = int.Parse(dato.GetComponent<carga_p>().data_player[25]);
+        hero = int.Parse(dato.GetComponent<carga_p>().data_player[7]);
+        datos.GetComponent<Datos>().mision = int.Parse(dato.GetComponent<carga_p>().data_player[8]);
+        datos.GetComponent<Datos>().progreso = int.Parse(dato.GetComponent<carga_p>().data_player[9]);
+        datos.GetComponent<Datos>().bosque[0]= int.Parse(dato.GetComponent<carga_p>().data_player[10]);
+        datos.GetComponent<Datos>().bosque[1] = int.Parse(dato.GetComponent<carga_p>().data_player[11]);
+        datos.GetComponent<Datos>().bosque[2] = int.Parse(dato.GetComponent<carga_p>().data_player[12]);
+        datos.GetComponent<Datos>().bosque[3] = int.Parse(dato.GetComponent<carga_p>().data_player[13]);
+        datos.GetComponent<Datos>().bosque[4] = int.Parse(dato.GetComponent<carga_p>().data_player[14]);
+        datos.GetComponent<Datos>().caza[0] = int.Parse(dato.GetComponent<carga_p>().data_player[15]);
+        datos.GetComponent<Datos>().caza[1] = int.Parse(dato.GetComponent<carga_p>().data_player[16]);
+        datos.GetComponent<Datos>().caza[2] = int.Parse(dato.GetComponent<carga_p>().data_player[17]);
+        datos.GetComponent<Datos>().caza[3] = int.Parse(dato.GetComponent<carga_p>().data_player[18]);
+        datos.GetComponent<Datos>().petroleo[0] = int.Parse(dato.GetComponent<carga_p>().data_player[19]);
+        datos.GetComponent<Datos>().petroleo[1] = int.Parse(dato.GetComponent<carga_p>().data_player[20]);
+        datos.GetComponent<Datos>().petroleo[2] = int.Parse(dato.GetComponent<carga_p>().data_player[21]);
+        datos.GetComponent<Datos>().petroleo[3] = int.Parse(dato.GetComponent<carga_p>().data_player[22]);
+        datos.GetComponent<Datos>().petroleo[4] = int.Parse(dato.GetComponent<carga_p>().data_player[23]);
+        datos.GetComponent<Datos>().petroleo[5] = int.Parse(dato.GetComponent<carga_p>().data_player[24]);
         Debug.Log(hero);
         datos.GetComponent<Datos>().carga(nombre,hero);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().vida=vida;
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntos= int.Parse(dato.GetComponent<carga_p>().data_player[26]);
-        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision = int.Parse(dato.GetComponent<carga_p>().data_player[10]);
-        if (int.Parse(dato.GetComponent<carga_p>().data_player[10]) != 0)
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntos= int.Parse(dato.GetComponent<carga_p>().data_player[25]);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision = int.Parse(dato.GetComponent<carga_p>().data_player[9]);
+        if (int.Parse(dato.GetComponent<carga_p>().data_player[9]) != 0)
         {
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = int.Parse(dato.GetComponent<carga_p>().data_player[9])+3;
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = int.Parse(dato.GetComponent<carga_p>().data_player[8])+3;
         }
         else
         {
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = int.Parse(dato.GetComponent<carga_p>().data_player[9]);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().tip_mision = int.Parse(dato.GetComponent<carga_p>().data_player[8]);
         }
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(0);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().actv_ms();
@@ -78,6 +78,7 @@ public class carga_datos : MonoBehaviour
             Destroy(j1);
             jj = j3;
         }
+        cam.SetActive(true);
 
         if (a1==1)
         {

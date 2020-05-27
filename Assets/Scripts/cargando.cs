@@ -18,7 +18,6 @@ public class cargando : MonoBehaviour
 
     IEnumerator Hacer_carga(string zona)
     {
-        yield return new WaitForSeconds(3f);
         AsyncOperation operacion = SceneManager.LoadSceneAsync(zona);
         while (operacion.isDone==false)
         {

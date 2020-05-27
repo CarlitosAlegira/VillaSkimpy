@@ -13,6 +13,8 @@ public class Camara2 : MonoBehaviour
     Transform pos;
     private void Start()
     {
+        objetivo = GameObject.Find("Heroe2");
+        centro = GameObject.Find("c2");
     }
     void LateUpdate()
     {
