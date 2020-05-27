@@ -27,24 +27,28 @@ public class PickUp : MonoBehaviour
                     other.GetComponent<Inventario>().armas[2] = true;
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(3);
                     other.GetComponent<Combate>().Weapon = 3;
+                    Destroy(gameObject);
                 }
                 else if (gameObject.name == "Bate")
                 {
                     other.GetComponent<Inventario>().armas[1] = true;
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(2);
                     other.GetComponent<Combate>().Weapon = 2;
+                    Destroy(gameObject);
                 }
                 else if (gameObject.name == "Maza")
                 {
                     other.GetComponent<Inventario>().armas[3] = true;
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(4);
                     other.GetComponent<Combate>().Weapon = 4;
+                    Destroy(gameObject);
                 }
                 else if (gameObject.name == "Arco")
                 {
                     other.GetComponent<Inventario>().armas[4] = true;
                     GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().weapon(5);
                     other.GetComponent<Combate>().Weapon = 5;
+                    Destroy(gameObject);
                 }
 
             }

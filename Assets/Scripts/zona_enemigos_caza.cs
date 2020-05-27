@@ -86,6 +86,7 @@ public class zona_enemigos_caza : MonoBehaviour
                 sonido_p.Play();
             }
         }
+        gameObject.SetActive(false);
     }
     void parti()
     {

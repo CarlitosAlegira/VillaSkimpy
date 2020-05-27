@@ -55,12 +55,17 @@ public class ZonaFinal_2 : MonoBehaviour
         cinematica.enabled = false;
         basica.enabled = true;
         MiniMap.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(2);
     }
     public void win()
     {
         // al dar click en el boton del canvas se ejecuta esto
         can_win.SetActive(false);
         Arco.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().Hub_mision.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().peligro.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(4);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
         Cursor.visible = false;

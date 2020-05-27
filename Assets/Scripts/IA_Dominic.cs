@@ -251,7 +251,7 @@ public class IA_Dominic: MonoBehaviour
         if (s==1)
         {
             objetivo.GetComponent<Combate>().rec_golpe = true;
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(20f);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10f);
         }
         else if (s==2)
         {
