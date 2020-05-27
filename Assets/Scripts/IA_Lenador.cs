@@ -167,6 +167,8 @@ public class IA_Lenador: MonoBehaviour
         { 
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
+                b = Instantiate(ParticulaDaño, gameObject.transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+                Destroy(b, 2);
                 RecibeDaño(20);
                 habilitado = false;
             }
