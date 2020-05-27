@@ -15,13 +15,13 @@ public class Destruir_petroleo : MonoBehaviour
         {
             if (dest && Input.GetKeyDown(KeyCode.E))
             {
-                //sonido.clip = exp;
-                //b = Instantiate(particulas, transform.position, particulas.transform.rotation);
+                sonido.clip = exp;
+                b = Instantiate(particulas, transform.position, particulas.transform.rotation);
                 Destroy(gameObject, 2);
-                //Destroy(b, 4);
+                Destroy(b, 4);
                 zona.GetComponent<zona_enemigos_petroleo>().dest += 1;
                 dest = false;
-                //sonido.Play();
+                sonido.Play();
             }
         }
     }

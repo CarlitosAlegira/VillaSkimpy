@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5002456, g: 0.5495799, b: 0.5921337, a: 1}
+  m_IndirectSpecularColor: {r: 0.5002394, g: 0.5495805, b: 0.5921079, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1321,8 +1321,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 025033f8d9e25ed4884ca9ce63a82821, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3110,8 +3110,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 025033f8d9e25ed4884ca9ce63a82821, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6668,6 +6668,7 @@ MonoBehaviour:
   dam3: 0
   rec_golpe: 0
   menu: 0
+  muerto: 0
   Weapon: 0
   wep1: {fileID: 1246039141}
   wep2: {fileID: 761480397}
@@ -6698,12 +6699,14 @@ MonoBehaviour:
   jugador: {fileID: 709980008}
   camaraP: {fileID: 733876241}
   CamaraFPS: {fileID: 0}
+  anim: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0
   atack_run: 0
   menu: 0
   nadando: 0
+  muerto: 0
 --- !u!143 &709980008
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6819,6 +6822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e63e7acceb2ed24091982971a0d06dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objetivo: {fileID: 0}
+  centro: {fileID: 0}
   Datos_j: {fileID: 965281930}
   p1: {fileID: 1787981365}
   p2: {fileID: 1909407503}
@@ -8852,8 +8857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14375001, y: 0.8243317}
   m_AnchorMax: {x: 0.89000005, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: -0.5}
-  m_SizeDelta: {x: -2.199997, y: -1.5}
+  m_AnchoredPosition: {x: -0.29995728, y: 0.12501526}
+  m_SizeDelta: {x: -0.6000366, y: -0.24998474}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877408718
 MonoBehaviour:
@@ -14645,6 +14650,7 @@ MonoBehaviour:
   dam3: 0
   rec_golpe: 0
   menu: 0
+  muerto: 0
   Weapon: 0
   wep1: {fileID: 1068234023}
   wep2: {fileID: 483577068}
@@ -14674,12 +14680,14 @@ MonoBehaviour:
   jugador: {fileID: 1462877354}
   camaraP: {fileID: 733876241}
   CamaraFPS: {fileID: 0}
+  anim: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0
   atack_run: 0
   menu: 0
   nadando: 0
+  muerto: 0
 --- !u!143 &1462877354
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16169,10 +16177,10 @@ RectTransform:
   m_Father: {fileID: 2127826210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.199999, y: 164}
-  m_SizeDelta: {x: 399, y: 52}
+  m_AnchorMin: {x: 0.28125003, y: 0.8243317}
+  m_AnchorMax: {x: 0.89000005, y: 0.9363453}
+  m_AnchoredPosition: {x: -46.100006, y: 4.5}
+  m_SizeDelta: {x: -96.40906, y: -13.024384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703339996
 MonoBehaviour:
@@ -16238,7 +16246,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -16820,7 +16828,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.65
+  m_fontSize: 19.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17004,10 +17012,10 @@ RectTransform:
   m_Father: {fileID: 2138910887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.10888893}
+  m_AnchorMax: {x: 0.98610413, y: 0.6244443}
+  m_AnchoredPosition: {x: 0.2000122, y: 0.26519966}
+  m_SizeDelta: {x: -0.39997864, y: 0.5303974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773329689
 MonoBehaviour:
@@ -20287,7 +20295,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.4
+  m_fontSize: 19.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -20981,6 +20989,7 @@ MonoBehaviour:
   dam3: 0
   rec_golpe: 0
   menu: 0
+  muerto: 0
   Weapon: 0
   wep1: {fileID: 1821576822}
   wep2: {fileID: 2028891609}
@@ -21010,12 +21019,14 @@ MonoBehaviour:
   jugador: {fileID: 1909407507}
   camaraP: {fileID: 733876241}
   CamaraFPS: {fileID: 0}
+  anim: {fileID: 0}
   keyframe1: 0
   agachado: 0
   atacking: 0
   atack_run: 0
   menu: 0
   nadando: 0
+  muerto: 0
 --- !u!143 &1909407507
 CharacterController:
   m_ObjectHideFlags: 0
