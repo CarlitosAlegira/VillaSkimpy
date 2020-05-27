@@ -46,6 +46,23 @@ public class zona_enemigos_caza : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
             //gameObject.SetActive(false);
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_peligro();
+            //PONER LO QUE DICE HERMOSILLA
+            if (gameObject.name == "Zona_1")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().caza[0] = 1;
+            }
+            else if (gameObject.name == "Zona_2")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().caza[1] = 1;
+            }
+            else if (gameObject.name == "Zona_3")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().caza[2] = 1;
+            }
+            else if (gameObject.name == "Zona_4")
+            {
+                GameObject.Find("Datos_player").GetComponent<Datos>().caza[3] = 1;
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
