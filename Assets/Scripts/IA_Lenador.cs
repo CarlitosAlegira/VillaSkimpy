@@ -167,7 +167,7 @@ public class IA_Lenador: MonoBehaviour
         { 
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(200);
+                RecibeDaño(10);
                 habilitado = false;
             }
         }
