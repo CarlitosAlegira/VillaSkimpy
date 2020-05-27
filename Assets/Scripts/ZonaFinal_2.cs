@@ -56,6 +56,7 @@ public class ZonaFinal_2 : MonoBehaviour
         basica.enabled = true;
         MiniMap.SetActive(true);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
+        //otro varios
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(2);
     }
     public void win()
@@ -65,6 +66,7 @@ public class ZonaFinal_2 : MonoBehaviour
         Arco.SetActive(true);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().Hub_mision.SetActive(true);
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().peligro.SetActive(true);
+        //un varios 
         GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(4);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;

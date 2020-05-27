@@ -51,6 +51,8 @@ public class ZonaFinal_3 : MonoBehaviour
         cinematica.enabled = false;
         basica.enabled = true;
         minimapa.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().aceptar_mision();
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(3);
     }
     public void win()
     {
@@ -58,6 +60,9 @@ public class ZonaFinal_3 : MonoBehaviour
         carta.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = false;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().Hub_mision.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().peligro.SetActive(true);
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().varios(4);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Destroy(gameObject);
