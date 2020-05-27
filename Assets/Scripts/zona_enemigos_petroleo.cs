@@ -21,7 +21,6 @@ public class zona_enemigos_petroleo : MonoBehaviour
         }
         if (n_enemigos == enemigos_base && !p2)
         {
-            Debug.Log("entro afsdfasdfasdfasfdasdfasf");
             p_petroleo.GetComponent<Destruir_petroleo>().dest = true;
             p_petrolero2.GetComponent<Destruir_petroleo>().dest = true;
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().terminar_zona();

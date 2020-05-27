@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CartaFinal : MonoBehaviour
 {
@@ -15,18 +14,22 @@ public class CartaFinal : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 cartaFinal.enabled = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = true;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
 
     public void cargarEscenaFinal()
     {
-        SceneManager.LoadScene("Creditos");
+        Cargar_nivel.cargar("Creditos");
     }
 
     public void MenuPrincipal()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        Cargar_nivel.cargar("MenuPrincipal");
     }
 
 }
