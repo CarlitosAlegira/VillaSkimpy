@@ -160,6 +160,11 @@ public class IA_Cazador: MonoBehaviour
             anim.SetBool("Cacha", true);
             nav1.SetDestination(transform.position);
         }
+        else
+        {
+            anim.SetBool("Daño", false);
+            habilitado = true;
+        }
     }
     void morido()
     {
@@ -213,7 +218,7 @@ public class IA_Cazador: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(20);
+                RecibeDaño(5);
                 habilitado = false;
             }
         }
