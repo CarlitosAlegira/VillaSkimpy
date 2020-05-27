@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Canvas_jugador : MonoBehaviour
 {
+    bool aux;
     public float vida,puntos;
     float timer,vida_aux;
     bool bb=false,regen;
@@ -44,6 +45,14 @@ public class Canvas_jugador : MonoBehaviour
             {
                 Muerte();
             }
+            if (!aux)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().muerto = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Combate>().muerto = true;
+                aux = true;
+            }
         }
 
         //verificar si se pausa el juego
@@ -58,7 +67,7 @@ public class Canvas_jugador : MonoBehaviour
                 Pause();
             }
         }
-        if (vida<100)
+        if (vida<100 && vida >0)
         {
             if (timer==0)
             {
@@ -169,7 +178,6 @@ public class Canvas_jugador : MonoBehaviour
     
     void Muerte()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
         CosasMuerte.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -308,6 +316,41 @@ public class Canvas_jugador : MonoBehaviour
         else if (tip_mision == 6)
         {
             C_text2.text = "Elimina las petroleras";
+        }
+    }
+    public void actv_ms()
+    {
+        Hub_mision.SetActive(false);
+        Hub_mision.SetActive(true);
+        if (tip_mision == 1)
+        {
+            C_text2.text = "Investiga el Bosque";
+            M_Active = 1;
+        }
+        else if (tip_mision == 2)
+        {
+            C_text2.text = "Investiga las montañas";
+            M_Active = 2;
+        }
+        else if (tip_mision == 3)
+        {
+            C_text2.text = "Investiga el lago";
+            M_Active = 3;
+        }
+        else if (tip_mision == 4)
+        {
+            C_text2.text = "Destruye los puestos de tala " + prog_mision + "/5";
+            M_Active = 4;
+        }
+        else if (tip_mision == 5)
+        {
+            C_text2.text = "Libera los grupos de animales " + prog_mision + "/4";
+            M_Active = 5;
+        }
+        else if (tip_mision == 6)
+        {
+            C_text2.text = "destruye las petroleras " + prog_mision + "/6";
+            M_Active = 6;
         }
     }
     public void varios(int ene)

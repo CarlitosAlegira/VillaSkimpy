@@ -11,7 +11,7 @@ public class Salida_zona1 : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         pod=GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().M_Active;
-        if (other.tag=="Player" && !is_menu&& pod==1)
+        if (other.tag=="Player" && !is_menu&& (pod==1||pod==4))
         {
             mostrar.SetActive(true);
             den.SetActive(false);

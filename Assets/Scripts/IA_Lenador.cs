@@ -22,8 +22,8 @@ public class IA_Lenador: MonoBehaviour
     public GameObject zona;
     void Start()
     {
-        VidaMax = 200f;
-        vida = 150f;
+        VidaMax = 150;
+        vida = 150;
         objetivo = GameObject.FindGameObjectWithTag("Player");
         nav1 = GetComponent<NavMeshAgent>();
         disReferencia = 10;
@@ -167,7 +167,7 @@ public class IA_Lenador: MonoBehaviour
         { 
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(10);
+                RecibeDaño(20);
                 habilitado = false;
             }
         }

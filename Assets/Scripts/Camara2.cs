@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camara2 : MonoBehaviour
 {
-    GameObject objetivo, centro;
+    public GameObject objetivo, centro;
     public GameObject Datos_j, p1, p2, p3, c1, c2, c3;
     public Vector3 distancia1, distancia2;
     Vector3 prueba, mouse, posCam;
@@ -13,8 +13,6 @@ public class Camara2 : MonoBehaviour
     Transform pos;
     private void Start()
     {
-        objetivo = p1;
-        centro = c1;
     }
     void LateUpdate()
     {

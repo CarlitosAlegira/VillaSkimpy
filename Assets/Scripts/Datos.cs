@@ -20,8 +20,8 @@ public class Datos : MonoBehaviour
     private void Start()
     {
         bosque = new int[5];
-        caza = new int[5];
-        petroleo = new int[5];
+        caza = new int[4];
+        petroleo = new int[6];
     }
     public void nombre_jugador()
     {
@@ -59,7 +59,10 @@ public class Datos : MonoBehaviour
         }
         string Sdatos = nombre + "," + GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().vida + "," +
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().Active + "," + a1 + "," + a2 + "," + a3 + "," + a4 + "," +
-                hero + "," + mision + "," + progreso;
+                hero + "," + mision + "," + progreso+","+bosque[0] + "," + bosque[1] + "," + bosque[2] + "," + bosque[3] + "," + bosque[4]
+                 + "," + caza[0] + "," + caza[1] + "," + caza[2] + "," + caza[3]
+                  + "," + petroleo[0] + "," + petroleo[1] + "," + petroleo[2] + "," + petroleo[3] + "," + petroleo[4] + "," + petroleo[5] 
+                  +","+GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntos;
         string prueba = PlayerPrefs.GetString(nombre_save,"none");
         if (prueba=="none")
         {

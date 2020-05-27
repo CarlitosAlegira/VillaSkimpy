@@ -6,7 +6,7 @@ public class Combate : MonoBehaviour
 {
     // Start is called before the first frame update
     bool com1, com2, com3;
-    public bool atack,run_atack,Running, dam1, dam2, dam3,rec_golpe,menu;
+    public bool atack,run_atack,Running, dam1, dam2, dam3,rec_golpe,menu,muerto;
     float timer;
     Animator anim;
     int combo;
@@ -23,6 +23,7 @@ public class Combate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         menu = gameObject.GetComponent<Movimeinto>().menu;
         pox = Input.GetAxis("Horizontal");
         poy = Input.GetAxis("Vertical");
@@ -65,7 +66,7 @@ public class Combate : MonoBehaviour
             //Debug.Log(combo);
             atack = true;
         }
-        if (atack && !rec_golpe && !menu)
+        if (atack && !rec_golpe && !menu &&!muerto)
         {
             combat_system();
         }
