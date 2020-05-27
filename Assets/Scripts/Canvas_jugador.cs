@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class Canvas_jugador : MonoBehaviour
 {
-    public float vida;
+    public float vida,puntos;
     float timer,vida_aux;
     bool bb=false,regen;
     public Image barra;
-    public TextMeshProUGUI var_name;
+    public TextMeshProUGUI var_name,points;
     public GameObject a1, a2, a3, a4,a5,barra_vida,showarm;
     public GameObject show1,show2,show3,show4,show5,C_mision,Hub_mision,peligro;
     public TextMeshProUGUI C_text, C_text2;
@@ -26,7 +26,7 @@ public class Canvas_jugador : MonoBehaviour
 
     private void Awake()
     {
-            DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
@@ -84,7 +84,11 @@ public class Canvas_jugador : MonoBehaviour
         }
 
     }
-
+    public void puntaje(int n)
+    {
+        puntos += n;
+        points.text = puntos+"";
+    }
     public void daño(float damage)
     {
         vida -= damage;

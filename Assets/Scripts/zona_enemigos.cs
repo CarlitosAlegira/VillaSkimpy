@@ -31,6 +31,7 @@ public class zona_enemigos : MonoBehaviour
         }
         if (!p && dest >= 4)
         {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(200);
             p = true;
             parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;
