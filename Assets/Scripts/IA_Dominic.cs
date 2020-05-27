@@ -25,6 +25,7 @@ public class IA_Dominic: MonoBehaviour
     bool habilitado = true, vivo = true, call, vp = true, vp2 = true, vp3 = true, pvez=true;
     public GameObject zona, Bar_Vida;
     public Image Vidaa;
+    bool ptje;
     void Start()
     {
         delay = 1;
@@ -227,6 +228,11 @@ public class IA_Dominic: MonoBehaviour
         vida = 0;
         vivo = false;
         Bar_Vida.SetActive(false);
+        if (!ptje)
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(1000);
+            ptje = true;
+        }
         if (pvez)
         {
             Debug.Log("entra al ganar");

@@ -39,6 +39,7 @@ public class zona_enemigos_caza : MonoBehaviour
         }
         if (!p && dest >= cuantodest)
         {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(500);
             p = true;
             //parti();
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision += 1;

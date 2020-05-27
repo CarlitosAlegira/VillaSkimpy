@@ -168,6 +168,7 @@ public class IA_Cazador: MonoBehaviour
         vida = 0;
         vivo = false;
         zona.GetComponent<zona_enemigos_caza>().n_enemigos += 1;
+        GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntaje(100);
         Destroy(gameObject, 4);
     }
     public void DarDaño(int s)
