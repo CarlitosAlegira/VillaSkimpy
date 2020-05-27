@@ -289,5 +289,12 @@ public class Combate : MonoBehaviour
             GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10);
             GameObject.Find("Jaxon").GetComponent<boss1>().dm=false;
         }
+
+        if (other.tag == "llave")
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(10);
+            GameObject.Find("Mason").GetComponent<BossPetroleo>().dm = false;
+        }
+
     }
 }
