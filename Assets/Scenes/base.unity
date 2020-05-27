@@ -20610,7 +20610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de919835c5b74204db0c5d398722a5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 1000000
+  vida: 100
   barra: {fileID: 2037892906}
   var_name: {fileID: 1215621450}
   a1: {fileID: 1503180691}

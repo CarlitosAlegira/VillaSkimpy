@@ -7,7 +7,7 @@ public class zona_enemigos : MonoBehaviour
     public GameObject p_tala1, p_tala2, p_tala3, tienda,par1,par2,par3,par4;
     GameObject b1, b2, b3, b4;
     public int n_enemigos,dest,enemigos_base;
-    bool p,p2,finish;
+    bool p,p2,finish,entro;
     public AudioClip normal, zona_e,win;
     public AudioSource sonido_p,sonido_e;
     void Start()
@@ -15,6 +15,10 @@ public class zona_enemigos : MonoBehaviour
     }
     void Update()
     {
+        if (!finish&&entro)
+        {
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().zona_progreso(n_enemigos, enemigos_base);
+        }
         if (n_enemigos >= enemigos_base && !p2)
         {
             p2 = true;
@@ -74,6 +78,7 @@ public class zona_enemigos : MonoBehaviour
                 sonido_p.clip = zona_e;
                 sonido_p.Play();
             }
+            entro = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -86,6 +91,8 @@ public class zona_enemigos : MonoBehaviour
                 sonido_p.clip = normal;
                 sonido_p.Play();
             }
+
+            entro = false;
         }
     }
     void parti()

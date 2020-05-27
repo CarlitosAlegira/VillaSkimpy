@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class Canvas_jugador : MonoBehaviour
 {
     public float vida;
-    bool bb=false;
+    float timer,vida_aux;
+    bool bb=false,regen;
     public Image barra;
     public TextMeshProUGUI var_name;
     public GameObject a1, a2, a3, a4,a5,barra_vida,showarm;
@@ -57,11 +58,38 @@ public class Canvas_jugador : MonoBehaviour
                 Pause();
             }
         }
+        if (vida<100)
+        {
+            if (timer==0)
+            {
+                vida_aux = vida;
+            }
+            timer += Time.deltaTime;
+            if (timer>=15&&!regen)
+            {
+                if (vida_aux==vida)
+                {
+                    regen = true;
+                }
+                else
+                {
+                    vida_aux = vida;
+                    timer=0;
+                }
+            }
+            if (regen)
+            {
+                vida += 5 * Time.deltaTime;
+            }
+        }
+
     }
 
     public void daño(float damage)
     {
         vida -= damage;
+        regen = false;
+        timer = 0;
     }
     public void weapon(int arma)
     {
@@ -166,6 +194,10 @@ public class Canvas_jugador : MonoBehaviour
         
     }
 
+    public void regenerar_vida()
+    {
+
+    }
     void Pause()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
