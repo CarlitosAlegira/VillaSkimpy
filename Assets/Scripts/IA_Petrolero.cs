@@ -122,7 +122,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", true);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Ddaño", false);
+        //anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -133,7 +133,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", true);
         anim.SetBool("Ataque", false);
-        anim.SetBool("Ddaño", false);
+        //anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(objetivo.transform.position);
@@ -144,7 +144,7 @@ public class IA_Petrolero: MonoBehaviour
         anim.SetBool("Quieto", false);
         anim.SetBool("Camina", false);
         anim.SetBool("Ataque", true);
-        anim.SetBool("Ddaño", false);
+        //anim.SetBool("Ddaño", false);
         anim.SetBool("Muerte", false);
         anim.SetBool("Cacha", false);
         nav1.SetDestination(transform.position);
@@ -154,13 +154,22 @@ public class IA_Petrolero: MonoBehaviour
     }
     void attackMele()
     {
-        anim.SetBool("Quieto", false);
-        anim.SetBool("Camina", false);
-        anim.SetBool("Ataque", false);
-        anim.SetBool("Ddaño", false);
-        anim.SetBool("Muerte", false);
-        anim.SetBool("Cacha", true);
-        nav1.SetDestination(transform.position);
+        if (habilitado)
+        {
+            anim.SetBool("Quieto", false);
+            anim.SetBool("Camina", false);
+            anim.SetBool("Ataque", false);
+            //anim.SetBool("Ddaño", false);
+            anim.SetBool("Muerte", false);
+            anim.SetBool("Cacha", true);
+            nav1.SetDestination(transform.position);
+        }
+        else
+        {
+            anim.SetBool("Ddaño", false);
+            habilitado = true;
+        }
+        
     }
     void morido()
     {
@@ -180,7 +189,7 @@ public class IA_Petrolero: MonoBehaviour
         if (s==1)
         {
             objetivo.GetComponent<Combate>().rec_golpe = true;
-            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(20f);
+            GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().daño(5f);
         }
         else if (s==2)
         {
@@ -206,7 +215,7 @@ public class IA_Petrolero: MonoBehaviour
         {
             if ((other.GetComponent<Combate>().dam1 || other.GetComponent<Combate>().dam2 || other.GetComponent<Combate>().dam3) && habilitado)
             {
-                RecibeDaño(200);
+                RecibeDaño(5);
                 habilitado = false;
             }
         }
