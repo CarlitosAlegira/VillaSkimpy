@@ -21,6 +21,7 @@ public class Misiones : MonoBehaviour
                     mis= "Hey veo que has vuelto me alegra mucho.\nPero bueno vamos al grano. \n \nHace ya algun tiempo hemos visto que el tamaño de nuestro bosque ha disminuido considerablemente por culpa de unos peligrosos leñadores. \n \nVe e investiga y libera el bosque de esos terribles leñadores";
                     GameObject.Find("Datos_player").GetComponent<Datos>().mision=1;
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision=0;
                     pon_mision(mis,1);
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
@@ -32,6 +33,7 @@ public class Misiones : MonoBehaviour
                     pon_mision(mis,2);
                     GameObject.Find("Datos_player").GetComponent<Datos>().mision = 2;
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision = 0;
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
                 else if (gameObject.name == "mision3" /*&& m == 2 && p == 6*/)
@@ -42,6 +44,7 @@ public class Misiones : MonoBehaviour
                     pon_mision(mis, 3);
                     GameObject.Find("Datos_player").GetComponent<Datos>().mision = 3;
                     GameObject.Find("Datos_player").GetComponent<Datos>().progreso = 0;
+                    GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().prog_mision = 0;
                     //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().des.SetActive(true);
                 }
                 else
