@@ -24,4 +24,9 @@ public class CartaFinal : MonoBehaviour
         SceneManager.LoadScene("Creditos");
     }
 
+    public void MenuPrincipal()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
 }
