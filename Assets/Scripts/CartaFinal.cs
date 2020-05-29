@@ -5,15 +5,15 @@ using UnityEngine;
 public class CartaFinal : MonoBehaviour
 {
 
-    public Canvas cartaFinal;
+    public GameObject cartaFinal;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             if (Input.GetKey(KeyCode.E))
             {
-                cartaFinal.enabled = true;
+                cartaFinal.SetActive(true);
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventario>().menus2 = true;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Movimeinto>().menu = true;
                 Cursor.visible = true;

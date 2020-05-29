@@ -16061,7 +16061,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.8
+  m_fontSize: 17.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16964,6 +16964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 5579794412907443995, guid: 65a6a0a7aec3ead479b8e48f074c4b03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65a6a0a7aec3ead479b8e48f074c4b03, type: 3}
 --- !u!1 &766703262 stripped
 GameObject:
@@ -38174,7 +38175,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 286
   m_TargetDisplay: 0
 --- !u!224 &1610638519
 RectTransform:
@@ -46286,7 +46287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89c753bc56c4664392f1ed34563da24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cartaFinal: {fileID: 1610638518}
+  cartaFinal: {fileID: 1610638515}
 --- !u!1001 &1987303297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47182,7 +47183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08936536, y: 0.094000004}
   m_AnchorMax: {x: 0.94036543, y: 0.814}
-  m_AnchoredPosition: {x: -3.893097, y: -0.0026474}
+  m_AnchoredPosition: {x: -3.893097, y: -0.0026550293}
   m_SizeDelta: {x: 7.7861633, y: 0.005279541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090726918
@@ -47234,7 +47235,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 19.35
+  m_fontSize: 19.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -47280,7 +47281,7 @@ MonoBehaviour:
     spaceCount: 42
     wordCount: 41
     linkCount: 0
-    lineCount: 10
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

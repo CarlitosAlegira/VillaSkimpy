@@ -159,7 +159,7 @@ public class BossPetroleo : MonoBehaviour
         gameObject.transform.LookAt(new Vector3(correr.transform.position.x, transform.position.y, correr.transform.position.z));
         transform.Translate(0, 0, 5 * Time.deltaTime);
         timer += Time.deltaTime;
-        if (timer >= 30)
+        if (timer >= 7)
         {
             Destroy(gameObject);
             zona.GetComponent<ZonaFinal_3>().can_win.SetActive(true);
