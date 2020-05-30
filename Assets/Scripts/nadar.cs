@@ -14,7 +14,6 @@ public class nadar : MonoBehaviour
     {
         if (other.tag=="agua")
         {
-            Debug.Log("hola");
             anim.SetBool("nadar", true);
             anim.SetBool("tierra", false);
             jugador.GetComponent<Movimeinto>().nadando = true;
