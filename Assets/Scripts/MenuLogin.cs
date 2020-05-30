@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MenuLogin : MonoBehaviour
 {
-
+    public GameObject cargo;
     [Header("Registro")]
 
     public Text usuario_r;
@@ -46,6 +46,8 @@ public class MenuLogin : MonoBehaviour
         yield return validate;
         if (validate.text.Contains("Bienvenido"))
         {
+            cargo.GetComponent<G_user>().name=user;
+            cargo.GetComponent<G_user>().pass = pass;
             SceneManager.LoadScene("MenuPrincipal");
         }
         else

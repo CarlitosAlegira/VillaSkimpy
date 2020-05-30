@@ -6,8 +6,11 @@ public class datos_petroleo : MonoBehaviour
 {
     public GameObject campo1, campo2, campo3, campo4, campo5, campo6;
     int f1, f2, f3, f4, f5, f6;
+    public float tiempo;
     void Start()
     {
+
+        tiempo = GameObject.Find("Datos_player").GetComponent<Datos>().t3;
         f1 = GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[0];
         f2 = GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[1];
         f3 = GameObject.Find("Datos_player").GetComponent<Datos>().petroleo[2];
@@ -21,7 +24,7 @@ public class datos_petroleo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        tiempo += Time.deltaTime;
     }
     public void zonas_activas()
     {

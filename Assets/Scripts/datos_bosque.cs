@@ -6,8 +6,10 @@ public class datos_bosque : MonoBehaviour
 {
     public GameObject campo1, campo2, campo3, campo4,campo5;
     int f1, f2, f3, f4,f5;
+    public float tiempo;
     void Start()
     {
+        tiempo = GameObject.Find("Datos_player").GetComponent<Datos>().t1;
         f1 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[0];
         f2 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[1];
         f3 = GameObject.Find("Datos_player").GetComponent<Datos>().bosque[2];
@@ -20,7 +22,7 @@ public class datos_bosque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        tiempo += Time.deltaTime;
     }
     public void zonas_activas()
     {

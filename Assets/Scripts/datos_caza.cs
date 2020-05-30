@@ -6,8 +6,10 @@ public class datos_caza : MonoBehaviour
 {
     public GameObject campo1, campo2, campo3, campo4;
     int f1, f2, f3, f4;
+    public float tiempo;
     void Start()
     {
+        tiempo = GameObject.Find("Datos_player").GetComponent<Datos>().t2;
         f1 = GameObject.Find("Datos_player").GetComponent<Datos>().caza[0];
         f2 = GameObject.Find("Datos_player").GetComponent<Datos>().caza[1];
         f3 = GameObject.Find("Datos_player").GetComponent<Datos>().caza[2];
@@ -20,7 +22,7 @@ public class datos_caza : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        tiempo += Time.deltaTime;
     }
     public void zonas_activas()
     {

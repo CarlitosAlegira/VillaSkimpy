@@ -6,6 +6,8 @@ using TMPro;
 
 public class Datos : MonoBehaviour
 {
+    private string log = "http://villaskimpy.000webhostapp.com/actualizar.php";
+    string user, pass;
     public Text hero_name;
     string nombre;
     public string nombre_save;
@@ -13,6 +15,7 @@ public class Datos : MonoBehaviour
     public int hero,mision,progreso, zona;
     bool repetido;
     public int[]bosque,caza,petroleo;
+    public float t1, t2, t3;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -86,12 +89,28 @@ public class Datos : MonoBehaviour
             }
 
             guardar_datos(Sdatos);
+            actualizar();
         }
         else
         {
             Debug.Log("paso");
             GameObject.Find("data").GetComponent<guardar>().error();
         }
+
+    }
+    public void actualizar()
+    {
+        StartCoroutine("actua_corr");
+    }
+
+    public IEnumerator actua_corr()
+    {
+        user = GameObject.Find("Usuario").GetComponent<G_user>().name;
+        pass = GameObject.Find("Usuario").GetComponent<G_user>().pass;
+        string urlusing = log + "?user=" + user + "&t1=" + (int)t1/60 + "&t2=" + (int)t2/60 + "&t3=" + (int)t3/60 + "&score=" + GameObject.Find("Canvas_base").GetComponent<Canvas_jugador>().puntos;
+        WWW validate = new WWW(urlusing);
+        Debug.Log(urlusing);
+        yield return validate;
     }
     void  guardar_partida(string anadir)
     {

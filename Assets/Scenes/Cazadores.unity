@@ -3480,7 +3480,7 @@ GameObject:
   - component: {fileID: 151345758}
   - component: {fileID: 151345761}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Caza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3534,6 +3534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimapa: {fileID: 1601888643}
+  datos_z: {fileID: 1596606013}
 --- !u!1 &165009743
 GameObject:
   m_ObjectHideFlags: 0
@@ -29206,6 +29207,7 @@ MonoBehaviour:
   campo2: {fileID: 387503567}
   campo3: {fileID: 32358883}
   campo4: {fileID: 1434262001}
+  tiempo: 0
 --- !u!1 &1601888643
 GameObject:
   m_ObjectHideFlags: 0
